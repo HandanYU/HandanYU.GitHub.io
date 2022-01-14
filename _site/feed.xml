@@ -1,0 +1,2435 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-14T19:18:50+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Diana’s Blog</title><subtitle>Hello</subtitle><author><name>Handan YU</name></author><entry><title type="html">How to build blog using jekyll</title><link href="http://localhost:4000/2022/01/12/build-blog-use-jekyll.html" rel="alternate" type="text/html" title="How to build blog using jekyll" /><published>2022-01-12T00:00:00+08:00</published><updated>2022-01-12T00:00:00+08:00</updated><id>http://localhost:4000/2022/01/12/build-blog-use-jekyll</id><content type="html" xml:base="http://localhost:4000/2022/01/12/build-blog-use-jekyll.html">&lt;ol&gt;
+  &lt;li&gt;markdown latex&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;首先在 /_layouts/post.html中的&amp;lt;head&amp;gt;…&amp;lt;/head&amp;gt;之间添加如下代码&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;MathJax&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;tex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;inlineMath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]],&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;displayMath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$$&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$$&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]],&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;processEnvironments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;processRefs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;skipHtmlTags&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;noscript&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;textarea&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;pre&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;ignoreHtmlClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;tex2jax_ignore&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;renderActions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;find_script_mathtex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelectorAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;script[type^=&quot;math/tex&quot;]&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+              &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;display&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/; *mode=display/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+              &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;math&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;MathItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;textContent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputJax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+              &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createTextNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+              &lt;span class=&quot;nx&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parentNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;replaceChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+              &lt;span class=&quot;nx&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;delim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+              &lt;span class=&quot;nx&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;delim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+              &lt;span class=&quot;nx&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;svg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;fontCache&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;行外公式&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;❌
+
+test test test
+
+$$
+formula
+$$
+
+test test
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;🙆
+
+test test test
+
+$$formula$$
+
+test test
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;行内公式&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;test test test $$formula$$ test test test
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;对于&lt;/td&gt;
+      &lt;td&gt;，需要单独使用|，且不能包含在\(..\)之间，否则会呈现&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;停止jeklly-serve后无法再次启动的原因&quot;&gt;停止jeklly serve后无法再次启动的原因&lt;/h2&gt;</content><author><name>Handan YU</name></author><summary type="html">markdown latex</summary></entry><entry><title type="html">损失函数 Loss Function</title><link href="http://localhost:4000/2022/01/06/loss-function.html" rel="alternate" type="text/html" title="损失函数 Loss Function" /><published>2022-01-06T00:00:00+08:00</published><updated>2022-01-06T00:00:00+08:00</updated><id>http://localhost:4000/2022/01/06/loss-function</id><content type="html" xml:base="http://localhost:4000/2022/01/06/loss-function.html">&lt;h5 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#0-1 Loss&quot;&gt;0-1 Loss&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Binary cross entropy / log Loss&quot;&gt;Binary cross entropy / log Loss&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Square Loss&quot;&gt;Square Loss&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Exponential Loss&quot;&gt;Exponential Loss&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Hinge Loss / Max Margin Loss&quot;&gt;Hinge Loss / Max Margin Loss&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Perceptron Loss&quot;&gt;Perceptron Loss&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Cross-entropy Loss&quot;&gt;Cross-entropy Loss&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Maximum Likelihood Estimation&quot;&gt;Maximum Likelihood Estimation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;0-1 Loss&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;0-1-loss&quot;&gt;0-1 Loss&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;used in Preceptron&lt;/li&gt;
+  &lt;li&gt;\(L(Y,\hat{Y})\) = 1, if |\(Y-\hat{Y}\)| \(\geq T.\) else 0&lt;/li&gt;
+  &lt;li&gt;non-convex function&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;Binary cross entropy / log Loss&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;binary-cross-entropy--log-loss&quot;&gt;Binary cross entropy / log Loss&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;used in LR&lt;/li&gt;
+  &lt;li&gt;L(Y,P(Y|X)) = -\(\log\)P(Y|X)&lt;/li&gt;
+  &lt;li&gt;L = -\(\frac{1}{N}\sum_{i=1}^Ny_i\log \hat{y_i}+(1-y_1)\log (1-\hat{y_i})\)
+    &lt;ul&gt;
+      &lt;li&gt;where \(\hat{y_i}=p(y_i\)|\(X)\)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;sensitive to noise compared with &lt;a href=&quot;#Hinge Loss / Max Margin Loss&quot;&gt;Hinge Loss / Max Margin Loss&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;describe distribution of feature probability well&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;Square Loss&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;square-loss&quot;&gt;Square Loss&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;used in Regression,&lt;/li&gt;
+  &lt;li&gt;L = \(\sum_{N}(y_i-\hat{y_i})^2\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;Exponential Loss&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;exponential-loss&quot;&gt;Exponential Loss&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;used in AdaBoost&lt;/li&gt;
+  &lt;li&gt;sensitive to outliers and noises&lt;/li&gt;
+  &lt;li&gt;L=\(\frac{1}{N}\sum_N\exp(-y_i\hat{y_i})\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;Hinge Loss / Max Margin Loss&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;hinge-loss--max-margin-loss&quot;&gt;Hinge Loss / Max Margin Loss&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;L=\(\max (0, 1-y_i\hat{y_i})\)
+    &lt;ul&gt;
+      &lt;li&gt;if classify correctly, return 0; else \(1-y_i\hat{y_i}\)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;used in SVM&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;Perceptron Loss&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;perceptron-loss&quot;&gt;Perceptron Loss&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;L = \(\sum_N\max (0,-\hat{y_i})\)&lt;/li&gt;
+  &lt;li&gt;advanced hinge loss&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;Cross-entropy Loss&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;cross-entropy-loss&quot;&gt;Cross-entropy Loss&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;L = \(-\frac{1}{N}\sum_Ny_i\log \hat{y_i}\)
+    &lt;ul&gt;
+      &lt;li&gt;where \(\hat{y_i} = \frac{\exp(z_i)}{\sum_K\exp(z_i)}\)&lt;/li&gt;
+      &lt;li&gt;\(z_i\) is the output of class \(i\)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;Maximum Likelihood Estimation&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;maximum-likelihood-estimation&quot;&gt;Maximum Likelihood Estimation&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;write down Loss Function&lt;/li&gt;
+  &lt;li&gt;derivation Loss Function&lt;/li&gt;
+  &lt;li&gt;let equal to 0&lt;/li&gt;
+  &lt;li&gt;compute optimum parameters’ values&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Handan YU</name></author><summary type="html">Table of Contents 0-1 Loss Binary cross entropy / log Loss Square Loss Exponential Loss Hinge Loss / Max Margin Loss Perceptron Loss Cross-entropy Loss Maximum Likelihood Estimation</summary></entry><entry><title type="html">机器学习常见考点</title><link href="http://localhost:4000/2021/04/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%80%83%E7%82%B9.html" rel="alternate" type="text/html" title="机器学习常见考点" /><published>2021-04-05T00:00:00+08:00</published><updated>2021-04-05T00:00:00+08:00</updated><id>http://localhost:4000/2021/04/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%80%83%E7%82%B9</id><content type="html" xml:base="http://localhost:4000/2021/04/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%80%83%E7%82%B9.html">&lt;h5 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#各类激活函数的比较&quot;&gt;各类激活函数的比较&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#召回率、准确率、精确率&quot;&gt;召回率、准确率、精确率&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#准确率(Accuracy)&quot;&gt;准确率(Accuracy)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#精确率(Precision)&quot;&gt;精确率(Precision)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#召回率(Recall)&quot;&gt;召回率(Recall)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#训练误差和测试误差&quot;&gt;训练误差和测试误差&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#过拟合和欠拟合&quot;&gt;过拟合和欠拟合&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#用来划分样本的方法&quot;&gt;用来划分样本的方法&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#算法是否需要调参&quot;&gt;算法是否需要调参&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#算法是否需要迭代&quot;&gt;算法是否需要迭代&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#算法是否需要归一化处理&quot;&gt;算法是否需要归一化处理&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#逻辑斯蒂回归和线性回归的区别&quot;&gt;逻辑斯蒂回归和线性回归的区别&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#生成模型和判别模型&quot;&gt;生成模型和判别模型&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#参数模型和非参数模型&quot;&gt;参数模型和非参数模型&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#线性分类器和非线性分类器&quot;&gt;线性分类器和非线性分类器&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#解决类别不平衡问题&quot;&gt;解决类别不平衡问题&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#异常点敏感度&quot;&gt;异常点敏感度&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#各算法对应的损失函数&quot;&gt;各算法对应的损失函数&lt;/a&gt;
+&lt;a name=&quot;各类激活函数的比较&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;各类激活函数的比较&quot;&gt;各类激活函数的比较&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post_img/6.png&quot; alt=&quot;image-20200603124717993&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;取值范围：(0,1),(-1,1),[0,inf]&lt;/p&gt;
+
+&lt;p&gt;能根据输出的值判断使用的激活函数&lt;/p&gt;
+
+&lt;p&gt;对数几率回归（logistics regression）和一般回归分析有什么区别？：
+A. 对数几率回归是设计用来预测事件可能性的
+B. 对数几率回归可以用来度量模型拟合程度
+C. 对数几率回归可以用来估计回归系数
+D. 以上所有
+答案：D&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;召回率、准确率、精确率&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;召回率准确率精确率&quot;&gt;召回率、准确率、精确率&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post_img/7.png&quot; alt=&quot;img7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;准确率(Accuracy)&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;准确率accuracy&quot;&gt;准确率(Accuracy)&lt;/h2&gt;
+
+&lt;p&gt;准确率(accuracy) = 预测对的/所有 = (TP+TN)/(TP+FN+FP+TN)&lt;/p&gt;
+
+&lt;p&gt;缺点：结果偏向样本数量大的样本，不适用于糖尿病等疾病的监测（由于正常人占比远远大于患糖尿病等疾病的人，因此当模型的准确率很高的时候，并不能相信该模型是优秀的，因为这高准确率主要由TN来决定来，但在这种情况下，我们更关注TP尽可能大）&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;精确率(Precision)&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;精确率precision&quot;&gt;精确率(Precision)&lt;/h2&gt;
+
+&lt;p&gt;精确率(precision) = TP/(TP+FP)&lt;/p&gt;
+
+&lt;p&gt;缺点：只关心正样本的准确率&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;召回率(Recall)&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;召回率recall&quot;&gt;召回率(Recall)&lt;/h2&gt;
+
+&lt;p&gt;召回率(recall) = TP/(TP+FN)&lt;/p&gt;
+
+&lt;p&gt;适用于“犯罪监测”，此时关心被误判数量仅可能小，也就是FN尽可能小，TP尽可能大&lt;/p&gt;
+
+&lt;p&gt;假设我们要解决一个二类分类问题, 我们已经建立好了模型, 输出是0或1, 初始时设阈值为0.5, 超过0.5概率估计, 就判别为1, 否则就判别为0 ; 如果我们现在用另一个大于0.5的阈值, 那么现在关于模型说法, 正确的是 :
+A. 模型分类的召回率会降低或不变
+B. 模型分类的召回率会升高
+C. 模型分类准确率会升高或不变
+D. 模型分类准确率会降低
+答案: AC&lt;/p&gt;
+
+&lt;p&gt;the true positive rate will stay the same if we keep increasing the cutoff from 0.5 to 0.75, since the all real positive samples can still be predicted to the positive samples, and the true positive rate only rely on the number of real positive sample.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;训练误差和测试误差&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;训练误差和测试误差&quot;&gt;训练误差和测试误差&lt;/h1&gt;
+
+&lt;p&gt;随着训练样本的增多，平均训练误差会逐渐增大，平均测试误差会逐渐减小。由于训练数据增多，使得原先拟合模型效果变差，因此训练误差变差，但随着训练数据的增多，最终使得整体拟合效果更好，则测试误差会越小，因此训练误差和测试误差之间的差距就会减小。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post_img/8.png&quot; alt=&quot;image8&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;过拟合和欠拟合&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;过拟合和欠拟合&quot;&gt;过拟合和欠拟合&lt;/h1&gt;
+
+&lt;h2 id=&quot;过拟合&quot;&gt;过拟合&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在训练集上的表现好，但在测试集上的表现能力差。&lt;/li&gt;
+  &lt;li&gt;模型偏差为0，方差大&lt;/li&gt;
+  &lt;li&gt;泛化能力差&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;欠拟合&quot;&gt;欠拟合&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;对训练样本的一般性质尚未学好&lt;/li&gt;
+  &lt;li&gt;模型偏差大，方差为0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;产生过拟合的原因&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;产生过拟合的原因&quot;&gt;产生过拟合的原因&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;模型过于复杂
+    &lt;ul&gt;
+      &lt;li&gt;特征过多&lt;/li&gt;
+      &lt;li&gt;神经元过多&lt;/li&gt;
+      &lt;li&gt;核函数选择的过于复杂&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;训练数据量太少&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a name=&quot;产生欠拟合的原因&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;产生欠拟合的原因&quot;&gt;产生欠拟合的原因&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;模型过于简单&lt;/li&gt;
+  &lt;li&gt;训练数据量过多&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a name=&quot;过拟合的解决办法&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;过拟合的解决办法&quot;&gt;过拟合的解决办法&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;增加数据量&lt;/li&gt;
+  &lt;li&gt;降低模型的复杂度&lt;/li&gt;
+  &lt;li&gt;添加正则化项&lt;/li&gt;
+  &lt;li&gt;如果有正则项，则适当增大正则化系数&lt;/li&gt;
+  &lt;li&gt;集成学习的方法&lt;/li&gt;
+  &lt;li&gt;特征降维&lt;/li&gt;
+  &lt;li&gt;交叉验证&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a name=&quot;欠拟合的解决办法&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;欠拟合的解决办法&quot;&gt;欠拟合的解决办法&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;添加新特征，如在决策树学习中扩展分支，在神经网络学习中增加训练次数&lt;/li&gt;
+  &lt;li&gt;增加模型的复杂度，尝试使用核SVM，DNN，决策树&lt;/li&gt;
+  &lt;li&gt;如果有正则项，减少正则化系数&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a name=&quot;用来划分样本的方法&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;用来划分样本的方法&quot;&gt;用来划分样本的方法&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;随机设置比例&lt;/li&gt;
+  &lt;li&gt;交叉验证&lt;/li&gt;
+  &lt;li&gt;自助采样：适用于数据集较小，集成学习&lt;/li&gt;
+  &lt;li&gt;留出法&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a name=&quot;算法是否需要调参&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;算法是否需要调参&quot;&gt;算法是否需要调参&lt;/h1&gt;
+
+&lt;h2 id=&quot;需要进行调参的算法&quot;&gt;需要进行调参的算法&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;神经网络&lt;/li&gt;
+  &lt;li&gt;SVM&lt;/li&gt;
+  &lt;li&gt;岭回归&lt;/li&gt;
+  &lt;li&gt;LASSO&lt;/li&gt;
+  &lt;li&gt;加权线性回归&lt;/li&gt;
+  &lt;li&gt;LR&lt;/li&gt;
+  &lt;li&gt;K-Means&lt;/li&gt;
+  &lt;li&gt;AdaBoost&lt;/li&gt;
+  &lt;li&gt;GMM&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;不需要进行调参的算法&quot;&gt;不需要进行调参的算法&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;决策树&lt;/li&gt;
+  &lt;li&gt;LDA&lt;/li&gt;
+  &lt;li&gt;NB&lt;/li&gt;
+  &lt;li&gt;线性回归&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a name=&quot;算法是否需要迭代&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;算法是否需要迭代&quot;&gt;算法是否需要迭代&lt;/h1&gt;
+
+&lt;h2 id=&quot;需要经过多次迭代的算法&quot;&gt;需要经过多次迭代的算法&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;LR&lt;/li&gt;
+  &lt;li&gt;决策树&lt;/li&gt;
+  &lt;li&gt;神经网络&lt;/li&gt;
+  &lt;li&gt;聚类&lt;/li&gt;
+  &lt;li&gt;AdaBoost&lt;/li&gt;
+  &lt;li&gt;SVM&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;不需要经过多次迭代的算法&quot;&gt;不需要经过多次迭代的算法&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;LDA&lt;/li&gt;
+  &lt;li&gt;线性回归&lt;/li&gt;
+  &lt;li&gt;NB&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a name=&quot;算法是否需要归一化处理&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;算法是否需要归一化处理&quot;&gt;算法是否需要归一化处理&lt;/h1&gt;
+
+&lt;h2 id=&quot;需要进行归一化的算法&quot;&gt;需要进行归一化的算法&lt;/h2&gt;
+
+&lt;h3 id=&quot;需要进行梯度下降操作的算法&quot;&gt;需要进行梯度下降操作的算法&lt;/h3&gt;
+
+&lt;p&gt;因为当不归一化的时候可能在梯度下降法寻求最优解时，收敛速度很慢迭代次数很多。&lt;/p&gt;
+
+&lt;p&gt;e.g.LR，SVM，AdaBoosting,神经网络&lt;/p&gt;
+
+&lt;h3 id=&quot;需要进行计算距离的算法&quot;&gt;需要进行计算距离的算法&lt;/h3&gt;
+
+&lt;p&gt;因为如果其中一个特征值域范围很大，那么在进行距离计算的时候就主要取决于这一个特征而忽视其他特征。&lt;/p&gt;
+
+&lt;p&gt;e.g.KNN，K-Means，LDA&lt;/p&gt;
+
+&lt;h2 id=&quot;不需要进行归一化的算法&quot;&gt;不需要进行归一化的算法&lt;/h2&gt;
+
+&lt;h3 id=&quot;树形结构的算法&quot;&gt;树形结构的算法&lt;/h3&gt;
+
+&lt;p&gt;由于树形结构寻找最优解的时候采用的不是梯度下降（因为树形结构模型是分段的一般不可导），而是通过寻找最优分裂点&lt;/p&gt;
+
+&lt;p&gt;e.g.决策树，随机森林，XGBoost,Boosting Tree，GBDT&lt;/p&gt;
+
+&lt;h3 id=&quot;概率模型&quot;&gt;概率模型&lt;/h3&gt;
+
+&lt;p&gt;高斯混合模型(GMM)，朴素贝叶斯，LR&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;逻辑斯蒂回归和线性回归的区别&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;逻辑斯蒂回归和线性回归的区别&quot;&gt;逻辑斯蒂回归和线性回归的区别&lt;/h1&gt;
+
+&lt;p&gt;①逻辑斯蒂回归解决的是分类问题，而线性回归解决的则是预测问题。逻辑斯蒂回归将实例x划分到条件概率最大的那一类。
+②逻辑斯蒂回归的因变量是离散的，而线性回归得因变量是连续的，逻辑斯蒂回归可以看成是对数几率的线性回归。
+③逻辑斯蒂回归参数求解的过程中，使用到了极大似然估计而线性回归则使用最小二乘法。二者在求解时均用到了梯度下降的方法。&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;生成模型和判别模型&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;生成模型和判别模型&quot;&gt;生成模型和判别模型&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;生成式模型估计它们的联合概率分布P(x,y)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;判别式模型估计决策函数F(X)或后验概率分布P(y&lt;/td&gt;
+          &lt;td&gt;x)&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;生成模型&quot;&gt;生成模型&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;GMM&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;朴素贝叶斯&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;HMM（隐马尔可夫模型）&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;判别模型&quot;&gt;判别模型&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;SVM&lt;/li&gt;
+  &lt;li&gt;LDA&lt;/li&gt;
+  &lt;li&gt;神经网络&lt;/li&gt;
+  &lt;li&gt;线性回归&lt;/li&gt;
+  &lt;li&gt;。逻辑回归&lt;/li&gt;
+  &lt;li&gt;决策树&lt;/li&gt;
+  &lt;li&gt;Boosting&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a name=&quot;参数模型和非参数模型&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;参数模型和非参数模型&quot;&gt;参数模型和非参数模型&lt;/h1&gt;
+
+&lt;h2 id=&quot;参数模型&quot;&gt;参数模型&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;逻辑回归&lt;/li&gt;
+  &lt;li&gt;线性成分分析&lt;/li&gt;
+  &lt;li&gt;感知机&lt;/li&gt;
+  &lt;li&gt;线性判别分析（LDA）&lt;/li&gt;
+  &lt;li&gt;朴素贝叶斯&lt;/li&gt;
+  &lt;li&gt;K-Means&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;非参数模型&quot;&gt;非参数模型&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;决策树&lt;/li&gt;
+  &lt;li&gt;KNN&lt;/li&gt;
+  &lt;li&gt;支持向量机&lt;/li&gt;
+  &lt;li&gt;神经网络&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a name=&quot;线性分类器和非线性分类器&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;线性分类器和非线性分类器&quot;&gt;线性分类器和非线性分类器&lt;/h1&gt;
+
+&lt;h2 id=&quot;线性分类器&quot;&gt;线性分类器&lt;/h2&gt;
+
+&lt;p&gt;LR,贝叶斯分类，单层感知机，线性回归，SVM（线性核）,LDA，朴素贝叶斯，&lt;/p&gt;
+
+&lt;h2 id=&quot;非线性分类器&quot;&gt;非线性分类器&lt;/h2&gt;
+
+&lt;p&gt;决策树、多层感知机（神经网络），KNN，SVM（非线性核）&lt;/p&gt;
+
+&lt;h2 id=&quot;根据特征数量与样本数量比选择分类器&quot;&gt;根据特征数量与样本数量比选择分类器&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;当特征数量很大且与样本数量差不多，选择LR或SVM(线性核)&lt;/li&gt;
+  &lt;li&gt;当特征数量较小，样本数量一般时，选择SVM(非线性核）&lt;/li&gt;
+  &lt;li&gt;当特征数量较小而样本数量很多，选择添加特征变为第一种&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a name=&quot;解决类别不平衡问题&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;解决类别不平衡问题&quot;&gt;解决类别不平衡问题&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;直接对训练集中占多数的类别样本进行“欠采样”&lt;/li&gt;
+  &lt;li&gt;对训练集中占少数的类别样本进行“过采样”（如通过对该类数据进行插值），也就是复制多个该类别样本&lt;/li&gt;
+  &lt;li&gt;阈值移动&lt;/li&gt;
+  &lt;li&gt;直接基于原数据集进行学习，对预测值进行再缩放处理&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a name=&quot;异常点敏感度&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;异常点敏感度&quot;&gt;异常点敏感度&lt;/h1&gt;
+
+&lt;h2 id=&quot;异常值敏感的算法&quot;&gt;异常值敏感的算法&lt;/h2&gt;
+
+&lt;p&gt;线性回归，LR,AdaBoosting，SVM&lt;/p&gt;
+
+&lt;h2 id=&quot;异常值不敏感的算法&quot;&gt;异常值不敏感的算法&lt;/h2&gt;
+
+&lt;p&gt;&lt;a name=&quot;各算法对应的损失函数&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;各算法对应的损失函数&quot;&gt;各算法对应的损失函数&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;最小二乘法——均方误差&lt;/li&gt;
+  &lt;li&gt;SVM——Hinge Loss&lt;/li&gt;
+  &lt;li&gt;LR——对数损失&lt;/li&gt;
+  &lt;li&gt;AdaBoosting——指数损失函数&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Handan YU</name></author><summary type="html">Table of Contents 各类激活函数的比较 召回率、准确率、精确率 准确率(Accuracy) 精确率(Precision) 召回率(Recall) 训练误差和测试误差 过拟合和欠拟合 用来划分样本的方法 算法是否需要调参 算法是否需要迭代 算法是否需要归一化处理 逻辑斯蒂回归和线性回归的区别 生成模型和判别模型 参数模型和非参数模型 线性分类器和非线性分类器 解决类别不平衡问题 异常点敏感度 各算法对应的损失函数</summary></entry><entry><title type="html">聚类算法</title><link href="http://localhost:4000/2021/03/04/%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95.html" rel="alternate" type="text/html" title="聚类算法" /><published>2021-03-04T00:00:00+08:00</published><updated>2021-03-04T00:00:00+08:00</updated><id>http://localhost:4000/2021/03/04/%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95</id><content type="html" xml:base="http://localhost:4000/2021/03/04/%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95.html">&lt;h5 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#K-Means&quot;&gt;K-Means&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#GMM&quot;&gt;GMM&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#DBSCAN&quot;&gt;DBSCAN&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#层次聚类&quot;&gt;层次聚类&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#谱聚类&quot;&gt;谱聚类&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#聚类模型的评价&quot;&gt;聚类模型的评价&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#聚类性能度量内部指标&quot;&gt;聚类性能度量内部指标&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#聚类性能度量外部指标&quot;&gt;聚类性能度量外部指标&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;K-Means&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;k-means&quot;&gt;K-Means&lt;/h2&gt;
+
+&lt;h3 id=&quot;模型&quot;&gt;模型&lt;/h3&gt;
+
+\[min_{C_1,C_2,\mu_1,\mu_2}~~~\sum_{X_i\in C_1}||X_i-\mu_1||^2_2+\sum_{X_i\in C_2}||X_i-\mu_2||^2_2\]
+
+&lt;p&gt;相当于\(X_i\)是服从协方差为单位阵的高斯分布，是一种特殊的GMM。&lt;/p&gt;
+
+&lt;h3 id=&quot;求解&quot;&gt;求解&lt;/h3&gt;
+
+\[Step1:已知\mu_1^k,\mu_2^k，求解C_1^{k+1},C_2^{k+1}\\
+C_1^{k+1},C_2^{k+1}=argmin_{C_1,C_2}~~F(C_1,C_2,\mu_1^k,\mu_2^k)\\\]
+
+\[Step2:已知C_1^{k},C_2^{k}，求解\mu_1^{k+1},\mu_2^{k+1}\\
+\mu_1^{k+1},\mu_2^{k+1}=argmin_{C_1,C_2}~~F(C_1^k,C_2^k,\mu_1,\mu_2)\\\]
+
+&lt;p&gt;重复迭代Step1,2&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;GMM&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;gmmp206&quot;&gt;GMM——P206&lt;/h2&gt;
+
+&lt;h3 id=&quot;模型-1&quot;&gt;模型&lt;/h3&gt;
+
+\[max_{p,\mu_1,\mu_2,\Sigma_1,\Sigma_2}~~~\prod_{i=1}^m[\sum_{k=1}^Kp_k\frac{1}{\sqrt{2\pi}|\Sigma_k|}exp(-\frac{(X_i-\mu_k)^T\Sigma_k(X_i-\mu_k)}{2})]\]
+
+&lt;h3 id=&quot;求解-1&quot;&gt;求解&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;E-Step: 已知\(\mu\),\(\Sigma\),\(p\)，求解$i$样本被聚类到$k$类的概率\(w^{(1)}_k\)&lt;/li&gt;
+&lt;/ul&gt;
+
+\[w_k^{(i)}=\frac{p_kN(X_i|\mu_k,\Sigma_k)}{\sum_{j=1}^kp_jN(X_i|\mu_j,\Sigma_j)}\]
+
+&lt;p&gt;其中\(p_j\)表示\(j\)类被选中的概率&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;M-SteP: 更新\(\mu\),\(\Sigma\),\(p\)&lt;/p&gt;
+
+\[p_k=\frac{\sum_{i=1}^mw_k^{(i)}}{m}\\
+\mu_k=\frac{\sum_{i=1}^mw_k^{(i)}x_i}{\sum_{i=1}^mw_k^{(i)}}\\
+\Sigma_k=\frac{\sum_{i=1}^mw_k^{(i)}(x_i-\mu_k)^T(x_i-\mu_k)}{\sum_{i=1}^mw_k^{(i)}}\]
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;DBSCAN&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;dbscanp221&quot;&gt;DBSCAN——P221&lt;/h2&gt;
+
+&lt;p&gt;由于K-Means和GMM都只能处理凸函数，因此引入基于密度的聚类&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;层次聚类&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;层次聚类&quot;&gt;层次聚类&lt;/h2&gt;
+
+&lt;p&gt;&lt;a name=&quot;谱聚类&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;谱聚类&quot;&gt;谱聚类&lt;/h2&gt;
+
+&lt;p&gt;&lt;a name=&quot;聚类模型的评价&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;聚类模型的评价&quot;&gt;聚类模型的评价&lt;/h2&gt;
+
+&lt;p&gt;&lt;a name=&quot;聚类性能度量内部指标&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;聚类性能度量内部指标&quot;&gt;聚类性能度量内部指标&lt;/h3&gt;
+
+&lt;p&gt;DB指数(DBI)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;类内距离\(avg(C_i)=\frac{2\sum_{j,k}d(j,k)}{\#C(\#C-1)}\)&lt;/li&gt;
+  &lt;li&gt;类间距离\(d_{cen}(\mu_i,\mu_j)\)，其中\(\mu_i\)为第\(i\)类中心点&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;由于我们希望类内距离越小，类间距离越大，因此DBI越小越好&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;聚类性能度量外部指标&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;聚类性能度量外部指标&quot;&gt;聚类性能度量外部指标&lt;/h3&gt;
+
+&lt;p&gt;在已知样本分类结果的前提下&lt;/p&gt;
+
+\[RI=\frac{2(|SS|+|DD|)}{\#C(\#C-1)}\]
+
+&lt;p&gt;其中|SS|表示同一类的还是被聚在一起的个数，|DD|表示不同类的还是被聚在不同类的个数,\(\#C\)表示所有样本数量&lt;/p&gt;</content><author><name>Handan YU</name></author><summary type="html">Table of Contents K-Means GMM DBSCAN 层次聚类 谱聚类 聚类模型的评价 聚类性能度量内部指标 聚类性能度量外部指标</summary></entry><entry><title type="html">雅思经验</title><link href="http://localhost:4000/2020/09/26/%E9%9B%85%E6%80%9D%E7%BB%8F%E9%AA%8C.html" rel="alternate" type="text/html" title="雅思经验" /><published>2020-09-26T00:00:00+08:00</published><updated>2020-09-26T00:00:00+08:00</updated><id>http://localhost:4000/2020/09/26/%E9%9B%85%E6%80%9D%E7%BB%8F%E9%AA%8C</id><content type="html" xml:base="http://localhost:4000/2020/09/26/%E9%9B%85%E6%80%9D%E7%BB%8F%E9%AA%8C.html">&lt;p&gt;首先亮上我最终过关的成绩单&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post_img/9.png&quot; alt=&quot;img9&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;虽然成绩并不是很高,对于很多商学、文科的同学来说这个分数还远远不够,但是俗话说的好“结果不重要,重要的是过程”,所以我想将我这三年对于雅思挖掘到的一些经验和教训分享给还在冲向目标路上的烤鸭们~~&lt;/p&gt;
+
+&lt;h3 id=&quot;首先说一下我也雅思的结缘吧&quot;&gt;&lt;strong&gt;首先说一下我也雅思的结缘吧!&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;由于高考的失利,去到了与自己本来水平稍为低一丢丢的大学(本来这么认为的,其实我的大学是全国最美的大学——马云的母校), 于是在高考结束的暑假和家人一同商讨了我之后的人生规划,最后决定在本科毕业后去国外留学在本专业上继续深造. 而能够顺利申请到国外的学校的敲门砖就是雅思过线. 于是我在那个暑假我报班(新航道)大致了解学习了雅思考试内容.&lt;/p&gt;
+
+&lt;p&gt;所以说我从进入大学的那一刻起我就有了我的奋斗目标——高绩点,过雅思,多竞赛.&lt;/p&gt;
+
+&lt;p&gt;雅思成绩的有效期是2年 ,也就是在大一和大二考得的成绩可以视为无效(但对于需要参加学校交流项目当然还是有用滴). 在通过那个暑期的培训后,发现口语是我读书以来第一次接触, 于是想着用大一的课余时间来加强我的口语能力.机会总是给有准备的人的,之前我从不接校园路边的广告,就有这么一天我收了,是一个美式英语培训机构——ishow的广告.也就这样我学完了中级,虽然最后由于个人精力有限没有坚持到高级影视,但我的确学到了很多,在那儿的一个学期,单词与单词之间的连读、语音语调以及我演讲能力都得到了很大的提升.这算是我大一的最大一个收获.&lt;/p&gt;
+
+&lt;p&gt;又一次锻炼的机会来了,大一到大二的暑假,成功参加了学校组织的UCLA暑期游学项目,正好将我学到的口语技巧加以了运用.那有了学习—运用这两步,接下来我就想通过考试来测试一下自己的水平,于是抱着试一试体验体验的想法报了第一次雅思考试,其实当时的我真的就是一个小白,压根儿就不知道口语还有题库😌.就这样与一位黑人小哥哥悠闲自在地聊了十多分钟.在笔试考场中收获了爱马仕笔笔一支、橡皮一块. 两周后的周五12点准时查了分,很好听力阅读都只有5.5,作文竟然只有5,哇塞我的口语有6诶. 其实这很符合我当时的实力, 我没有刷过什么雅思真题,没有练习过写作,只是学习了口语.所以当时我给了我自己很大的信心,“口语万年5.5”不会在我身上发生了🤪&lt;/p&gt;
+
+&lt;p&gt;时间不等人,转眼间我要大三了,雅思成绩要生效了,我不能在这样玩玩了.但是我被六级飘过的成绩重重地打击了,我没有勇气报名雅思.一直想着准备好了再报(因为报名费实在太贵了),但其实永远没有准备好的时候.大三的那个国庆我鼓起勇气报了11月底的考试,从那个国庆开始我每天在课间刷听力,没课的时候刷阅读,晚上练习口语作文.&lt;/p&gt;
+
+&lt;h3 id=&quot;第一次正式准备雅思感觉有些方法还是可行的&quot;&gt;&lt;strong&gt;第一次正式准备雅思:(感觉有些方法还是可行的)&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;第一次试水听力,阅读和作文都成功上岸了,口语却溺水而亡了😫&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;听力
+    &lt;ol&gt;
+      &lt;li&gt;练习关键词信号词定位能力:刚开始还是给自己充足的读题时间,逐渐地缩短读题时间&lt;/li&gt;
+      &lt;li&gt;分场景训练:每天记忆2个场景的词汇,然后训练这两个场景的真题——推荐小站雅思app&lt;/li&gt;
+      &lt;li&gt;分section训练:当将所有的场景都熟悉了,就开始section训练,&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;p&gt;&lt;strong&gt;因此首先训练这section 1 &amp;amp; 4.&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;由于section1和4基本都是填空题形式,而且是比较容易通过预判,运用所记的场景词汇来解决的&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;确定空格单词个数要求(注意⚠️a number可以属于a word)&lt;/li&gt;
+      &lt;li&gt;划出关键词(空格前后的限定词), 判断空格单词词性,如果根据场景预判空格内容&lt;/li&gt;
+      &lt;li&gt;同时划出线索词,也就是方便确定听力播放到哪个位置了,有时候特别容易产生的现象:比如你一直在等空格4的答案,但是一直到录音结束都没有听到第四题的关键词信息.这样如果只是瞎等就会错过很多题目,这时候就需要线索词来帮助判断录音进展.&lt;/li&gt;
+      &lt;li&gt;听音过程中注意留意信号词(转折词,否定词,重读的地方以及停顿的地方),这些词的前后都有可能是答案词出没的地方.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;strong&gt;接下来训练section 2 &amp;amp; 3&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;由于这两个部分的题目基本是选择题,因此可以一起训练&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;同样需要划出关键词和线索词, 这时候需要对答案选项进行分类.比如情感类题目可以对选项根据好坏分类&lt;/li&gt;
+      &lt;li&gt;对于选择题,需要积累一些常见的同义词替换,原文和选项中的词很容易产生同意替换现象.&lt;/li&gt;
+      &lt;li&gt;这两个section中很容易出地图题,对于地图题
+        &lt;ul&gt;
+          &lt;li&gt;首先默读图上已有的建筑,道路,设施名称,同时找到起始位置,以便于听录音的时候能够快速反映过来在那个位置&lt;/li&gt;
+          &lt;li&gt;积累表示方位的单词和词组,((可以和小作文中的地图题一同准备))&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;阅读&lt;/p&gt;
+
+    &lt;p&gt;先全部大致审一下题目,划出关键词,然后全文仔细&lt;strong&gt;扫读&lt;/strong&gt;(不一定每个单词都要翻译到位,根据题干中的关键词去读,对于一般的句子看过,对于有出现关键词的地方,仔细阅读上三句下三句的内容).&lt;/p&gt;
+
+    &lt;p&gt;对于题干以及选项的关键词一般包括:中心名词,定位词(年份,人名,专有名词,地点名)&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;填空题&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;这个题型算是最简单的了,因为首先它是按顺序出题,其次填写的是原文中的原词.&lt;/p&gt;
+
+    &lt;p&gt;需要运用的技巧就是预判空格中填写的词性,以及前后的限定信息的抓取&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;选择题&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;一般有细节题和主旨题两种类型,对于细节题只需要划出题干以及答案句中的关键词,然后阅读就可.对于主旨题,可以根据全文的基调来判断.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;判断题&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;按顺序出题,&lt;/p&gt;
+
+    &lt;p&gt;有YES,NO,NOT GIVEN和TRUE,FALSE,NOT GIVEN两种题型,在纸质考试中看清题目,并且写全了&lt;/p&gt;
+
+    &lt;p&gt;其中注意区分NO/FALSE和NOT GIVEN.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;当你不确定是NO/FALSE还是NOT GIVEN,此时采用“否命题”来判断,若其“否命题”在文中能够印证是对的,那么这道题就是NO/FALSE;若其“否命题”在文中也不能找到印证的内容,那么这道题就是NOT GIVEN.&lt;/li&gt;
+      &lt;li&gt;划出句子的主谓宾,若主谓宾中至少有一个在文中没有出现过, 那么这道题就是NOT GIVEN.
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;小标题&lt;/strong&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;p&gt;划出每个标题中的中心名词(注意⚠️名词的单复数),注意时态,&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;人物配对&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;人物在文中按顺序出现,但是配对内容不一定按顺序,有时候一个人物对应多个句子&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;句子配对&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;题干句在文中按顺序出现,但答案句不一定按顺序,对于纸质考试,可以先预判根据一般逻辑判断题干句可能匹配的答案句有哪些,然后再在看原文的时候排除错误的.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;作文(文末有我自己总结的详细的超有用的词汇、词组、模版等干货哦)
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;小作文&lt;/p&gt;
+
+        &lt;p&gt;主要就是看真题的高分范文,总结逻辑以及词汇,多看图多练习&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;大作文&lt;/p&gt;
+
+        &lt;p&gt;主要就是看真题的高分范文,根据不同主题积累对应词汇词组以及观点&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;口语&lt;/p&gt;
+
+    &lt;p&gt;当时我知道了口语有题库,于是我狠下心来对着题库的题目一个一个地写素材,说实话真的很累很慢. 过程中听听小站雅思的公开课(推荐王丽颖老师的课),她的课让我学到了很多P1中的答题思路和一些好的素材. 那会儿我练习口语的时间每天不少于2小时,一有空就嘴边开始念叨,洗澡的时候也念叨,骑车的时候还念叨,就为了能够做到英语脱口而出. 我有一个习惯就是喜欢将这些笔记啊,素材啊都写到word中,然后弄一个目录,这样方便我搜索查看. 为了让自己能有随机反应能力,我每天自己随机抽取P1中5个题号, P2中1个题号,然后开始练习.说实话当时我觉得我准备的已经很到位了.(&lt;del&gt;不好的习惯:把题目的所有回答答案都用文字写下来&lt;/del&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;第二次正式冲刺雅思&quot;&gt;&lt;strong&gt;第二次正式冲刺雅思&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;本来我是打算大三上期末考考完的寒假复习一个月后续战,报了3月6号的考试,然而突如其来的疫情打破了我所有的计划,就这样&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;我没有准备好,雅思还没开考,雅思开考了,我还没有准备好,雅思开考1个月了,我还没有准备好但是没时间了&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;最终鼓起勇气报了上海的9月6号机考,虽然有考虑到口语换题以及被压分都风险,但是我真的不想再经历一周失眠两晚了,不想再经历奋笔疾书的感觉了.&lt;/p&gt;
+
+&lt;p&gt;说实话这次备考的时间很多,从报名到考试本来就只有一个月,然后由于对于雅思对我的一次次打击,再加上离留学申请时间越来越近,我耗费在雅思上的时间越来越久,我真的压力太大了,在这一个月中我去了4趟医院,做了两次B超一次CT,吃了一个月杂七杂八的💊,在考前两周我终于挡不牢了发烧了.就这样在生病😷的一个月中我努力坚持每天说口语4小时,听力、阅读只能片段式的练习(想在自己之前有一定基础了),作文不停的看范文自己总结的模版想观点.就这样上战场了.&lt;/p&gt;
+
+&lt;p&gt;虽然最后也是老天待我,给了我运气,但也是我这么多年的积累和摸索的成果.这里说说这次口语的复习方式吧!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;首先我改变了之前将答案全部写成文字的习惯,而是将P1,P3每道题的核心词汇写下来,然后一开始的时候看着核心词临场组织语言说练习. 慢慢地做到不看核心词,看到题目直接说.然后对于P2,在每个所给的小问后面写上答题的思路和核心词汇,有时故事性很强的题目我会画流程图,然后看着草稿纸复述出来.&lt;/li&gt;
+  &lt;li&gt;由于此次考试遇到换题的交界处,考试很有可能考到全新的题目,于是我在5-8月题目的基础上,查看往年题库中的题目,然后进行题目分类总结.&lt;/li&gt;
+  &lt;li&gt;另外对于口语素材词汇的积累,我这里推荐一下Sharon黄文琪老师,大家可以关注她的微信公众号,里面会推送很多关于雅思口语中话题的表达以及核心词汇.还有口语生活老师Tara老师,大家可以去关注她的B站,对于语音语调欠缺或者生活用语表达欠缺的同学特别适合看一下她的视频.&lt;/li&gt;
+  &lt;li&gt;另外如可以通过流利说英语APP来对口语语音进行评分,趴趴英语APP中的素材库帮助你拓宽思路&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;小作文干货&quot;&gt;&lt;strong&gt;小作文干货&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;条形图/柱状图&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post_img/10.png&quot; alt=&quot;img10&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;地图题&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post_img/11.png&quot; alt=&quot;img11&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post_img/12.png&quot; alt=&quot;img12&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post_img/13.png&quot; alt=&quot;img13&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;流程图&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;类型&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;1． 某种事物的生产工艺或加工流程&lt;/p&gt;
+
+&lt;p&gt;2． 动植物的生命循环&lt;/p&gt;
+
+&lt;p&gt;3． 自然界某种现象的发展流程&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;注意点&lt;/strong&gt;⚠️：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;基本不会出现数据，以描述为主(在描述工序的时候，可以使用分词结构和状语从句)&lt;/li&gt;
+  &lt;li&gt;需要把图中出现的信息都描述&lt;/li&gt;
+  &lt;li&gt;主要使用的是一般现在时&lt;/li&gt;
+  &lt;li&gt;分段比较灵活，只要不同阶段之间的差距很明显，就可以另起一段&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;写作步骤&lt;/strong&gt;：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;确定流程的第一步&lt;/li&gt;
+  &lt;li&gt;判断流程图分几个步骤&lt;/li&gt;
+  &lt;li&gt;确定材料、工具和动词&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;词汇&lt;/strong&gt;：&lt;/p&gt;
+
+&lt;p&gt;动词：introduce, pass through, produce, go into, pass to, come out, flow through, filter through(滤过)&lt;/p&gt;
+
+&lt;p&gt;衔接词：&lt;/p&gt;
+
+&lt;p&gt;The first step is to…/ In the first stage, …&lt;/p&gt;
+
+&lt;p&gt;Then, …/Next, …&lt;/p&gt;
+
+&lt;p&gt;At this stage, what is needed to be done is to&lt;/p&gt;
+
+&lt;p&gt;Stage three of the process is when …&lt;/p&gt;
+
+&lt;p&gt;After this, …&lt;/p&gt;
+
+&lt;p&gt;Afterwards, …&lt;/p&gt;
+
+&lt;p&gt;Finally, …/At the end of the process, …&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;类别及其对应写法&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;对于只有一张图的流程图:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;开头段：介绍图（题目改写）&lt;/p&gt;
+
+&lt;p&gt;主题段：流程按步骤描述&lt;/p&gt;
+
+&lt;p&gt;结尾段：总结（有时可以与开头段呼应）&lt;/p&gt;
+
+&lt;p&gt;P1: The provided flow char describes the process of the … It is clear that there are … stages in this process, from initial … to the final…&lt;/p&gt;
+
+&lt;p&gt;P2: Consulting from the given chart, in the first stage, …. After that/after doing/next/afterwards/stage three of the process is… . Finally,&lt;/p&gt;
+
+&lt;p&gt;P3: Thus, the process of the diagram shows the stage of…&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;例子&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post_img/14.png&quot; alt=&quot;img14&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The diagram illustrates in four stages how a refrigerator works.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(1)&lt;/strong&gt;Consulting from the given diagram, in the first stage, high-pressure liquid flows in the capillary tube. Food within refrigerator sends out vapor. In this stage, the high-pressure liquid is heated by the vapor to warm low-pressure gas. &lt;strong&gt;(2)&lt;/strong&gt;Next, the warm low-pressure gas flows ahead, arriving at the compressor. At this stage, it is compressed to hot, high-pressure gas. &lt;strong&gt;(3)&lt;/strong&gt;Stage three of the process is when the hot, high-pressure gas passed the condenser, where it is cooled to cool high-pressure liquid. Then the heat is transferred to atmosphere. &lt;strong&gt;(4)&lt;/strong&gt;Finally, the cool high-pressure liquid continues to flow forward and enters into capillary tube. At this point, it is heated by the vapor from food within the refrigerator again and a new cycle begins.&lt;/p&gt;
+
+&lt;p&gt;Thus, the process diagram shows the principle of the refrigerator.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;有两幅图组成的流程图&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;注意最后需要进行一定的比较&lt;/p&gt;
+
+&lt;p&gt;开头段：介绍图&lt;/p&gt;
+
+&lt;p&gt;主题段一：第一幅图的流程&lt;/p&gt;
+
+&lt;p&gt;主题段二：第二幅图的流程&lt;/p&gt;
+
+&lt;p&gt;结尾段：两幅图的比较总结&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;例子&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post_img/15.png&quot; alt=&quot;img15&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The provided flow diagrams show the processes and the equipment used to make cement, and how these are used to produce concrete for building purposes.&lt;/li&gt;
+  &lt;li&gt;Consulting from the given diagrams, the first step in the cement productions is to introduce limestone and clay. These materials pass through crusher that produces a powder.&lt;/li&gt;
+  &lt;li&gt;Then this powder goes into mixer.&lt;/li&gt;
+  &lt;li&gt;After this, the product passes to a rotating heater which works with heat.&lt;/li&gt;
+  &lt;li&gt;Afterwards, the mixture goes into grinder where the cement comes out.&lt;/li&gt;
+  &lt;li&gt;At the end of the process, the cement is packed in bags.&lt;/li&gt;
+  &lt;li&gt;Referring to the concrete production, the process begins with a combination of 15% cement, 10% water, 25% sand and 50% gravel. These four elements are introduced into a concrete mixer.&lt;/li&gt;
+  &lt;li&gt;As mentioned above, the concrete production takes fewer steps than the cement production, however it is necessary to use more materials than the latter process in order to obtain the final product. The last difference between both progresses is that the concrete mixer does not work with heat.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;大作文干货&quot;&gt;&lt;strong&gt;大作文干货&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;题型&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;优缺点&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;背景+个人观点(From my perspective, inspite of its drawbacks/benefits, … brings more benefits/negative effects to… / we cannot ignore the value of…/the risk of …)&lt;/p&gt;
+
+&lt;p&gt;It is certainly true that there are several potential disadvantages of… The most distinct demerit is that … What is worse,… Apart from those, another underlying downside is …&lt;/p&gt;
+
+&lt;p&gt;However, in spite of those problems of … there are numerous advantages. First and foremost/To commence, … Additionally, …&lt;/p&gt;
+
+&lt;p&gt;In conclusion, I confirm that … will bring far more gains/losses than losses/gains. (If … is used at a right place, it will …)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Discuss both views and give your own opinion&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;题干观点——我的观点&lt;/p&gt;
+
+&lt;p&gt;对立关系——虽然… 但是….&lt;/p&gt;
+
+&lt;p&gt;共存关系——缺一不可&lt;/p&gt;
+
+&lt;p&gt;背景+题目提供观点阐述(Some people assert/advocate that, while others persist …)+个人观点(From my perspective, …)&lt;/p&gt;
+
+&lt;p&gt;Admittedly, it is reasonable for some to argue that…. This is because,… Furthermore,… Due to the fact that,…&lt;/p&gt;
+
+&lt;p&gt;On the other hand, it is undeniable that… The reason for this is that…. Additionally,….&lt;/p&gt;
+
+&lt;p&gt;In my opinion,….&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Do you agree or disagree?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;背景+争论焦点+个人观点(是否同意)&lt;/p&gt;
+
+&lt;p&gt;Admittedly, it is reasonable for some to argue that 个人不赞同的观点&lt;/p&gt;
+
+&lt;p&gt;What I want to rebut, however, is that 个人赞同的观点. The reason for this is that… Additonally, …&lt;/p&gt;
+
+&lt;p&gt;In conclusion, I re-confirm my conviction that …&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What are the reasons? what are the effects of this trend…?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;背景+问题+This essay aims to explore the causes of .. and then represent relevant measures of…&lt;/p&gt;
+
+&lt;p&gt;The potential reasons are complicated and manifold. To commence, it can be mainly owed to…原因1+解释1. Still, 原因2is another factor to be considered.+解释2. Last, … has resulted in 原因3+解释3&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;主题&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;除了最常见范围最广的社会类话题,还有以下几类,可以事先准备&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post_img/16.png&quot; alt=&quot;img16&quot; /&gt;&lt;/p&gt;</content><author><name>Handan YU</name></author><summary type="html">首先亮上我最终过关的成绩单</summary></entry><entry><title type="html">分类算法</title><link href="http://localhost:4000/2020/04/03/%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95.html" rel="alternate" type="text/html" title="分类算法" /><published>2020-04-03T00:00:00+08:00</published><updated>2020-04-03T00:00:00+08:00</updated><id>http://localhost:4000/2020/04/03/%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95</id><content type="html" xml:base="http://localhost:4000/2020/04/03/%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95.html">&lt;h5 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#逻辑回归&quot;&gt;逻辑回归&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#Logist 函数&quot;&gt;Logist 函数&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#目标函数&quot;&gt;目标函数&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#最大似然求解Loss Function&quot;&gt;最大似然求解Loss Function&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#运用梯度下降得到参数更新递推公式&quot;&gt;运用梯度下降得到参数更新递推公式&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#朴素贝叶斯&quot;&gt;朴素贝叶斯&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#条件概率&quot;&gt;条件概率&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#极大似然估计&quot;&gt;极大似然估计&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#SVM&quot;&gt;SVM&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#目标&quot;&gt;目标&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#支持向量&quot;&gt;支持向量&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#最优化问题&quot;&gt;最优化问题&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#对偶问题&quot;&gt;对偶问题&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#求支撑向量&quot;&gt;求支撑向量&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#求分界线&quot;&gt;求分界线&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#运用梯度下降方法求解SVM&quot;&gt;运用梯度下降方法求解SVM&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#决策树&quot;&gt;决策树&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#决策树针对缺失数据的处理办法&quot;&gt;决策树针对缺失数据的处理办法&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#信息熵&quot;&gt;信息熵&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#决策树类型&quot;&gt;决策树类型&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#ID3&quot;&gt;ID3&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#C4.5&quot;&gt;C4.5&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#CART&quot;&gt;CART&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#感知机算法&quot;&gt;感知机算法&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#目标&quot;&gt;目标&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#运用梯度下降进行求解&quot;&gt;运用梯度下降进行求解&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#具体做题步骤&quot;&gt;具体做题步骤&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#LDA&quot;&gt;LDA&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#二分类&quot;&gt;二分类&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#多分类&quot;&gt;多分类&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;逻辑回归&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;逻辑回归lrp57&quot;&gt;逻辑回归(LR)——P57&lt;/h2&gt;
+
+&lt;p&gt;标准逻辑回归是结果为0，1的二分类算法。目标是求\(P(y_i=1\|x_i,w)\)，若其大于\(\frac{1}{2}\)，则预测分类结果为1，否则为0。&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;Logist 函数&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;logist-函数&quot;&gt;Logist 函数&lt;/h3&gt;
+
+&lt;p&gt;令\(p(x_i) = P(y_i=1\|x_i,w)\)，构建\(p(x_i)\)与\(w^Tx_i\)之间的关系式。&lt;/p&gt;
+
+&lt;p&gt;首先提出以下猜想&lt;/p&gt;
+
+&lt;p&gt;\(~~~~~~~~~~~~~p(x_i)=w^Tx_i？~~~~~~~~~~~\log p(x_i) = w^Tx_i\)？&lt;/p&gt;
+
+&lt;p&gt;由于\(0\leq p(x)\leq 1\), \(w^Tx_i\)是无界的。于是我们说以上等式都是不成立的，因此又有了以下猜想&lt;/p&gt;
+
+\[\log \frac{p(x_i)}{1-p(x_i)} = w^Tx_i\]
+
+&lt;p&gt;可以证明\(\text{odd} = \frac{p(x_i)}{1-p(x_i)}\)的范围是[0,\(\inf\)]，则等式成立。我们称其为logist函数。&lt;/p&gt;
+
+&lt;p&gt;则可以化简得到&lt;/p&gt;
+
+\[p(x_i) = \frac{1}{1+e^{-w^Tx_i}}\]
+
+&lt;p&gt;可以类比Sigmoid函数发现，\(p(x_i)\)与Sigmoid函数一致。因此我们设\(p(x_i) = g(w^Tx_i)\).&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;目标函数&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;目标函数&quot;&gt;目标函数&lt;/h3&gt;
+
+\[max_w ~~~~\prod_{i=1}^n P(y_i|x_i,w)\]
+
+&lt;p&gt;其中&lt;/p&gt;
+
+\[P(y_i|x_i,w) = P(y_i=1|x_i,w)^{y_i}P(y_i=0|x_i,w)^{1-y_i}\]
+
+&lt;p&gt;&lt;a name=&quot;最大似然求解Loss Function&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;最大似然求解loss-function&quot;&gt;最大似然求解Loss Function&lt;/h3&gt;
+
+&lt;p&gt;令&lt;/p&gt;
+
+\[~~~~~~~~~ J = \prod_{i=1}^n P(y_i|x_i,w)\]
+
+\[~~~~~~~~~~~~~~~~~~~~~~~~= \prod_{i=1}^n g(w^Tx_i)^{y_i}(1-g(w^Tx_i))^{1-y_i}\]
+
+\[~~~~~~~~~~~~~~~\log J = \sum_{i=1}^my_i\ln (g(w^Tx_i))+(1-y_i)\ln (1-g(w^Tx_i))\]
+
+\[~~~~~~~~~~~~~~~~~~~~ \text{Loss} = - \log J\]
+
+&lt;p&gt;目标函数为&lt;/p&gt;
+
+\[~~~~~~~~~~~~~~~~~~~~ \min_w - \log J(w)\]
+
+&lt;p&gt;其中\(g\) 为sigmoid函数&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;运用梯度下降得到参数更新递推公式&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;运用梯度下降得到参数更新递推公式&quot;&gt;运用梯度下降得到参数更新递推公式&lt;/h3&gt;
+
+&lt;p&gt;对Loss函数求导&lt;/p&gt;
+
+\[\frac{\partial{-\log J}}{\partial{w}}=-\sum_{i=1}^n[y_i\frac{\frac{\partial{g(w^Tx_i)}}{\partial{w}}}{g(w^Tx_i)}+(1-y_i)\frac{\frac{-\partial{ g(w^Tx_i)}}{\partial{w}}}{1-g(w^Tx_i)}]\]
+
+&lt;p&gt;由于令\(z_i = w^Tx_i\)，则有&lt;/p&gt;
+
+\[\frac{\partial{g(w^Tx_i)}}{\partial{w}} = \frac{\partial{g(z_i)}}{\partial{z_i}}\frac{\partial{z_i}}{\partial{w}}\]
+
+&lt;p&gt;又因为&lt;/p&gt;
+
+\[\frac{\partial{g(z_i)}}{\partial{z_i}}=g(z_i)'=g(z_i)(1-g(z_i))\]
+
+&lt;p&gt;于是整合得&lt;/p&gt;
+
+\[\frac{\partial{-\log J}}{\partial{w}} = \sum_{i=1}^n(g{z_i})-y_i)x_i\]
+
+&lt;p&gt;根据梯度定义得到&lt;/p&gt;
+
+\[w:=w-\alpha\sum_{i=1}^n(g{z_i})-y_i)\]
+
+&lt;p&gt;&lt;a name=&quot;朴素贝叶斯&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;朴素贝叶斯p150&quot;&gt;朴素贝叶斯——P150&lt;/h2&gt;
+
+&lt;p&gt;假设各属性变量之间相互独立，条件独立性假设不成立时，朴素贝叶斯分类器仍有可能产生最优贝叶斯分类器。&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;条件概率&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;条件概率&quot;&gt;条件概率&lt;/h3&gt;
+
+\[P(A|B)=\frac{P(AB)}{P(B)}\]
+
+&lt;p&gt;&lt;a name=&quot;极大似然估计&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;极大似然估计&quot;&gt;极大似然估计&lt;/h3&gt;
+
+&lt;h4 id=&quot;离散型分布函数&quot;&gt;离散型——分布函数&lt;/h4&gt;
+
+&lt;p&gt;假设样本服从二项分布&lt;/p&gt;
+
+&lt;p&gt;目标为
+\(max_\theta~~~P(X|\theta)\)
+对于小概率事件来说：概率=频率&lt;/p&gt;
+
+&lt;h4 id=&quot;连续型密度函数&quot;&gt;连续型——密度函数&lt;/h4&gt;
+
+&lt;p&gt;假设样本服从高斯分布&lt;/p&gt;
+
+&lt;p&gt;期望=样本均值，方差=样本方差&lt;/p&gt;
+
+&lt;h5 id=&quot;mle证明最小二乘法&quot;&gt;MLE证明最小二乘法&lt;/h5&gt;
+
+&lt;p&gt;最小二乘法的本质是选择一个y拟合效果最好，也就是选择w,b使得$y_i$. 尽可能对，也就是取到$y_i$ 的概率尽可能大，又由于每个点是独立的即使得密度函数尽可能大，即&lt;/p&gt;
+
+\[max_{w,b}~~~~~~~~~~J(w,b)=\prod_{i=1}^mP(y_i|w,b)\]
+
+&lt;p&gt;而由于假设偏差\(\epsilon_i\) ~\(N(0,\sigma^2)\) ,则\(y_i\)~\(N(w^Tx_i+b,\sigma^2)\) ,则&lt;/p&gt;
+
+\[P(y_|w,b)=\frac{1}{\sqrt{2\pi}\sigma}exp(-\frac{(y_i-w^Tx_i-b)^2}{2\sigma^2})\]
+
+&lt;p&gt;则对\(J(w,b)\)取2对数，得到&lt;/p&gt;
+
+\[log J(w,b)=\frac{-1}{\sqrt{2\pi}\sigma}\sum_i(y_i-w^Tx_i-b)^2\]
+
+&lt;p&gt;则目标函数相当于&lt;/p&gt;
+
+\[min_{w,b}~~~~~~~~\sum_i(y_i-w^Tx_i-b)^2\]
+
+&lt;h5 id=&quot;例子&quot;&gt;例子：&lt;/h5&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post_img/2.png&quot; alt=&quot;图片pic1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;由于\(\epsilon_i\) ~\(N(0,1)\),则\(y_i\) ~\(N(exp(wx_i),1)\) ，则&lt;/p&gt;
+
+\[P(y_i|w,x_i)=\frac{1}{\sqrt{2\pi}}exp(-\frac{(y_i-exp(wx_i))^2}{2})\]
+
+&lt;p&gt;则极大似然函数J为&lt;/p&gt;
+
+\[J(w)=\prod_{i=1}^m P(y_i|w,x_i)\\
+=(\frac{1}{\sqrt{2\pi}})^m\prod_{i=1}^mexp(-\frac{(y_i-exp(wx_i))^2}{2})\]
+
+&lt;p&gt;则求对数似然函数log J&lt;/p&gt;
+
+\[log J(w)=D\cdot  \frac{1}{2}\sum_{=1}^m(y_i-exp(wx_i))^2\]
+
+&lt;p&gt;则对对数似然函数求导得&lt;/p&gt;
+
+\[\frac{\partial logJ}{\partial w}=-\sum_{i=1}^mx_iexp(wx_i)(y_i-exp(wx_i))\]
+
+&lt;p&gt;再令对数=0求解w&lt;/p&gt;
+
+&lt;h3 id=&quot;贝叶斯公式&quot;&gt;贝叶斯公式&lt;/h3&gt;
+
+\[P(A|B)=\frac{P(B|A)P(A)}{P(B)}\]
+
+&lt;h3 id=&quot;朴素贝叶斯方法&quot;&gt;朴素贝叶斯方法&lt;/h3&gt;
+
+\[argmax_k P(Y=k)\prod_{j=1}^n P(X_j=x_j|Y=k)\]
+
+&lt;h3 id=&quot;假设&quot;&gt;假设&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;每个特征相互独立&lt;/li&gt;
+  &lt;li&gt;每个实例相互独立&lt;/li&gt;
+  &lt;li&gt;训练集的分布和测试集的分布一致&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;平滑法&quot;&gt;平滑法&lt;/h3&gt;
+
+&lt;p&gt;对于某个数据集，由于数据的稀疏性，我们考虑到对于某个特征X在训练集中没有出现，那么将会导致整个分类概率变为0，这将会导致分类变得非常不合理，所以为了解决零概率的问题，避免过拟合。需要通过平滑法来解决&lt;/p&gt;
+
+&lt;h4 id=&quot;epsilon-平滑法&quot;&gt;Epsilon 平滑法&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;将\(P(x_m\)|\(y)=0\) 替换为\(P(x_m\)|\(y)=\epsilon\) , 其中\(\epsilon\)远小于$$\frac{1}{N}$​$(N是训练集样本数)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;laplace-平滑法加法平滑&quot;&gt;&lt;strong&gt;Laplace&lt;/strong&gt; 平滑法/加法平滑&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;假定训练样本很大时，每个分量x的计数加1造成的估计概率变化可以忽略不计，但可以通过减少方差来方便有效的避免零概率问题。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;在实际的使用中也经常使用加 \(\alpha\)（\(1\geq \alpha\geq 0\)）来代替简单加1。&lt;/p&gt;
+
+\[P(X_j=x_j|Y=k) = \frac{\alpha + \text{count}(Y=k,X_j=x_j)}{M\alpha + \text{count}(Y=k)}.\]
+
+    &lt;p&gt;其中M是\(X_j\)取值类别数。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;当训练集很小的时候，概率变化剧烈；当数据集大的时候，变化不大。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;减少方差(various)，增大偏差(bias)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;算法流程&quot;&gt;算法流程&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post_img/3.png&quot; alt=&quot;image3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;SVM&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;svmp121&quot;&gt;SVM——P121&lt;/h2&gt;
+
+&lt;p&gt;&lt;a name=&quot;目标&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;目标&quot;&gt;目标&lt;/h3&gt;
+
+&lt;p&gt;寻找最大边缘超平面，即使得支持向量距离超平面距离尽可能大&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;支持向量&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;支持向量&quot;&gt;支持向量&lt;/h3&gt;
+
+&lt;p&gt;样本中距离超平面最近的一些点，SVM的决策边界完全由支持向量决定，因此当将能够被正确分类且远离决策边界的样本点加入到训练数据中，也不会影响改变SVM原来确定的决策边界。&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;最优化问题&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;最优化问题&quot;&gt;最优化问题&lt;/h3&gt;
+
+&lt;p&gt;最大化两间隔边界之间的距离&lt;/p&gt;
+
+\[max_w~~~~~~~\frac{2}{||w||}\\\Rightarrow
+min_w~~~\frac{1}{2}||w||\\
+s.t. ~~~~~y_i(w^Tx_i+b)\geq 1\]
+
+&lt;p&gt;&lt;a name=&quot;对偶问题&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;对偶问题&quot;&gt;对偶问题&lt;/h3&gt;
+
+\[max_{\lambda_i}~~~~~~~~~  f(\lambda_i)\\=&amp;gt;
+max_{\lambda_i}~~-\frac{1}{2}\sum_{i=1}^n\sum_{j=1}^n\lambda_i\lambda_jy_iy_j(x_i.x_j)+\sum_{i=1}^n\lambda_i\\
+s.t.~~~~~\sum_{i=1}^n\lambda_iy_i=0,~~~\lambda_i\geq0\]
+
+&lt;p&gt;&lt;a name=&quot;求支撑向量&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;求支撑向量&quot;&gt;求支撑向量&lt;/h3&gt;
+
+&lt;p&gt;求\(\frac{\partial f(\lambda_i)}{\partial \lambda_i}=0\) 得到\(\lambda_i\) ，然后验证\(\sum_{i=1}^n \lambda_iy_i=0\) ，如果满足则\(\lambda_i&amp;gt;0\) 对应的样本就是支撑向量；否则分类讨论，即令其中一个\(\lambda_i=0\) ，求解剩余的\(\lambda_j\) 然后比较每次求得的\(f(\lambda_i)\)选择\(f(\lambda_i)\) 最小时候对应的\(\lambda_i\) ，且\(\lambda_i&amp;gt;0\)对应的样本就是支撑向量。&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;求分界线&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;求分界线&quot;&gt;求分界线&lt;/h3&gt;
+
+&lt;h4 id=&quot;最优权重&quot;&gt;最优权重&lt;/h4&gt;
+
+\[w^*=\sum_{i=1}^n\lambda_jy_ix_i\]
+
+&lt;p&gt;其中\(x_i\)是列向量&lt;/p&gt;
+
+&lt;h4 id=&quot;截距项&quot;&gt;截距项&lt;/h4&gt;
+
+&lt;p&gt;通过将任意支撑向量X(+1)，代入\(\sum_{i=1}^K\sum_{j=1}^nw_ix_{ji}+b=1\) 得到&lt;/p&gt;
+
+&lt;p&gt;或通过将任意支撑向量X(-1)，代入\(\sum_{i=1}^K\sum_{j=1}^nw_ix_{ji}+b=-1\)得到&lt;/p&gt;
+
+&lt;h4 id=&quot;最优分界线&quot;&gt;最优分界线&lt;/h4&gt;
+
+\[\sum_{i=1}^K\sum_{j=1}^nw_ix_{ji}+b=0\]
+
+&lt;p&gt;&lt;a name=&quot;运用梯度下降方法求解SVM&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;运用梯度下降方法求解svm&quot;&gt;运用梯度下降方法求解SVM&lt;/h3&gt;
+
+&lt;h4 id=&quot;线性svm&quot;&gt;线性SVM&lt;/h4&gt;
+
+&lt;h5 id=&quot;改进的线性svm目标函数软间隔&quot;&gt;改进的线性SVM目标函数——软间隔&lt;/h5&gt;
+
+\[min~~~~~\frac{1}{2}||w||_2^2+C\#K\]
+
+&lt;p&gt;其中C表示错分的惩罚力度，#K表示所分点个数，即\(K=\{i\)|\(y_i(w^Tx_i+b)&amp;lt;1\}\)&lt;/p&gt;
+
+&lt;p&gt;相当于
+\(min~~~~~\frac{1}{2}||w||_2^2+C \sum_{i\in K}(1-y_i(w^Tx_i+b))\)&lt;/p&gt;
+
+&lt;h5 id=&quot;参数更新&quot;&gt;参数更新&lt;/h5&gt;
+
+\[~~~~~~~~~~~~~~w:=w-\alpha(w-C\sum_{i\in K}y_ix_i)\\
+b:=b+\alpha C\sum_{i\in K}y_i\]
+
+&lt;h4 id=&quot;非线性svm&quot;&gt;非线性SVM&lt;/h4&gt;
+
+&lt;h5 id=&quot;非线性svm目标函数&quot;&gt;非线性SVM目标函数&lt;/h5&gt;
+
+\[min~~~~~\frac{1}{2}||w||_2^2+C \sum_{i\in K}(1-y_i(w^T\phi(x_i)))\\
+K=\{i|y_i(w^T\phi(x_i))&amp;lt;1\},~~~~~~~w=\sum_{i=1}^n\lambda_iy_i\phi(x_i)\]
+
+&lt;p&gt;令\(\alpha_i=\lambda_iy_i\)故化简为&lt;/p&gt;
+
+\[min~~~~~\frac{1}{2}\sum_{i,j}\alpha_i\alpha_j\phi(x_i)^T\phi(x_j)+C \sum_{i\in K}(1-y_i(\sum_j\alpha_j\phi(x_j)^T\phi(x_i)))\\\]
+
+&lt;p&gt;再令\(K_{ij}=\phi(x_i)^T\phi(x_j)\)，则最终化简为&lt;/p&gt;
+
+\[min~~~~~\frac{1}{2}\sum_{i,j}\alpha_i\alpha_jK_{ij}+C \sum_{i\in K}(1-y_i(\sum_j\alpha_jK_{ij}))\\\]
+
+&lt;h5 id=&quot;参数更新-1&quot;&gt;参数更新&lt;/h5&gt;
+
+\[\alpha_i:=\alpha_i-\eta(\bar{K}\alpha -C\sum_{i\in K}y_i\bar{K_i})\]
+
+&lt;h5 id=&quot;模型分类结果&quot;&gt;模型分类结果&lt;/h5&gt;
+
+\[\sum_j\alpha_jK_{ij}&amp;lt;0=&amp;gt;y_i=-1\\
+\sum_j\alpha_jK_{ij}&amp;gt;0=&amp;gt;y_i=1\]
+
+&lt;h4 id=&quot;根据线性非线性目标函数的区别以及c高斯核的sigma取值的性质判断目标函数对应的分类结果图&quot;&gt;根据线性、非线性目标函数的区别以及C,高斯核的\(\sigma\)取值的性质，判断目标函数对应的分类结果图&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;C表示分错点的惩罚程度。当C越大的时候说明对分错点的惩罚程度就越大，也就是对错误点的容忍率越低，分错点就会越少，（也就是强行将分割面插在很近的两个异类点之间）这时候两支撑面之间的间隔就会变小，\(\|w\|\) 会增大。但随着C趋向无穷，也就退回到了原始SVM，没有错误点可以容忍，此时\(\|w\|\) 不会改变，间隔也不会变，支撑向量数量减少（由于在改进SVM中那些容错点（两支撑面之间的点）也是支持向量）。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;\(\sigma\)越小，数据点越少，越容易造成过拟合&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post_img/4-1.png&quot; alt=&quot;image-4-1&quot; /&gt;
+&lt;img src=&quot;/assets/img/post_img/4-2.png&quot; alt=&quot;image-4-2&quot; /&gt;
+&lt;img src=&quot;/assets/img/post_img/4-3.png&quot; alt=&quot;image-4-3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;首先发现1，2的目标函数表示的是线性SVM，而1中的C=0.1,2中的C=1，则说明2中的SVM分错点更少一点，则1对应的图为c，2对应的图为b。&lt;/p&gt;
+
+&lt;p&gt;其次发现3，4，5的目标函数都是非线性SVM，且3中选择的核函数是多项式，而4，5选择的是高斯核函数，则3对应的决策边界是二次曲线则图应该为b。进而，4中的\(\sigma^2=1\),5中的\(\sigma^2=0.5\)，则5的拟合效果会更好曲线更弯曲且可能会过拟合因此5对应的e图，4对应的是a图&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;决策树&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;决策树p73&quot;&gt;决策树——P73&lt;/h2&gt;
+
+&lt;p&gt;&lt;a name=&quot;决策树针对缺失数据的处理办法&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;决策树针对缺失数据的处理办法&quot;&gt;决策树针对缺失数据的处理办法&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;放弃含缺失值的样本，仅使用无缺失值的样本来进行学习&lt;/li&gt;
+  &lt;li&gt;根据此属性值已知的其他样本，来估计这个缺失的属性值
+    &lt;ul&gt;
+      &lt;li&gt;赋给它当前结点所有样本中该属性最常见的值&lt;/li&gt;
+      &lt;li&gt;赋给它当前结点同类样本中该属性最常见的值&lt;/li&gt;
+      &lt;li&gt;为含缺失值属性的每个可能值赋予一个概率&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a name=&quot;信息熵&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;信息熵&quot;&gt;信息熵&lt;/h3&gt;
+
+&lt;h4 id=&quot;范围&quot;&gt;范围&lt;/h4&gt;
+
+&lt;h4 id=&quot;0log_2n-0-确定事件log_2n-均匀分布&quot;&gt;[0,\(\log_2n\)]， 0-&amp;gt;确定事件;\(\log_2n\)-&amp;gt;均匀分布&lt;/h4&gt;
+
+&lt;h4 id=&quot;特征&quot;&gt;特征&lt;/h4&gt;
+
+&lt;p&gt;Ent(x): 当x的取值越多越大&lt;/p&gt;
+
+&lt;p&gt;Ent(x,a): 当a的前提下，x的取值越多越大&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;决策树类型&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;决策树类型&quot;&gt;决策树类型&lt;/h3&gt;
+
+&lt;p&gt;&lt;a name=&quot;ID3&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;id3基于信息增益&quot;&gt;ID3(基于信息增益)&lt;/h4&gt;
+
+\[max_a~~~~~~Gain(D,a)=Ent(D)-Ent(D,a)\]
+
+&lt;p&gt;&lt;a name=&quot;C4.5&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;c45基于信息增益率&quot;&gt;C4.5(基于信息增益率)&lt;/h4&gt;
+
+\[max_a~~~Gain\_ratio(D,a)=\frac{Gain(D,a)}{Ent(a)}\]
+
+&lt;p&gt;&lt;a name=&quot;CART&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;cart基于基尼系数&quot;&gt;CART(基于基尼系数)&lt;/h4&gt;
+
+\[min_a~~~~~Gini(D,a)=\sum_{i=1}^mp(a_i)Gini(D_i)\\
+Gini(D_i)=1-\sum_{k\in D_i} p(k)^2\]
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post_img/5.png&quot; alt=&quot;image5&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;终止分支的条件&quot;&gt;终止分支的条件&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Gain &amp;lt;= threshold&lt;/li&gt;
+  &lt;li&gt;该节点上所有样本的类别相同&lt;/li&gt;
+  &lt;li&gt;所有特征都已经用过了&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;注意&quot;&gt;注意&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;信息增益不会&amp;lt;0&lt;/li&gt;
+  &lt;li&gt;叶子节点不一定确保只有一个类别&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;感知机算法&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;感知机算法&quot;&gt;感知机算法&lt;/h2&gt;
+
+&lt;p&gt;&lt;a name=&quot;目标&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;目标-1&quot;&gt;目标&lt;/h3&gt;
+
+&lt;p&gt;使得错分点个数尽可能的少&lt;/p&gt;
+
+\[min ~~~~~\#K\]
+
+&lt;p&gt;其中\(K=\{i\)|\(y_i(w^Tx_i+b)&amp;lt;0\}\)，相当于使错分类样本到分界面距离之和最小，即&lt;/p&gt;
+
+\[min ~~~\sum_{i\in K}|w^Tx_i+b|\\
+=&amp;gt;min ~~~\sum_{i\in K} -y_i(w^Tx_i+b)\]
+
+&lt;p&gt;&lt;a name=&quot;运用梯度下降进行求解&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;运用梯度下降进行求解&quot;&gt;运用梯度下降进行求解&lt;/h3&gt;
+
+&lt;p&gt;每次随机选择一个错分点\((x_i,y_i)\)进行参数更新&lt;/p&gt;
+
+\[w:=w+\alpha y_ix_i\\
+b:=b+\alpha y_i\]
+
+&lt;p&gt;&lt;a name=&quot;具体做题步骤&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;具体做题步骤&quot;&gt;具体做题步骤&lt;/h3&gt;
+
+&lt;p&gt;随机选取一个样本，若该样本是满足\(y_i(w^Tx_i+b)\leq0\)也就是错分点，就对参数进行更新，直到参数使得所有样本点都不是错分点为止。&lt;/p&gt;
+
+&lt;h2 id=&quot;神经网络dnnp98&quot;&gt;神经网络DNN——P98&lt;/h2&gt;
+
+&lt;h3 id=&quot;多层感知机算法前馈神经网络mlp&quot;&gt;多层感知机算法（前馈神经网络）MLP&lt;/h3&gt;
+
+&lt;h3 id=&quot;bp算法&quot;&gt;BP算法&lt;/h3&gt;
+
+&lt;p&gt;相当于优化过程，参数更新&lt;/p&gt;
+
+\[\delta^{(i)}=\delta^{(i+1)} {w^{(i+1)}}\cdot h(X^{(i)}).\\
+w^{(i)}:=w^{(i)}-\alpha X^{(i)}\delta^{(i)}\\
+b^{(i)}:=b^{(i)}-\alpha \delta^{(i)}\]
+
+&lt;p&gt;&lt;a name=&quot;LDA&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ldap60&quot;&gt;LDA——P60&lt;/h2&gt;
+
+&lt;p&gt;&lt;a name=&quot;二分类&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;二分类&quot;&gt;二分类&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;计算每个类别点集的中心点\(\mu_i\)&lt;/li&gt;
+  &lt;li&gt;计算每个类别点集的协方差矩阵\(\Sigma_i\)&lt;/li&gt;
+  &lt;li&gt;计算类间散度矩阵\(S_w=\Sigma_1+\Sigma_2\)&lt;/li&gt;
+  &lt;li&gt;判断\(S_w\)是否可逆（在python中用np.linalg.det（）求解矩阵A的行列式|A|，如果行列式为0，不可逆，否则可逆。）
+    &lt;ul&gt;
+      &lt;li&gt;若可逆，则\(w^*=S_w^{-1}(\mu_1-\mu_2)\)&lt;/li&gt;
+      &lt;li&gt;若不可逆，则\(w^*=(S_w+\lambda I)^{-1}(\mu_1-\mu_2)\)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a name=&quot;多分类&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;多分类&quot;&gt;多分类&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;计算整个样本点集的中心点\(\mu\)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;计算每个类别点集的中心点\(\mu_i\)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;计算每个类别点集的协方差矩阵\(\Sigma_i\)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;计算全局散度矩阵\(S_t=\sum_{i=1}^m (x_i-\mu)(x_i-\mu)^T\)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;计算类内散度矩阵\(S_w=\sum_{j=1}^k\Sigma_j\)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;计算类间散度矩阵\(S_b=\sum_{j=1}^k m_j(\mu_j-\mu)(\mu_j-\mu)^T\)&lt;/p&gt;
+
+    &lt;p&gt;其中\(m_j\)表示第\(j\)类的样本数&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;计算\(S_w^{-1}S_b\)的特征根和特征向量，选取前k个&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;集成学习&quot;&gt;集成学习&lt;/h1&gt;
+
+&lt;p&gt;集成学习算法存在过拟合、鲁棒性不强等问题。&lt;/p&gt;
+
+&lt;h2 id=&quot;adaboosting&quot;&gt;AdaBoosting&lt;/h2&gt;
+
+&lt;h3 id=&quot;算法流程-1&quot;&gt;算法流程&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Step1：初始化：最大迭代次数，各样本权重&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Step2：列出所有可能的弱分类器&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Step3：计算所有可能的弱分类器的错误率，并选择错误率最小的作为其中一个弱分类器&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Step4：权重更新&lt;/p&gt;
+
+\[\alpha=\frac{1}{2}ln(\frac{1-\epsilon}{\epsilon})~~~~~~~~其中\epsilon为当前弱分类器的错分率\\
+z_i=w_iexp(-\hat{y_i}y_i\alpha)~~~~~~~~~~~~~~~其中\hat{y_i}为预测值\\
+w_i^{new}=\frac{z_i}{\sum_{j=1}^mz_j}\]
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;重复Step3,4达到需要的弱分类器个数或强分类器的错误率=0&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;性质&quot;&gt;性质&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;所有被错分样本的权重更新比例是相同的，所有被分对的样本的权重更新比例是相同的&lt;/li&gt;
+  &lt;li&gt;串行算法&lt;/li&gt;
+  &lt;li&gt;AdaBoost模型是弱分类器的线性组合&lt;/li&gt;
+  &lt;li&gt;AdaBoost算法的一个解释是该算法实际上是前向分步算法的一个实现，在这个方法里，模型是加法模型，损失函数是指数损失，算法是前向分步算法。&lt;/li&gt;
+&lt;/ol&gt;
+
+\[\]</content><author><name>Handan YU</name></author><summary type="html">Table of Contents 逻辑回归 Logist 函数 目标函数 最大似然求解Loss Function 运用梯度下降得到参数更新递推公式 朴素贝叶斯 条件概率 极大似然估计 SVM 目标 支持向量 最优化问题 对偶问题 求支撑向量 求分界线 运用梯度下降方法求解SVM 决策树 决策树针对缺失数据的处理办法 信息熵 决策树类型 ID3 C4.5 CART 感知机算法 目标 运用梯度下降进行求解 具体做题步骤 LDA 二分类 多分类</summary></entry><entry><title type="html">线性回归</title><link href="http://localhost:4000/2017/10/15/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.html" rel="alternate" type="text/html" title="线性回归" /><published>2017-10-15T00:00:00+08:00</published><updated>2017-10-15T00:00:00+08:00</updated><id>http://localhost:4000/2017/10/15/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92</id><content type="html" xml:base="http://localhost:4000/2017/10/15/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.html">&lt;p&gt;From &lt;a href=&quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&quot;&gt;adam-p/markdown-here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#标准线性回归&quot;&gt;标准线性回归&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#最小一乘法&quot;&gt;最小一乘法&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#普通最小二乘法&quot;&gt;普通最小二乘法&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#局部加权线性回归&quot;&gt;局部加权线性回归&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#加权最小二乘法&quot;&gt;加权最小二乘法&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#岭回归&quot;&gt;岭回归&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#LASSO回归&quot;&gt;LASSO回归&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;#blockquotes&quot;&gt;Blockquotes&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;#html&quot;&gt;Inline HTML&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;#hr&quot;&gt;Horizontal Rule&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;#lines&quot;&gt;Line Breaks&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;#videos&quot;&gt;Youtube videos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;标准线性回归&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;标准线性回归&quot;&gt;标准线性回归&lt;/h2&gt;
+&lt;p&gt;本质是已知m\((x_i,y_i)\)个需要拟合一条型如\(y=\omega x+b\)的直线$l$。则可根据满足$l$尽可能接近\((x_i,y_i)\)，根据点到直线距离公式\(\frac{|\omega x_i-y_i+b|}{\sqrt{\omega^2+1}}\)建立目标函数&lt;/p&gt;
+
+\[\min\limits_{\omega,b}\sum_{i=1}^m\frac{|\omega x_i-y_i+b|}{\sqrt{\omega^2+1}}\Rightarrow最小一乘  \min\limits_{\omega,b}\sum_{i=1}^m|\omega x_i-y_i+b|\Rightarrow最小二乘\min\limits_{\omega,b}\sum_{i=1}^m(\omega x_i-y_i+b)^2\]
+
+&lt;p&gt;&lt;a name=&quot;最小一乘法&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;最小一乘法&quot;&gt;最小一乘法&lt;/h3&gt;
+
+\[\min\limits_{\omega,b}\sum_{i=1}^m|\omega x_i-y_i+b|\]
+
+&lt;p&gt;\(\widehat{W}\)的最优解为\(\widehat{W}\in\{w\|wx_i-y_i+b=0\}\)&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;普通最小二乘法&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;普通最小二乘法ols&quot;&gt;普通最小二乘法(OLS)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;目标函数为&lt;/li&gt;
+&lt;/ul&gt;
+
+\[\min\limits_{\omega,b}\sum_{i=1}^m(\omega x_i-y_i+b)^2
+=\min\limits_{\widehat{W}}(X\widehat{W}-y)^T(X\widehat{W}-y)\]
+
+&lt;p&gt;定义\(F(\widehat{W})=(X\widehat{W}-y)^T(X\widehat{W}-y)\)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;损失函数为&lt;/p&gt;
+
+\[||X\widehat{W}-y||^2\]
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;其中\(\widehat{W}=(\omega,b)^T,X=(x_1,x_2,\dots,x_m,1),y=(y_1,y_2,\dots,y_m)\)&lt;/p&gt;
+
+&lt;h4 id=&quot;求解&quot;&gt;求解&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;通过对\(F(\widehat{W})\)求关于\(\widehat{W}\)的一阶偏导为0，此时求得的\(\widehat{W}\)为驻点，可以得到\(\widehat{W}\)可能最优解为\(\widehat{W}^*=(X^TX)^{-1}X^Ty\)&lt;/li&gt;
+  &lt;li&gt;为了验证上面求得的\(\widehat{W}^*\)是否是真正的最优解，也就是要验证该驻点是否是极小值点，因此需要对\(F(\widehat{W})\)求关于\(\widehat{W}\)的二阶偏导，如果结果为正定的，则说明该点为极小值点。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;线性回归基本表达式&quot;&gt;线性回归基本表达式&lt;/h4&gt;
+
+\[\widehat{W}^*=(X^TX)^{-1}X^Ty\]
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;陷阱一：\(X^TX\)不可逆,也就是\(X\)不是列满秩或存在列与列直线相关共线的情况。为解决\(X^TX\)不可逆，我们可以通过改进最小二乘法中大损失函数来解决，也就是正则化处理。常用的改进方法有以下两种分别为岭回归和LASSO回归(Least absolution and selection operator)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;陷阱二：当特征维数过高\((X\in R^{m\times d})\) ,其中𝑚 为样本个数,𝑑为特征维,求\((X^TX)^{-1}\)的时间复杂度为\(O(d^3)\)太复杂了，因此采用梯度下降法进行求解&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;局部加权线性回归&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;局部加权线性回归lwlr&quot;&gt;局部加权线性回归（LWLR）&lt;/h2&gt;
+&lt;p&gt;由于线性回归会出现欠拟合现象，因此引入局部加权线性回归&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;加权最小二乘法&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;加权最小二乘法&quot;&gt;加权最小二乘法&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;目标函数为&lt;/li&gt;
+&lt;/ul&gt;
+
+\[\min\limits_{\omega,b}\sum_{i=1}^mw_i(\omega x_i-y_i+b)^2\]
+
+&lt;p&gt;定义$J(\widehat{W})=\sum_{i=1}^mw_i(\omega x_i-y_i+b)^2$&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;损失函数为
+\(w||X\widehat{W}-y||^2\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;​	其中\(w\)是以\(w_i\)为对角线上的值的对角矩阵，即权重矩阵&lt;/p&gt;
+
+&lt;h4 id=&quot;求解-1&quot;&gt;求解&lt;/h4&gt;
+&lt;p&gt;对$J(\widehat{W})$求关于$\widehat{W}$的一阶偏导为0，得到$\widehat{W}=(XwX)^{-1}X^Twy$，其中$w_i=exp(-\frac{(x_i-x)^2}{2\sigma^2})$我们成其为$Gaussian$核，，可以看出$x$越接近$x_i$，则$w_i$就会越大&lt;/p&gt;
+&lt;h4 id=&quot;对sigma的选取&quot;&gt;对$\sigma$的选取&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;\(\sigma\)越小，逼近效果越好，越容易产生过拟合&lt;/li&gt;
+  &lt;li&gt;$$\sigma$越大，逼近效果越差，越容易产生欠拟合&lt;/li&gt;
+  &lt;li&gt;则根据模型复杂度-误差图得到如下$\sigma$取值方法
+&lt;img src=&quot;https://note.youdao.com/yws/public/resource/cf6ffdff1ac9efd3d7ea23f51cdba86f/xmlnote/291DCB2C0F164E848099222C1FA29B77/3585&quot; alt=&quot;image&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;岭回归&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;岭回归&quot;&gt;岭回归&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;主要思想：修改损失函数,添加惩罚项（L2正则化项  ），在最优解中\(X^TX\)处添加单位向量,把不可逆变成可逆。这里通过引入\(\lambda\)来限制了所有\(\omega\)之和，通过引入该惩罚项，能够减少不重要的参数，这个技术在统计学中也叫做缩减(shrinkage)&lt;/p&gt;
+
+\[X^TX-&amp;gt;X^TX+\lambda I\]
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;目标函数为&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+\[\min\limits_{\widehat{W}}=||X\widehat{W}-y||^2+\lambda||\widehat{W}||^2\]
+
+&lt;p&gt;其中\(\lambda\|\widehat{W}\|^2\)为正则化项&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;损失函数为&lt;/li&gt;
+&lt;/ul&gt;
+
+\[||X\widehat{W}-y||^2+\lambda||\widehat{W}||^2\]
+
+&lt;ul&gt;
+  &lt;li&gt;最优解&lt;/li&gt;
+&lt;/ul&gt;
+
+\[\widehat{w}_{\lambda}^*=(X^TX+\lambda I)^{-1}X^Ty\]
+
+&lt;h4 id=&quot;lambda的选取&quot;&gt;\(\lambda\)的选取&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;当\(\lambda\)越大，容易导致\(\|X\widehat{W}-y\|^2\)不太起作用，故容易产生欠拟合&lt;/li&gt;
+  &lt;li&gt;当\(\lambda\)越小，故容易产生过拟合&lt;/li&gt;
+  &lt;li&gt;首先抽一部分数据用于测试，剩余的作为训练集用于训练参数\(\omega\)。训练完毕后在测试集上测试预测性能。通过选取不同的λ来重复上述测试过程，最终得到一个使预测误差最小的\(\lambda\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;LASSO回归&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;lasso回归&quot;&gt;LASSO回归&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;主要思想：进行特征选取。修改损失函数，添加L1惩罚项。【选特征，类似于AIC信息准则法】，选取X的子列矩阵\(X'\)使得\((X')^T(X')\)可逆&lt;/li&gt;
+  &lt;li&gt;目标函数为&lt;/li&gt;
+&lt;/ul&gt;
+
+\[\min\limits_{\widehat{W}}=\frac{1}{2}||X\widehat{W}-y||^2+\lambda|\widehat{W}|\]
+
+&lt;p&gt;其中\(P_{\lambda}(|\widehat{W}|)\)为惩罚项&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;损失函数为&lt;/li&gt;
+&lt;/ul&gt;
+
+\[J(\widehat{W})=\frac{1}{2}||X\widehat{W}-y||^2+\lambda|\widehat{W}|\]
+
+&lt;h4 id=&quot;求解-2&quot;&gt;求解&lt;/h4&gt;
+&lt;p&gt;可通过降维到一维\(\frac{1}{2}(\widehat{W}-y)^2+\lambda|\widehat{W}|\)进行求解&lt;/p&gt;
+
+&lt;p&gt;故将目标函数化简为&lt;/p&gt;
+
+\[\min\limits_{\widehat{W}\in R} \frac{1}{2}(\widehat{W}-y)^2+\lambda|\widehat{W}|\]
+
+&lt;p&gt;根据\(\widehat{W}\)与0的关系分为以下两种情况&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+\[\widehat{W}\geq 0\]
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+\[J(\widehat{W})=\frac{1}{2}(\widehat{W}-y)^2+\lambda\widehat{W}\]
+
+&lt;p&gt;通过对\(J(\widehat{W})\)求关于\(\widehat{W}\)一次偏导为0得到&lt;/p&gt;
+
+\[\widehat{W}=y-\lambda\]
+
+&lt;ul&gt;
+  &lt;li&gt;
+\[\widehat{W}\leq 0\]
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+\[J(\widehat{W})=\frac{1}{2}(\widehat{W}-y)^2-\lambda\widehat{W}\]
+
+&lt;p&gt;通过对$J(\widehat{W})$求关于$\widehat{W}$一次偏导为0得到&lt;/p&gt;
+
+\[\widehat{W}=y+\lambda\]
+
+&lt;p&gt;故通过以上两种情况可以得到$y$与$\widehat{W}$的关系
+&lt;img src=&quot;https://note.youdao.com/yws/public/resource/cf6ffdff1ac9efd3d7ea23f51cdba86f/xmlnote/WEBRESOURCE2bccde0c54885603bed3fa37d3b80f34/3672&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;33-梯度下降&quot;&gt;3.3 梯度下降&lt;/h2&gt;
+&lt;h3 id=&quot;331-批量梯度下降法bgd&quot;&gt;3.3.1 （批量）梯度下降法(BGD)&lt;/h3&gt;
+&lt;h4 id=&quot;1-递推公式推导过程&quot;&gt;1. 递推公式推导过程&lt;/h4&gt;
+
+&lt;p&gt;通过多项式对函数进行逼近的方法得到&lt;/p&gt;
+
+\[f(x)=f(x_0)+\frac{f'(x_0)}{1!}(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\dots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+R_n(x)\]
+
+&lt;p&gt;故&lt;/p&gt;
+
+\[f(x)≈f(x_0)+f'(x_0)(x-x_0)\]
+
+&lt;p&gt;其中令$\Delta x=x-x_0$，则有&lt;/p&gt;
+
+\[f(x)≈f(x_0)+\Delta x\nabla f(x_0)\]
+
+&lt;p&gt;则得到&lt;/p&gt;
+
+\[f(x)-f(x_0)=\Delta x\nabla f(x_0)\]
+
+&lt;p&gt;其实$\Delta x$和$\nabla f(x_0)$都是向量，因此需要$f(x)-f(x_0)$最小，只有当$\Delta x$和$\nabla f(x_0)$两个方向相反，故有&lt;/p&gt;
+
+\[\Delta x=-\alpha \nabla f(x_0)~~~~~~~\alpha &amp;gt;0\]
+
+&lt;p&gt;最终得到梯度下降法的递推公式为&lt;/p&gt;
+
+\[x:=x-\alpha \nabla f(x)\]
+
+&lt;h4 id=&quot;2-求解最小二乘问题采用梯度下降算法求解线性回归模型最优解&quot;&gt;2. 求解最小二乘问题（采用梯度下降算法求解线性回归模型最优解）&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;线性回归模型&lt;/li&gt;
+&lt;/ul&gt;
+
+\[f_\omega(x)=\omega_0+\omega_1x+\dots+\omega_dx_d\]
+
+&lt;p&gt;其中d表示有d个特征.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;损失函数&lt;/li&gt;
+&lt;/ul&gt;
+
+\[J(\widehat{\omega})=\frac{1}{2m}\sum\limits_{i=1}^m(X_i\widehat{\omega}-y_i)^2\]
+
+&lt;p&gt;其中m表示有m个样本点.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;使用梯度下降最小化损失函数，求解最优解&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;根据梯度下降递推公式有&lt;/p&gt;
+
+&lt;p&gt;\(\widehat{\omega}:=\widehat{\omega}-\alpha\frac{\partial{J(\widehat{\omega})}}{\partial{\widehat{\omega}}}\)
+即&lt;/p&gt;
+
+\[\widehat{\omega}:=\widehat{\omega}-\frac{\alpha}{m}X^T(X\widehat{\omega}-y)=\widehat{\omega}-\frac{\alpha}{m}\sum\limits_{i=1}^m(X_i\widehat{\omega}-y_i)X_i^T\]
+
+&lt;h4 id=&quot;3-优点&quot;&gt;3. 优点&lt;/h4&gt;
+&lt;p&gt;此时时间复杂度为$O(md)$,迭代次数少&lt;/p&gt;
+&lt;h4 id=&quot;4-缺点&quot;&gt;4. 缺点&lt;/h4&gt;
+&lt;p&gt;每次迭代都要用到训练集所有的数据，因此当数据量大的时候迭代速度会很慢&lt;/p&gt;
+&lt;h3 id=&quot;332-随机梯度下降sgd&quot;&gt;3.3.2 随机梯度下降（SGD）&lt;/h3&gt;
+&lt;p&gt;通过观察发现$\frac{1}{m}\sum\limits_{i=1}^m(X_i\widehat{\omega}-y_i)X_i^T$相当于是所有训练集样本点的均值&lt;/p&gt;
+
+&lt;p&gt;记$z_i=(X_i\widehat{\omega}-y_i)X_i^T$，每个样本点i选取的概率为$\frac{1}{m}$，则有&lt;/p&gt;
+
+\[E_i(z_i)=\frac{1}{m}\sum\limits_{i=1}^m(X_i\widehat{\omega}-y_i)X_i^T\]
+
+&lt;p&gt;故随机梯度下降法的递推公式为&lt;/p&gt;
+
+\[\widehat{\omega}:=\widehat{\omega}-\alpha(X_j\widehat{\omega}-y_j)X_j^T\]
+
+&lt;h4 id=&quot;优点&quot;&gt;优点&lt;/h4&gt;
+&lt;p&gt;每次迭代使用随机的一个样本来对参数进行更新，使得训练速度加快，此时的时间复杂度为$O(d)$&lt;/p&gt;
+&lt;h4 id=&quot;缺点&quot;&gt;缺点&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;准确度下降，当目标函数为强凸函数的情况下，无法做到线性收敛&lt;/li&gt;
+  &lt;li&gt;可能会收敛到局部最优&lt;/li&gt;
+  &lt;li&gt;迭代次数比BGD多&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;333-小批量梯度下降法mbgd&quot;&gt;3.3.3 小批量梯度下降法(MBGD)&lt;/h3&gt;
+&lt;p&gt;鉴于BGD,SGD的优缺点，提出每次迭代使用部分样本来对参数进行更新，故MBGD的迭代公式为&lt;/p&gt;
+
+\[\widehat{\omega}:=\widehat{\omega}-\frac{\alpha}{\# J}\sum\limits_{j\in J}(X_j\widehat{\omega}-y_j)X_j^T\]
+
+&lt;h3 id=&quot;334-adagrad&quot;&gt;3.3.4 Adagrad&lt;/h3&gt;
+
+&lt;h4 id=&quot;递推公式&quot;&gt;递推公式&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;step1:计算梯度$\nabla f(\widehat{\omega})$&lt;/li&gt;
+  &lt;li&gt;step2:累加平方梯度$r_{k+1}=r_k+(\nabla f(\widehat{\omega}_k))^2$&lt;/li&gt;
+  &lt;li&gt;step3:计算更新参数\(\widehat{\omega}_{k+1}:=\widehat{\omega}_k-\frac{\alpha}{\sqrt{r_{k+1}^2+\epsilon}}\nabla f(\widehat{\omega}_k)\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;适用情况&quot;&gt;适用情况&lt;/h4&gt;
+
+&lt;p&gt;有些参数已经近乎最优，因此只需要微调了，而另一些可能还需要很大的调整。这种情况可能会在样本较少的情况下出现，比如含有某一特征的样本出现较少，因此被代入优化的次数也较少，这样就导致不同参数的下降不平衡。adagrad就是来处理这类问题的。&lt;/p&gt;
+&lt;h4 id=&quot;优点-1&quot;&gt;优点&lt;/h4&gt;
+&lt;p&gt;不同的分量选取不同的学习率。在平缓的分量下降稍快，在陡峭的分量下降稍慢。&lt;/p&gt;
+&lt;h4 id=&quot;缺点-1&quot;&gt;缺点&lt;/h4&gt;
+&lt;p&gt;累计梯度平方导致时间复杂度变大，迭代次数较多时，学习率过早过量减少&lt;/p&gt;
+&lt;h3 id=&quot;335-rmsprop&quot;&gt;3.3.5 RMSprop&lt;/h3&gt;
+&lt;h4 id=&quot;递推公式-1&quot;&gt;递推公式&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;step1:计算梯度$\nabla f(\widehat{\omega})$&lt;/li&gt;
+  &lt;li&gt;step2:加权累加平方梯度$r_{k+1}=\rho r_k+(1-\rho)(\nabla f(\widehat{\omega}_k))^2$,其中$\rho$表示学习率的衰减速率一般取0.9&lt;/li&gt;
+  &lt;li&gt;step3:参数更新$\widehat{\omega}&lt;em&gt;{k+1}:=\widehat{\omega}_k-\frac{\alpha}{\sqrt{r&lt;/em&gt;{k+1}+\epsilon}}\nabla f(\widehat{\omega}_k)$
+    &lt;h4 id=&quot;优点-2&quot;&gt;优点&lt;/h4&gt;
+    &lt;p&gt;解决Adagrad的学习率逐渐消失的问题&lt;/p&gt;
+    &lt;h3 id=&quot;336-momentum&quot;&gt;3.3.6 Momentum&lt;/h3&gt;
+    &lt;h4 id=&quot;主要思想&quot;&gt;主要思想&lt;/h4&gt;
+    &lt;p&gt;借助物理中动量的概念，更新时在一定程度上保持之前更新的方向，同时利用当前的梯度微调最终的方向。&lt;/p&gt;
+    &lt;h4 id=&quot;递推公式-2&quot;&gt;递推公式&lt;/h4&gt;
+  &lt;/li&gt;
+  &lt;li&gt;step1:计算梯度$\nabla f(\widehat{\omega})$&lt;/li&gt;
+  &lt;li&gt;step2:冲量的梯度更新$v_{k+1}=\alpha v_k-\eta\nabla f(\widehat{\omega})$&lt;/li&gt;
+  &lt;li&gt;step3:参数的更新$x_{k+1}=x_k+v_k$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;34-logistic回归与梯度上升法&quot;&gt;3.4 Logistic回归与梯度上升法&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://note.youdao.com/yws/public/resource/cf6ffdff1ac9efd3d7ea23f51cdba86f/xmlnote/E55E53CB00F4446E81CC1A64EEB3752E/4254&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;342-逻辑回归解决多分类问题&quot;&gt;3.4.2 逻辑回归解决多分类问题&lt;/h4&gt;
+&lt;h5 id=&quot;一-ovr&quot;&gt;一、 OvR&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;思想：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;n 种类型的样本进行分类时，分别取一种样本作为一类，将剩余的所有类型的样本看做另一类，这样就形成了 n 个二分类问题，使用逻辑回归算法对 n 个数据集训练出 n 个模型，将待预测的样本传入这 n 个模型中，所得概率最高的那个模型对应的样本类型即认为是该预测样本的类型；&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;时间复杂度：O(n)&lt;/li&gt;
+  &lt;li&gt;示意图
+&lt;img src=&quot;https://note.youdao.com/yws/public/resource/cf6ffdff1ac9efd3d7ea23f51cdba86f/xmlnote/46794D7A7A51496BB7AD86E76BCEC393/4479&quot; alt=&quot;image&quot; /&gt;
+&lt;img src=&quot;https://note.youdao.com/yws/public/resource/cf6ffdff1ac9efd3d7ea23f51cdba86f/xmlnote/0538F5351AF64FD1A705F6B44201FE32/4481&quot; alt=&quot;image&quot; /&gt;
+    &lt;h5 id=&quot;二ovo&quot;&gt;二、OvO&lt;/h5&gt;
+  &lt;/li&gt;
+  &lt;li&gt;思想&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;n 类样本中，每次挑出 2 种类型，两两结合，一共有 $C_n^2$ 种二分类情况，使用$C_n^2$种模型预测样本类型，有$C_n^2$ 个预测结果，种类最多的那种样本类型，就认为是该样本最终的预测类型；&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;时间复杂度：$O(n^2)$&lt;/li&gt;
+  &lt;li&gt;示意图
+&lt;img src=&quot;https://note.youdao.com/yws/public/resource/cf6ffdff1ac9efd3d7ea23f51cdba86f/xmlnote/DA7CAE16C2304323B12F9C348548E484/4493&quot; alt=&quot;image&quot; /&gt;
+&lt;img src=&quot;https://note.youdao.com/yws/public/resource/cf6ffdff1ac9efd3d7ea23f51cdba86f/xmlnote/F9B7008076594B5392C5738390C3E876/4495&quot; alt=&quot;image&quot; /&gt;
+    &lt;h5 id=&quot;三softmax&quot;&gt;三、softmax&lt;/h5&gt;
+  &lt;/li&gt;
+  &lt;li&gt;思想&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;由于发现OvR的所有概率相加通常会超过1，因此对OvR进行改进，对概率进行归一化&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;推导&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;令$z_i^j=(w^j)^Tx_i$,其中$w^j$表示第$j$类的权重(是个列向量)，$x_i$表示第$i$个样本(是个列向量)。&lt;/p&gt;
+
+&lt;p&gt;将$z_i^j$映射到$y_j(z_i)=e^{z_i^j}/\sum\limits_{c=1}^Ce^{z_i^c}$，其中C表示有C个类，$y_j(z_i)$表示第j类的softmax值，即样本$i$属于$j$类的概率&lt;/p&gt;
+
+&lt;p&gt;令$gs(z_i)=[y_1(z_i),y_2(z_i),\dots,y_C(z_i)]^T$
+相当于用矩阵表示&lt;/p&gt;
+
+\[Ps(w^Tx)=\frac{exp(w^Tx)}{1^Texp(w^Tx)},其中1是全为1的向量,w=[w^1,w^2,\dots,w^C]^T\]
+
+&lt;p&gt;用统计学知识解释，那么在多分类问题中，假设类别标签y∈{1, 2, …, C}有C个取值，那么给定一个样本x，softmax回归预测x属于类别i的后验概率为：&lt;/p&gt;
+
+\[P(y=i|x;w_i)=\frac{exp(w_i^Tx)}{\sum_{c=1}^Cexp(w_c^Tx)}.\]
+
+&lt;ul&gt;
+  &lt;li&gt;示意图
+&lt;img src=&quot;https://note.youdao.com/yws/public/resource/cf6ffdff1ac9efd3d7ea23f51cdba86f/xmlnote/08CA9236CBBE41DEBDF99A64E3A39A23/4514&quot; alt=&quot;image&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;目标函数&lt;/li&gt;
+&lt;/ul&gt;
+
+\[L=\sum_kt_k⋅lnP(y=k)，其中目标类的t_k为1，其余类的t_k为0\]
+
+&lt;ul&gt;
+  &lt;li&gt;权重递推公式&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;由于对比普通逻辑回归，只是改变了映射函数&lt;/p&gt;
+
+&lt;p&gt;logistic的递推公式&lt;/p&gt;
+
+\[w:=w+\alpha \sum_{i=1}^C(x_i(y_i-g(w^Tx_i)))
+w:=w-\alpha X^T(g(w^TX)-y)\]
+
+&lt;p&gt;则softmax的递推公式&lt;/p&gt;
+
+\[w:=w+\alpha \sum_{i=1}^C(x_i(y_i-Ps(w^Tx_i)))
+w:=w-\alpha X^T(Ps(w^TX)-y)\]
+
+&lt;h3 id=&quot;35-线性判别法lda&quot;&gt;3.5 线性判别法(LDA)&lt;/h3&gt;
+&lt;h4 id=&quot;主要思想-1&quot;&gt;主要思想&lt;/h4&gt;
+&lt;p&gt;需要找一条直线，希望各点投影在该直线上后，希望同一种类别数据的投影点尽可能的接近，而不同类别的数据的类别中心之间的距离尽可能的大。量化这两点感官，则需满足异类点的中心距离远，同类点的方差小&lt;/p&gt;
+&lt;h4 id=&quot;模型建立&quot;&gt;模型建立&lt;/h4&gt;
+&lt;p&gt;假设我们有数据集$D={(x_1,y_1),(x_2,y_2),\dots,(x_m,y_m)}$，其中任意样本$x_i$为n为向量，$y_i\in{0,1}$，我们定义&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;$X_i(i=0,1)$为第$i$类样本的集合，&lt;/li&gt;
+  &lt;li&gt;$#X_i(i=0,1)$为第$i$类样本的个数，&lt;/li&gt;
+  &lt;li&gt;$a_i(i=0,1)$为第$i$类样本的投影中心点（是一个向量）,&lt;/li&gt;
+  &lt;li&gt;$\mu_i(i=0,1)$为第$i$类样本的中心点&lt;/li&gt;
+  &lt;li&gt;$S_i(i=0,1)$为第$i$类样本的方差&lt;/li&gt;
+  &lt;li&gt;$\Sigma_i(i=0,1)$为第$i$类样本的协方差矩阵&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;根据投影的知识可得&lt;/p&gt;
+
+&lt;p&gt;点$(x_{i1},x_{i2})$在直线$w_1x_1+w_2x_2=0$上的投影相当于向量$(x_{i1},x_{i2})$在向量$(w_1,w_2)$上的投影，即为向量$(x_{i1},x_{i2})$与向量$(w_1,w_2)$的点积$(x_i)^Tw$&lt;/p&gt;
+
+&lt;p&gt;则有
+$$
+a_i=\frac{1}{#X_i}\sum_{j\in X_i}(x_j)^Tw~~~~~~~~~~~&lt;/p&gt;
+
+&lt;p&gt;=(\frac{1}{#X_i}\sum_{j\in X_i}(x_j)^T)w~~&lt;/p&gt;
+
+&lt;p&gt;=\mu_iw
+~~~~~~~~~~(i=0,1)
+$$&lt;/p&gt;
+
+\[S_i=\sum_{j\in X_i}((x_j)^Tw-a_i)^2~~~~~~~~~~~~~~~~~~~~~~
+
+=\sum_{j\in X_i}(((x_j)^T-\mu_i)w)^2~~~~~~~~~~~~~~（1）
+
+=\sum_{j\in X_i}((x_j-\mu_i)^Tw)^2~~~~~~~~~~~~~~~~~（2）
+
+=\sum_{j\in X_i}w^T(x_j-\mu_i)(x_j-\mu_i^T)w~~~（3）
+
+=w^T(\sum_{j\in X_i}(x_j-\mu_i)(x_j-\mu_i)^T)w~~~~~~~~~~
+
+=w^T\Sigma_iw~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~(i=0,1)\]
+
+&lt;ul&gt;
+  &lt;li&gt;其中(1)由$a_i$的表达式代入得到&lt;/li&gt;
+  &lt;li&gt;(2)由于$\mu_i$是数，一个数点转置还是它本身&lt;/li&gt;
+  &lt;li&gt;(3)根据$(x^Ty)^2=(x^Ty)(x^Ty)=(x^Ty)^T(x^Ty)=y^Txx^Ty$其中$x^Ty$为一个数&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;根据主要思想，我们建立以下目标函数&lt;/p&gt;
+
+&lt;p&gt;由于我们希望$|a_1-a_2|$尽可能大，$S_1+S_2$尽可能小，即可建立目标函数
+$$
+由于\min~~ |a_1-a_2|=&amp;gt;\min ~~(a_1-a_2)^2&lt;/p&gt;
+
+&lt;p&gt;\max\limits_{w}\frac{(a_1-a_2)^2}{S_1+S_2}
+\(下面求解$(a_1-a_2)^2$和$S_1+S_2$\)
+(a_1-a_2)^2=((\mu_1-\mu_2)w)^2=w^T(\mu_1-\mu_2)(\mu_1-\mu_2)^Tw&lt;/p&gt;
+
+&lt;p&gt;S_1+S_2=w^T(\Sigma_1+\Sigma_2)w
+\(最终确立目标函数为\)
+\max\limits_w=\frac{w^T(\mu_1-\mu_2)(\mu_1-\mu_2)^Tw}{w^T(\Sigma_1+\Sigma_2)w}
+\(根据拉格朗日乘子法得到最优权重为\)
+w^&lt;em&gt;=(\Sigma_1+\Sigma_2)^{-1}(\mu_1-\mu_2)
+$$
+当$\Sigma_1+\Sigma_2$不可逆的时候采用$w^&lt;/em&gt;=(\Sigma_1+\Sigma_2+\lambda I)^{-1}(\mu_1-\mu_2)$&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;headers&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;headers&quot;&gt;Headers&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-no-highlight&quot;&gt;# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Alternatively, for H1 and H2, an underline-ish style:
+
+Alt-H1
+======
+
+Alt-H2
+------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;h1&quot;&gt;H1&lt;/h1&gt;
+&lt;h2 id=&quot;h2&quot;&gt;H2&lt;/h2&gt;
+&lt;h3 id=&quot;h3&quot;&gt;H3&lt;/h3&gt;
+&lt;h4 id=&quot;h4&quot;&gt;H4&lt;/h4&gt;
+&lt;h5 id=&quot;h5&quot;&gt;H5&lt;/h5&gt;
+&lt;h6 id=&quot;h6&quot;&gt;H6&lt;/h6&gt;
+
+&lt;p&gt;Alternatively, for H1 and H2, an underline-ish style:&lt;/p&gt;
+
+&lt;h1 id=&quot;alt-h1&quot;&gt;Alt-H1&lt;/h1&gt;
+
+&lt;h2 id=&quot;alt-h2&quot;&gt;Alt-H2&lt;/h2&gt;
+
+&lt;p&gt;&lt;a name=&quot;emphasis&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;emphasis&quot;&gt;Emphasis&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-no-highlight&quot;&gt;Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Emphasis, aka italics, with &lt;em&gt;asterisks&lt;/em&gt; or &lt;em&gt;underscores&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Strong emphasis, aka bold, with &lt;strong&gt;asterisks&lt;/strong&gt; or &lt;strong&gt;underscores&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Combined emphasis with &lt;strong&gt;asterisks and &lt;em&gt;underscores&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Strikethrough uses two tildes. &lt;del&gt;Scratch this.&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;lists&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;lists&quot;&gt;Lists&lt;/h2&gt;
+
+&lt;p&gt;(In this example, leading and trailing spaces are shown with with dots: ⋅)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-no-highlight&quot;&gt;1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list.
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
+
+⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First ordered list item&lt;/li&gt;
+  &lt;li&gt;Another item
+    &lt;ul&gt;
+      &lt;li&gt;Unordered sub-list.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Actual numbers don’t matter, just that it’s a number&lt;/li&gt;
+  &lt;li&gt;Ordered sub-list&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;And another item.&lt;/p&gt;
+
+    &lt;p&gt;You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we’ll use three here to also align the raw Markdown).&lt;/p&gt;
+
+    &lt;p&gt;To have a line break without a paragraph, you will need to use two trailing spaces.&lt;br /&gt;
+Note that this line is separate, but within the same paragraph.&lt;br /&gt;
+(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Unordered list can use asterisks&lt;/li&gt;
+  &lt;li&gt;Or minuses&lt;/li&gt;
+  &lt;li&gt;Or pluses&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a name=&quot;links&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
+
+&lt;p&gt;There are two ways to create links.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-no-highlight&quot;&gt;[I'm an inline-style link](https://www.google.com)
+
+[I'm an inline-style link with title](https://www.google.com &quot;Google's Homepage&quot;)
+
+[I'm a reference-style link][Arbitrary case-insensitive reference text]
+
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
+
+[You can use numbers for reference-style link definitions][1]
+
+Or leave it empty and use the [link text itself].
+
+URLs and URLs in angle brackets will automatically get turned into links.
+http://www.example.com or &amp;lt;http://www.example.com&amp;gt; and sometimes
+example.com (but not on Github, for example).
+
+Some text to show that the reference links can follow later.
+
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.google.com&quot;&gt;I’m an inline-style link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.google.com&quot; title=&quot;Google's Homepage&quot;&gt;I’m an inline-style link with title&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.mozilla.org&quot;&gt;I’m a reference-style link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;../blob/master/LICENSE&quot;&gt;I’m a relative reference to a repository file&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://slashdot.org&quot;&gt;You can use numbers for reference-style link definitions&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Or leave it empty and use the &lt;a href=&quot;http://www.reddit.com&quot;&gt;link text itself&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;URLs and URLs in angle brackets will automatically get turned into links.
+http://www.example.com or &lt;a href=&quot;http://www.example.com&quot;&gt;http://www.example.com&lt;/a&gt; and sometimes
+example.com (but not on Github, for example).&lt;/p&gt;
+
+&lt;p&gt;Some text to show that the reference links can follow later.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;images&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;images&quot;&gt;Images&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-no-highlight&quot;&gt;Here's our logo (hover to see the title text):
+
+Inline-style:
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &quot;Logo Title Text 1&quot;)
+
+Reference-style:
+![alt text][logo]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &quot;Logo Title Text 2&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here’s our logo (hover to see the title text):&lt;/p&gt;
+
+&lt;p&gt;Inline-style:
+&lt;img src=&quot;https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Reference-style:
+&lt;img src=&quot;https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;code&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;code-and-syntax-highlighting&quot;&gt;Code and Syntax Highlighting&lt;/h2&gt;
+
+&lt;p&gt;Code blocks are part of the Markdown spec, but syntax highlighting isn’t. However, many renderers – like Github’s and &lt;em&gt;Markdown Here&lt;/em&gt; – support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer. &lt;em&gt;Markdown Here&lt;/em&gt; supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the &lt;a href=&quot;http://softwaremaniacs.org/media/soft/highlight/test.html&quot;&gt;highlight.js demo page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-no-highlight&quot;&gt;Inline `code` has `back-ticks around` it.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Inline &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;code&lt;/code&gt; has &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;back-ticks around&lt;/code&gt; it.&lt;/p&gt;
+
+&lt;p&gt;Blocks of code are either fenced by lines with three back-ticks &lt;code&gt;```&lt;/code&gt;, or are indented with four spaces. I recommend only using the fenced code blocks – they’re easier and only they support syntax highlighting.&lt;/p&gt;
+
+&lt;pre lang=&quot;no-highlight&quot;&gt;&lt;code&gt;```javascript
+var s = &quot;JavaScript syntax highlighting&quot;;
+alert(s);
+```
+
+```python
+s = &quot;Python syntax highlighting&quot;
+print s
+```
+
+```
+No language indicated, so no syntax highlighting.
+But let's throw in a &amp;lt;b&amp;gt;tag&amp;lt;/b&amp;gt;.
+```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;JavaScript syntax highlighting&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Python syntax highlighting&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;No language indicated, so no syntax highlighting in Markdown Here (varies on Github).
+But let's throw in a &amp;lt;b&amp;gt;tag&amp;lt;/b&amp;gt;.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a name=&quot;tables&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
+
+&lt;p&gt;Tables aren’t part of the core Markdown spec, but they are part of GFM and &lt;em&gt;Markdown Here&lt;/em&gt; supports them. They are an easy way of adding tables to your email – a task that would otherwise require copy-pasting from another application.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-no-highlight&quot;&gt;Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don't need to make the
+raw Markdown line up prettily. You can also use inline Markdown.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Colons can be used to align columns.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Tables&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Are&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Cool&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;col 3 is&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;right-aligned&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;$1600&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;col 2 is&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;centered&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;$12&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;zebra stripes&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;are neat&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;$1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;There must be at least 3 dashes separating each header cell. The outer pipes (&lt;/td&gt;
+      &lt;td&gt;) are optional, and you don’t need to make the raw Markdown line up prettily. You can also use inline Markdown.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Markdown&lt;/th&gt;
+      &lt;th&gt;Less&lt;/th&gt;
+      &lt;th&gt;Pretty&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Still&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;renders&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;nicely&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;a name=&quot;blockquotes&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-no-highlight&quot;&gt;&amp;gt; Blockquotes are very handy in email to emulate reply text.
+&amp;gt; This line is part of the same quote.
+
+Quote break.
+
+&amp;gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Blockquotes are very handy in email to emulate reply text.
+This line is part of the same quote.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Quote break.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is a very long line that will still be quoted properly when it wraps. Oh boy let’s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can &lt;em&gt;put&lt;/em&gt; &lt;strong&gt;Markdown&lt;/strong&gt; into a blockquote.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a name=&quot;html&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;inline-html&quot;&gt;Inline HTML&lt;/h2&gt;
+
+&lt;p&gt;You can also use raw HTML in your Markdown, and it’ll mostly work pretty well.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-no-highlight&quot;&gt;&amp;lt;dl&amp;gt;
+  &amp;lt;dt&amp;gt;Definition list&amp;lt;/dt&amp;gt;
+  &amp;lt;dd&amp;gt;Is something people use sometimes.&amp;lt;/dd&amp;gt;
+
+  &amp;lt;dt&amp;gt;Markdown in HTML&amp;lt;/dt&amp;gt;
+  &amp;lt;dd&amp;gt;Does *not* work **very** well. Use HTML &amp;lt;em&amp;gt;tags&amp;lt;/em&amp;gt;.&amp;lt;/dd&amp;gt;
+&amp;lt;/dl&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Definition list&lt;/dt&gt;
+  &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;
+
+  &lt;dt&gt;Markdown in HTML&lt;/dt&gt;
+  &lt;dd&gt;Does *not* work **very** well. Use HTML &lt;em&gt;tags&lt;/em&gt;.&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;&lt;a name=&quot;hr&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;horizontal-rule&quot;&gt;Horizontal Rule&lt;/h2&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+___
+
+Underscores
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Three or more…&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Hyphens&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Asterisks&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Underscores&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;lines&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;line-breaks&quot;&gt;Line Breaks&lt;/h2&gt;
+
+&lt;p&gt;My basic recommendation for learning how line breaks work is to experiment and discover – hit &amp;lt;Enter&amp;gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You’ll soon learn to get what you want. “Markdown Toggle” is your friend.&lt;/p&gt;
+
+&lt;p&gt;Here are some things to try out:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Here's a line for us to start with.
+
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+
+This line is also a separate paragraph, but...
+This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here’s a line for us to start with.&lt;/p&gt;
+
+&lt;p&gt;This line is separated from the one above by two newlines, so it will be a &lt;em&gt;separate paragraph&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;This line is also begins a separate paragraph, but…&lt;br /&gt;
+This line is only separated by a single newline, so it’s a separate line in the &lt;em&gt;same paragraph&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;(Technical note: &lt;em&gt;Markdown Here&lt;/em&gt; uses GFM line breaks, so there’s no need to use MD’s two-space line breaks.)&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;videos&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;youtube-videos&quot;&gt;Youtube videos&lt;/h2&gt;
+
+&lt;p&gt;They can’t be added directly but you can add an image with a link to the video like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-no-highlight&quot;&gt;&amp;lt;a href=&quot;http://www.youtube.com/watch?feature=player_embedded&amp;amp;v=YOUTUBE_VIDEO_ID_HERE
+&quot; target=&quot;_blank&quot;&amp;gt;&amp;lt;img src=&quot;http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg&quot;
+alt=&quot;IMAGE ALT TEXT HERE&quot; width=&quot;240&quot; height=&quot;180&quot; border=&quot;10&quot; /&amp;gt;&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or, in pure Markdown, but losing the image sizing and border:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-no-highlight&quot;&gt;[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Referencing a bug by #bugID in your git commit links it to the slip. For example #1.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;License: &lt;a href=&quot;https://creativecommons.org/licenses/by/3.0/&quot;&gt;CC-BY&lt;/a&gt;&lt;/p&gt;</content><author><name>Handan YU</name></author><summary type="html">From adam-p/markdown-here</summary></entry></feed>
