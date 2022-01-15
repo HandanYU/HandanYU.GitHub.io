@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 损失函数 Loss Function
-summary: Markdown is a way to style text on the web. You control the display of the document; formating words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in.
+summary: 本章主要总结了机器学习中典型的损失函数类型及其特征，以及对应的典型机器学习模型。
 featured-img: 损失函数
-
+summary: Leetcode题型总结
 ---
 
 ##### Table of Contents  
