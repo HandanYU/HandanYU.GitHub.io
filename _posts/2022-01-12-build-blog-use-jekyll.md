@@ -80,3 +80,14 @@ test test test $$formula$$ test test test
 对于|，需要单独使用\|，且不能包含在$$..$$之间，否则会呈现||
 
 ## 停止jeklly serve后无法再次启动的原因
+
+```
+jekyll new <blog name>
+
+cd ./<blog name>
+
+jekyll serve
+```
+
+
+将文件夹中除了_site, gem相关的文件，其余文件复制到新创建的jekyll blog
