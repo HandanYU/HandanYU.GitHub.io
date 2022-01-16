@@ -3,7 +3,7 @@ layout: post
 title: 损失函数 Loss Function
 summary: 本章主要总结了机器学习中典型的损失函数类型及其特征，以及对应的典型机器学习模型。
 featured-img: 损失函数
-summary: Leetcode题型总结
+
 ---
 
 ##### Table of Contents  
