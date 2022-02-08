@@ -31,6 +31,7 @@ layout: compress
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
 
             {% for post in site.posts %}
+            <a>{{ post.url }}</a>
               <!-- {% include card.html %} -->
             {% endfor %}
 
