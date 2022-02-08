@@ -6,7 +6,7 @@ layout: compress
   {% include head.html %}
   {% for category in site.categories %}
   <h2>{{ category[0] }}</h2>
-  {% for post in category.posts %}
+  {% for post in category[1].posts %}
   
     <h3><a class="header__link" href="{{ post.url }}" itemprop="url"></a><span itemprop="name">{{ post.title }}</span></h3>
   {% endfor %}
