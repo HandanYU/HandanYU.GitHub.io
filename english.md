@@ -5,5 +5,6 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
 layout: default
-title: Handan YU's Blog
+title: Diana's Blog
+permalink: /english/
 ---
