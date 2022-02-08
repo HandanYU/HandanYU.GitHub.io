@@ -30,7 +30,7 @@ layout: compress
         <div class="container">
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
 
-            
+            <ul>
             {% for category in site.categories %}
             <h2>{{ category[0] }}</h2>
             <ul>
@@ -39,9 +39,9 @@ layout: compress
               <span><a class="header__link" href="{{ post.url }}" itemprop="url">{{ post.title }}</a></span>
             </li>
               {% endfor %}
-            </ul>
+              </ul>
             {% endfor %}
-            {% include footer.html %}
+          </ul>
             <!-- {% include pagination.html %} -->
           </div>
         </div>
