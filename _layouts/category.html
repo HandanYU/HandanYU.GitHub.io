@@ -35,7 +35,10 @@ layout: compress
             <h2>{{ category[0] }}</h2>
             <ul>
             {% for post in category.last %}
-            <li><span class="post-card__meta"><time>{{ post.date }}</time></span>
+            {% assign date_format = site.sleek.date_format | default: "%b %-d, %Y" %}
+            <li><span class="post-card__meta">
+              <time>{{ post.date | date: date_format }}</time>
+            </span>
               <span><a class="post_link" href="{{ post.url }}" itemprop="url">{{ post.title }}</a></span>
             </li>
               {% endfor %}
