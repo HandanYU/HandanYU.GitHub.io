@@ -33,11 +33,11 @@ layout: compress
             {% for category in site.categories %}
             <h2>{{ category }}</h2>
             </span>{{ category | size }}</span>
-            <ul class="arc-list">
+            <!-- <ul class="arc-list">
                 {% for post in category %}
                     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
                 {% endfor %}
-            </ul>
+            </ul> -->
             {% endfor %}
 
             <!-- {% include pagination.html %} -->
