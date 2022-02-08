@@ -33,11 +33,13 @@ layout: compress
             
             {% for category in site.categories %}
             <h2>{{ category[0] }}</h2>
+            <ul>
             {% for post in category.last %}
             <li><span class="post-card__meta"><time>{{ post.date | date: date_format }}</time></span>
               <span><a class="header__link" href="{{ post.url }}" itemprop="url">{{ post.title }}</a></span>
             </li>
               {% endfor %}
+            </ul>
             {% endfor %}
             {% include footer.html %}
             <!-- {% include pagination.html %} -->
