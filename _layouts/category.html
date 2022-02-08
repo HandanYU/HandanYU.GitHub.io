@@ -1,11 +1,13 @@
 <!-- ---
 layout: compress
 --- -->
-<a>{{ site.categories }}</a>
-<!-- <html lang="{{ page.lang | default: site.lang | default: "en_US" }}"> -->
-  <!-- {% include head.html %} -->
+<html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
+  {% include head.html %}
   <!-- <a>{{ site.categories }}</a> -->
-  <!-- {% for category in site.categories %}
-  <h2>{{ category }}</h2>
-  {% endfor %} -->
-  <!-- </html> -->
+  {% for category in site.categories %}
+    <h2>{{ category }}</h2>
+    {% for post in category.posts %}
+    <a>{{ post.title }}</a>
+    {% endfor %}
+  {% endfor %}
+  </html>
