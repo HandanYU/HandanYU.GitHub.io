@@ -1,14 +1,15 @@
 ---
 layout: compress
 ---
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script language="javascript" type="text/javascript">
-    $(document).ready(function() {
-	$("#onoffswitch").on('click', function(){
+    $('.switchButton').ready(function() {
+	$("#switchButton").on('click', function(){
 		clickSwitch()
 	});
  
 	var clickSwitch = function() {
-		if ($("#onoffswitch").is(':checked')) {
+		if ($("#switchButton").is(':checked')) {
 			window.location.href="{{ '/about_english' | relative_url }}";
 		} else {
 			window.location.href="{{ '/about_chinese' | relative_url }}";
@@ -36,13 +37,7 @@ layout: compress
     <div class="hero--small">
       <div class="hero__wrap">
         <h1 class="hero__title">{{ page.title }}</h1>
-        <div class="testswitch">
-			<input class="testswitch-checkbox" id="onoffswitch" type="checkbox">
-			<label class="testswitch-label" for="onoffswitch">
-				<span class="testswitch-inner" data-on="ON" data-off="OFF"></span>
-				<span class="testswitch-switch"></span>
-			</label>
-		</div>
+        <input type="checkbox" class="switch" id="switchButton">
       </div>
     </div>
 
