@@ -3,10 +3,10 @@ layout: compress
 ---
 <html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
 
-  {% include head.html %}
+  {% include header.html %}
   {% for category in site.categories %}
   <h2>{{ category[0] }}</h2>
-  {% for post in category[1].posts %}
+  {% for post in site.category[0].posts %}
   
     <h3><a class="header__link" href="{{ post.url }}" itemprop="url"></a><span itemprop="name">{{ post.title }}</span></h3>
   {% endfor %}
