@@ -8,11 +8,17 @@
       </a>
       <nav class="header__links">
         <div class="container header__links-wrapper">
-          <a class="header__link" href="{{ '/' | relative_url }}" itemprop="url"><span itemprop="name">Home</span></a>
+          <select>
+            <option class="header__link" href="{{ '/' | relative_url }}"  itemprop="url" value ="Home"></option>
+            <option class="header__link" href="{{ '/english' | relative_url }}"  itemprop="url" value ="English"></option>
+            <!-- <option value="opel">Opel</option> -->
+            <!-- <option value="audi">Audi</option> -->
+          </select>
+          <!-- <a class="header__link" href="{{ '/' | relative_url }}" itemprop="url"><span itemprop="name">Home</span></a> -->
           <a class="header__link" href="{{ '/about' | relative_url }}" itemprop="url"><span itemprop="name">About</span></a>
-          <a class="header__link" href="{{ '/english' | relative_url }}" itemprop="url">
-            <span itemprop="name">English</span>
-          </a>
+          <!-- <a class="header__link" href="{{ '/english' | relative_url }}" itemprop="url"> -->
+            <!-- <span itemprop="name">English</span> -->
+          <!-- </a> -->
         </div>
       </nav>
       <div class="header__toggle">
