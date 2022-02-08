@@ -1,0 +1,53 @@
+---
+layout: compress
+---
+<html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
+
+  {% include head.html %}
+
+  <body class="site">
+
+    {% if site.google_tag_manager %}
+
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+
+    {% endif %}
+
+    {% include header.html %}
+
+    <div class="hero lazyload" data-bg="{{site.url}}/assets/img/posts/Sleek_lg.jpg">
+      <div class="hero__wrap">
+        <h1 class="hero__title">Diana's Blog</h1>
+        <p class="hero__meta">This site mainly contains some blogs which were concluded during my studying periods. Currently, lots of contents are written in Notion Blog, you can look through <a href="https://inquisitive-charger-3f8.notion.site/Diana-s-Home-Page-1881c8286de94552873577bd8918d943" style="color:bisque;font-weight: bold;">Notion Blog</a></body> </p>
+      </div>
+    </div>
+
+    <main class="site__content">
+      <section class="blog">
+        <div class="container">
+          <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
+
+            {% for category in site.categories %}
+            <h2>{{ category }}</h2>
+            </span>{{ category | size }}</span>
+            <ul class="arc-list">
+                {% for post in category %}
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+
+            <!-- {% include pagination.html %} -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

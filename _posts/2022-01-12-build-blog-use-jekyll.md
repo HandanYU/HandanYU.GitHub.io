@@ -5,6 +5,7 @@ feature-img:
 summary: The tutorial to tell you how to build blog using jekll
 featured-img: jekyll
 language: english 
+category: others
 ---
 
 1. markdown latex
