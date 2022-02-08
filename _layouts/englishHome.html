@@ -31,7 +31,6 @@ layout: compress
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
 
             {% for post in site.posts %}
-            <a>{{ post.language }}</a>
                 {% if post.language == "english" %}
                     {% include card.html %}
                 {% endif %}
