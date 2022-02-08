@@ -1,5 +1,5 @@
 ---
-layout: about_chinese
+layout: about
 title: About Me 
 permalink: /about_chinese/
 ---
