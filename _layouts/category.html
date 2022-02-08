@@ -24,7 +24,7 @@ layout: compress
       </div>
     </div>
     {% for category in site.categories %}
-    <a>{{ category }}</a>
+    <a>{{ category[0] }}</a>
     {% endfor %}
     {% include footer.html %}
 
