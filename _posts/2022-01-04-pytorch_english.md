@@ -3,6 +3,7 @@ layout: post
 title: PyTorch
 featured-img: PyTorch
 summary: 运用PyTorch自定义网络层并搭建网络结构
+language: english 
 ---
 ##### Table of Contents  
 - [mac上安装pytorch](#mac上安装pytorch)  

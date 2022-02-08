@@ -4,6 +4,7 @@ title: How to build blog using jekyll
 feature-img: 
 summary: The tutorial to tell you how to build blog using jekll
 featured-img: jekyll
+language: english 
 ---
 
 1. markdown latex
