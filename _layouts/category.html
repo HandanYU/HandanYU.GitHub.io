@@ -36,7 +36,7 @@ layout: compress
             <ul>
             {% for post in category.last %}
             <li><span class="post-card__meta"><time>{{ post.date }}</time></span>
-              <span><a class="header__link" href="{{ post.url }}" itemprop="url">{{ post.title }}</a></span>
+              <span><a class="post_link" href="{{ post.url }}" itemprop="url">{{ post.title }}</a></span>
             </li>
               {% endfor %}
               </ul>

@@ -29,6 +29,14 @@
     transition: transform .3s;
   }
 }
+.news_title {
+  font: normal 18px/28px "Microsoft YaHei";
+  font-size: 15px;
+  font-weight: bold;
+}
+.news_title:link {color: #000000; text-decoration: none}
+.news_title:visited {color: #aa0000; text-decoration: none}
+.news_title:hover {color: #000000; text-decoration: none}
 
 .header__logo {
   display: flex;
@@ -198,3 +206,4 @@
     }
   }
 }
+
