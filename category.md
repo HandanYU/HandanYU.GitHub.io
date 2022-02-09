@@ -5,6 +5,6 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
 layout: category
-title: Diana's Blog
+title: CATEGORIES
 permalink: /category/
 ---
