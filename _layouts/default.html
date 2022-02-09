@@ -50,7 +50,8 @@ layout: compress
           <ul>
           {% for category in site.categories %}
           <li>
-            <a href="{{ {{ '/'+category[0] }} | relative_url }}">{{ category[0] }}</a>
+            <a>{{ site.url }}/{{ category[0] }}.html</a>
+            <a href='{{ site.url }}/{{ category[0] }}.html'>{{ category[0] }}</a>
           </li>
           {% endfor %}
         </ul>
