@@ -137,9 +137,11 @@ layout: compress
 </div>
 <div style="width: 20%;padding-top: 5rem;float:right;background-color: blue;">
 <h3 style="text-align: center;">Relative Blogs</h3>
+<a>{{ page.category }}</a>
 <ul>
   {% for category in site.categories %}
   {% if category.last == page.category %}
+  <a>{{ category.last }}</a>
   {% for post in category.last %}
   <li>
     <a href="{{ post.url | relative_url }}"><span>{{ post.title }}</span></a>
