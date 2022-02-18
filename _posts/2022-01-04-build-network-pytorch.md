@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PyTorch
+title: Build Network via PyTorch 
 featured-img: PyTorch
 summary: 运用PyTorch自定义网络层并搭建网络结构
 language: english 
