@@ -50,7 +50,7 @@ a measurement of synthetic accessibility
 1. use KL regularization
 2. the posterior distribution in VAE is usually a Gaussian distribution with mean and variance predicted by the encoder
 
-#### ChemVAE (Chemical VAE)
+#### ChemVAE (Chemical VAE) 
 
 - Mechanism
 
