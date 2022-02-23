@@ -6,6 +6,6 @@
 #
 layout: subposts
 title: Diana's Blog
-permalink: /week report/
+permalink: /weekly report/
 cate: week report
 ---
