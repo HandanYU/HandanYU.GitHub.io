@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Build Network via PyTorch 
-featured-img: PyTorch
+featured-img: deep learning
 summary: 运用PyTorch自定义网络层并搭建网络结构
 language: english 
 category: deep learning

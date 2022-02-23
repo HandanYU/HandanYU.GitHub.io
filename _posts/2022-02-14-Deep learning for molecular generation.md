@@ -2,7 +2,7 @@
 layout: post
 title: Deep learning for molecular generation读书笔记
 summary: 
-featured-img: 梯度下降
+featured-img: others
 language: english 
 category: others
 ---

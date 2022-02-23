@@ -3,7 +3,7 @@ layout: post
 title: How to build blog using jekyll
 feature-img: 
 summary: The tutorial to tell you how to build blog using jekll
-featured-img: jekyll
+featured-img: others
 language: english 
 category: others
 ---
