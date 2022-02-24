@@ -7,5 +7,5 @@
 layout: subposts
 title: Diana's Blog
 permalink: /weekly report/
-cate: week report
+cate: weekly report
 ---
