@@ -19,7 +19,7 @@ category: deep learning
 - [训练网络模型](#训练网络模型)
 - [预测结果](#预测结果)
 - [例：BP Net](#例：BP Net)
-
+- [例：RNN](#例：RNN)
 <a name='mac上安装pytorch'/>
 
 # mac上安装pytorch
@@ -237,4 +237,104 @@ output = model(x)
 pre = torch.max(output,1)[1]
 pred_y = pre.data.numpy() # data.numpy(): transform tensor to array
 target_y = y.data.numpy()
+```
+
+<a name='例：RNN'/>
+
+# 例：RNN
+```python
+import torch
+import torch.nn as nn
+from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
+import re
+import numpy as np
+import torch.optim as optim
+from torch.utils.data import DataLoader
+from torch.autograd import Variable
+from tqdm import tqdm
+
+
+class RNN(nn.Module):
+    def __init__(self, INPUT_SIZE, OUTPUT_SIZE, EMBED_DIM, HIDDEN_SIZE, NUM_LAYER):
+        super(RNN, self).__init__()
+        self.embedding = nn.Embedding(INPUT_SIZE, EMBED_DIM)
+        self.rnn = nn.RNN(
+            input_size=EMBED_DIM, 
+            hidden_size=HIDDEN_SIZE, 
+            num_layers=NUM_LAYER, 
+            batch_first=True)
+        self.out = nn.Linear(in_features=HIDDEN_SIZE, out_features=OUTPUT_SIZE)
+    def forward(self, x, h_state, length):
+        x = self.embedding(x) # batch_size(2) * seq_len(4) * embed_dim(7)
+        rnn_out, h_state = self.rnn(x, h_state) # rnn_out: batch_size(2) * seq_len(4) * hidden_size(2)
+        outs = []
+        
+        for seq in range(rnn_out.size(1)):
+            outs.append(self.out(rnn_out[:,seq,:]))
+        out = torch.stack(outs, 1)
+        return out, h_state # out: batch_size(2) * seq_len(4) * output_size(1)
+    
+
+
+# read txt
+content = []
+words = []
+with open('./text.txt') as f:
+    while True:
+        line = f.readline()
+        if line == '':
+            break
+        content.append(line.strip())
+        words.extend(line.strip().split(' '))
+vocab = set(words)
+
+# encode
+word_int_table = {w:i for i, w in enumerate(vocab)}
+encoded_content = []
+for s in content:
+    encoded_content.append([word_int_table[w] for w in s.split(' ')])
+
+# pad，在创建batch data的时候要求一个batch中所有instance整齐
+seq_len = [len(s) for s in encoded_content]
+padded_content = []
+for s in encoded_content:
+    padded_array = np.pad(np.array(s),(0,max(seq_len)-len(s)),mode='constant')
+    padded_content.append(torch.tensor(padded_array))
+# concat
+x = torch.stack(padded_content, 0)
+y = torch.zeros(x.shape)
+y[:-1], y[-1] = x[1:], x[0]
+x_cat = []
+for data_x, label, length in zip(x,y,seq_len):
+    x_cat.append((data_x, label,length))
+
+
+BATCH_SIZE = 2 # 要使得train_loader的大小能被BATCH_SIZE整除，否则对于hidden_state的维数会和最后一个batch的input对应不上
+LR = 1e-3
+
+# generate batch data
+train_data = DataLoader(x_cat, batch_size=BATCH_SIZE, shuffle=True)
+
+INPUT_SIZE = OUTPUT_SIZE = len(vocab)
+EMBED_DIM = 7
+HIDDEN_SIZE = 3
+NUM_LAYER = 2
+
+model = RNN(INPUT_SIZE, OUTPUT_SIZE, EMBED_DIM, HIDDEN_SIZE, NUM_LAYER)
+optimizer = optim.Adam(model.parameters(), lr=LR)
+loss_fn = nn.CrossEntropyLoss()
+
+h_state = None
+
+    
+for epoch in range(10):
+    for i, (x,y,length) in enumerate(train_data):
+        out, h_state = model(x, h_state, length)
+        h_state = Variable(h_state.data) # 注意必须用Variable进行包裹，否则会导致导数计算错误。“one of the variables needed for gradient computation has been modified by an inplace operation”
+        loss = loss_fn(out.view(-1, out.size(-1)), y.view(-1).long())
+        print(loss)
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+    print('epoch: #{}========= loss: {}'.format(epoch,loss))
 ```
