@@ -3,17 +3,18 @@ layout: post
 title: 损失函数 Loss Function
 summary: 本章主要总结了机器学习中典型的损失函数类型及其特征，以及对应的典型机器学习模型。
 featured-img: machine learning
-language: chinese 
+language: chinese
 category: machine learning
 ---
 
-##### Table of Contents  
-- [0-1 Loss](#0-1 Loss)  
-- [Binary cross entropy / log Loss](#Binary cross entropy / log Loss) 
-- [Square Loss](#Square Loss)  
-- [Exponential Loss](#Exponential Loss)  
-- [Hinge Loss / Max Margin Loss](#Hinge Loss / Max Margin Loss)  
-- [Perceptron Loss](#Perceptron Loss)  
+##### Table of Contents
+
+- [0-1 Loss](#0-1 Loss)
+- [Binary cross entropy / log Loss](#Binary cross entropy / log Loss)
+- [Square Loss](#Square Loss)
+- [Exponential Loss](#Exponential Loss)
+- [Hinge Loss / Max Margin Loss](#Hinge Loss / Max Margin Loss)
+- [Perceptron Loss](#Perceptron Loss)
 - [Cross-entropy Loss](#Cross-entropy Loss)
 - [Maximum Likelihood Estimation](#Maximum Likelihood Estimation)
 
@@ -24,6 +25,9 @@ category: machine learning
 - used in Preceptron
 - $$L(Y,\hat{Y})$$ = 1, if \|$$Y-\hat{Y}$$\| $$\geq T.$$ else 0
 - non-convex function
+  - there is no guarantee that gradient-based optimization will be effective
+- the loss is discontinuous
+  - the derivatives are useless, since the partial derivative with respect to any parameter is 0 everywhere.
 
 <a name="Binary cross entropy / log Loss"/>
 
@@ -32,7 +36,7 @@ category: machine learning
 - used in LR
 - L(Y,P(Y\|X)) = -$$\log$$P(Y\|X)
 - L = -$$\frac{1}{N}\sum_{i=1}^Ny_i\log \hat{y_i}+(1-y_1)\log (1-\hat{y_i})$$
-    - where $$\hat{y_i}=p(y_i$$\|$$X)$$
+  - where $$\hat{y_i}=p(y_i$$\|$$X)$$
 - sensitive to noise compared with [Hinge Loss / Max Margin Loss](#Hinge Loss / Max Margin Loss)
 - describe distribution of feature probability well
 
@@ -56,7 +60,7 @@ category: machine learning
 # Hinge Loss / Max Margin Loss
 
 - L=$$\max (0, 1-y_i\hat{y_i})$$
-    - if classify correctly, return 0; else $$1-y_i\hat{y_i}$$
+  - if classify correctly, return 0; else $$1-y_i\hat{y_i}$$
 - used in SVM
 
 <a name="Perceptron Loss"/>
@@ -71,9 +75,8 @@ category: machine learning
 # Cross-entropy Loss
 
 - L = $$-\frac{1}{N}\sum_Ny_i\log \hat{y_i}$$
-    - where $$\hat{y_i} = \frac{\exp(z_i)}{\sum_K\exp(z_i)}$$
-    - $$z_i$$ is the output of class $$i$$
-
+  - where $$\hat{y_i} = \frac{\exp(z_i)}{\sum_K\exp(z_i)}$$
+  - $z_i$ is the output of class $$i$$
 
 <a name="Maximum Likelihood Estimation"/>
 
