@@ -24,13 +24,28 @@ layout: compress
         <p class="hero__meta">This site mainly contains some blogs which were concluded during my studying periods. Currently, lots of contents are written in Notion Blog, you can look through <a href="https://inquisitive-charger-3f8.notion.site/Diana-s-Home-Page-1881c8286de94552873577bd8918d943" style="color:bisque;font-weight: bold;">Notion Blog</a></body> </p>
       </div>
     </div>
+        <div style="-webkit-text-size-adjust: 100%;
+                  -webkit-tap-highlight-color: rgba(0,0,0,0);
+                  line-height: 1.7;
+                  font-size: 16px;
+                  color: #404040;
+                  text-rendering: auto;
+                  -webkit-font-smoothing: antialiased;
+                  box-sizing: border-box;
+                  position: relative;
+                  min-height: 1px;
+                  padding-right: 15px;
+                  padding-left: 15px;
+                  float: left;
+                  width: 66.66666667%;
+                  margin-left: 8.33333333%;
+                  margin-bottom: 15px;">
     {% for post in site.posts %}
     {% if post.category == page.cate %}
     {% include card.html %}
     {% endif %}
     {% endfor %}
-
-
+    </div>
     {% include footer.html %}
 
   </body>
