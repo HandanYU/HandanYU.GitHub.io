@@ -6,7 +6,7 @@ layout: compress
   {% include head.html %}
   <head>
     <style>
-      #aEle {
+      .hover{
         -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
@@ -130,7 +130,7 @@ layout: compress
           <ul>
           {% for category in site.categories %}
           
-            <a href='{{ site.url }}/{{ category[0] }}/' id="aEle" class="hover">{{ category[0] }}</a>
+            <a href='{{ site.url }}/{{ category[0] }}/'  class="hover">{{ category[0] }}</a>
           {% endfor %}
         </ul>
     </div>
