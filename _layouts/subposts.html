@@ -3,19 +3,55 @@ layout: compress
 ---
 <html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
   <head>
-    <style type="text/css">
-      a:link {
-        color: #404040;
+    <style>
+      .hover{
+        -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #bfbfbf!important;
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 999em;
+    padding: 0 10px 0 10px;
+    line-height: 24px;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0 1px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-color: #bfbfbf;
       }
-    
-      a:hover {
-        color: rgb(69, 121, 122)
+      .hover:hover{
+        -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 999em;
+    color: rgb(15, 14, 14);
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 10px 0 12px;
+    transition-property: all;
+    transition-duration: .4s;
+    transition-timing-function: ease;
+    font-size: 14px;
+    border: none;
+    line-height: 28px;
+    margin: 0 2px;
+    margin-bottom: 8px;
+    border-color: #49717a;
+    background: #f3f5f5;
+    background-color:transparent;
       }
-    
-      a:active {
-        color: rgb(69, 121, 122)
-      }
-    </style>
+      </style>
   </head>
   {% include head.html %}
 
@@ -81,24 +117,7 @@ layout: compress
         </div>
         <ul>
           {% for category in site.categories %}
-          <a href='{{ site.url }}/{{ category[0] }}/' style=" -webkit-tap-highlight-color: rgba(0,0,0,0);
-                          text-rendering: auto;
-                          -webkit-font-smoothing: antialiased;
-                          box-sizing: border-box;
-                          background-color:  transparent;
-                          color: #4f9c83!important;
-                          display: inline-block;
-                          border: 1px solid rgba(116, 212, 200, 0.8);
-                          border-radius: 999em;
-                          padding: 0 10px 0 10px;
-                          line-height: 24px;
-                          font-size: 15px;
-                          text-decoration: none;
-                          margin: 0 1px;
-                          margin-bottom: 6px;
-                          cursor: pointer;
-                          margin-right: 5px;
-                          border-color: #1f7090;">{{ category[0] }}</a>
+          <a href='{{ site.url }}/{{ category[0] }}/'  class="hover">{{ category[0] }}</a>
           {% endfor %}
         </ul>
     </div>
