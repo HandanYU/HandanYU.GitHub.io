@@ -143,7 +143,7 @@ layout: compress
           {% if category == page.cate %}
           <a href='{{ site.url }}/{{ category[0] }}/'  class="visit">{{ category[0] }}</a>
           {% endif %}
-          {% if category ! = page.cate %}
+          {% if category != page.cate %}
           <a href='{{ site.url }}/{{ category[0] }}/'  class="hover">{{ category[0] }}</a>
           {% endif %}
           {% endfor %}
