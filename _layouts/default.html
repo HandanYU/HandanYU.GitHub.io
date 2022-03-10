@@ -92,24 +92,24 @@ layout: compress
         </div>
           <ul>
           {% for category in site.categories %}
-            <a href='{{ site.url }}/{{ category[0] }}/' style=" -webkit-tap-highlight-color: rgba(0,0,0,0);
-                text-rendering: auto;
-                -webkit-font-smoothing: antialiased;
-                box-sizing: border-box;
-                background-color: transparent;
-                color: #a8ccd1!important;
-                display: inline-block;
-                border: 1px solid rgba(80, 167, 145, 0.8);
-                border-radius: 999em;
-                padding: 0 10px 0 10px;
-                line-height: 24px;
-                font-size: 12px;
-                text-decoration: none;
-                margin: 0 1px;
-                margin-bottom: 6px;
-                cursor: pointer;
-                margin-right: 5px;
-                border-color:powderblue ;">{{ category[0] }}</a>
+            <a href='{{ site.url }}/{{ category[0] }}/' ><p style=" -webkit-tap-highlight-color: rgba(0,0,0,0);
+              text-rendering: auto;
+              -webkit-font-smoothing: antialiased;
+              box-sizing: border-box;
+              background-color:  transparent;
+                        color: #4f9c83!important;
+                        display: inline-block;
+                        border: 1px solid rgba(116, 212, 200, 0.8);
+                        border-radius: 999em;
+                        padding: 0 10px 0 10px;
+                        line-height: 24px;
+                        font-size: 15px;
+                        text-decoration: none;
+                        margin: 0 1px;
+                        margin-bottom: 6px;
+                        cursor: pointer;
+                        margin-right: 5px;
+                        border-color: #1f7090;">{{ category[0] }}</p></a>
           {% endfor %}
         </ul>
     </div>
