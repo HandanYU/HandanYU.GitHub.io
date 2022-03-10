@@ -32,8 +32,18 @@ layout: compress
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
 
             {% for post in site.posts %}
-            <div>
-              {% include card.html %}
+              <div>
+                <h1>{{ post.title | strip_html }}</h1>
+                {% if post.summary %}
+                <p>{{ post.summary | strip_html }}</p>
+                {% else %}
+                <p>{{ post.content | strip_html }}</p>
+                {% endif %}
+                {% assign date_format = site.sleek.date_format | default: "%b %-d, %Y" %}
+                <span class="post-card__meta">
+                  <time>Posted by Diana on {{ post.date | date: date_format }}</time>
+                </span>
+                <div style="border:0.5px solid rgba(58, 55, 55, 0.2)"></div>
               </div>
             {% endfor %}
 
