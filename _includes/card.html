@@ -1,5 +1,5 @@
-<!-- <a class="post-card" href="{{ post.url | relative_url }}" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting"> -->
-  <!-- {% if post.featured-img %}
+<!-- <a class="post-card" href="{{ post.url | relative_url }}" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting">
+  {% if post.featured-img %}
   <figure class="post-card__thumb">
     <img
       src="{{site.url}}/assets/img/posts/{{post.featured-img}}_placehold.jpg",
@@ -13,8 +13,24 @@
   <figure class="post-card__thumb">
     <div class="dark-bg"></div>
   </figure>
-  {% endif %} -->
-  <div>
+  {% endif %}
+  <div class="post-card__inner">
+    <div class="post-card__header">
+      <h2>{{ post.title | strip_html | truncate: 50 }}</h2>
+      {% assign date_format = site.sleek.date_format | default: "%b %-d, %Y" %}
+      <span class="post-card__meta">
+        <time>{{ post.date | date: date_format }}</time>
+      </span>
+    </div>
+    {% if post.summary %}
+      <p>{{ post.summary | strip_html | truncatewords:20 }}</p>
+    {% else %}
+      <p>{{ post.content | strip_html | truncatewords: 20 }}</p>
+    {% endif %}
+  </div>
+</a> -->
+<div>
+  <a href="{{ post.url }}" itemprop="url"></a>
   <h1>{{ post.title | strip_html }}</h1>
   {% if post.summary %}
   <p>{{ post.summary | strip_html }}</p>
@@ -22,17 +38,9 @@
   <p>{{ post.content | strip_html }}</p>
   {% endif %}
   {% assign date_format = site.sleek.date_format | default: "%b %-d, %Y" %}
-<span class="post-card__meta">
-  <time>Posted by Diana on {{ post.date | date: date_format }}</time>
-</span>
-<div style="border:0.5px solid rgba(58, 55, 55, 0.2)"></div>
-  </div>
-
-  <!-- <div class="post-card__inner">
-    <div class="post-card__header">
-      <h2>{{ post.title | strip_html | truncate: 50 }}</h2>
-      
-    </div>
-    
-  </div> -->
-<!-- </a> -->
+  <h5>
+    <time>Posted by Diana on {{ post.date | date: date_format }}</time>
+  </h5>
+  </a>
+  <div style="border:0.5px solid rgba(58, 55, 55, 0.2)"></div>
+</div>

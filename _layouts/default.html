@@ -25,21 +25,10 @@ layout: compress
       </div>
     </div>
     <div class="content_container">
-    <div style="width: 80%;height: 100%;float: left;">
+    <div style="width: 70%;height: 100%; padding-left: 10em;">
+    
         {% for post in site.posts %}
-        <div>
-          <h1>{{ post.title | strip_html }}</h1>
-          {% if post.summary %}
-          <p>{{ post.summary | strip_html }}</p>
-          {% else %}
-          <p>{{ post.content | strip_html }}</p>
-          {% endif %}
-          {% assign date_format = site.sleek.date_format | default: "%b %-d, %Y" %}
-          <span class="post-card__meta">
-            <time>Posted by Diana on {{ post.date | date: date_format }}</time>
-          </span>
-          <div style="border:0.5px solid rgba(58, 55, 55, 0.2)"></div>
-        </div>
+          {% include card.html %}
         {% endfor %}
     <!-- <main class="site__content">
       <section class="blog">
