@@ -26,32 +26,33 @@ layout: compress
     </div>
     <div class="content_container">
     <div style="width: 80%;height: 100%;float: left;">
-    <main class="site__content">
+        {% for post in site.posts %}
+        <div>
+          <h1>{{ post.title | strip_html }}</h1>
+          {% if post.summary %}
+          <p>{{ post.summary | strip_html }}</p>
+          {% else %}
+          <p>{{ post.content | strip_html }}</p>
+          {% endif %}
+          {% assign date_format = site.sleek.date_format | default: "%b %-d, %Y" %}
+          <span class="post-card__meta">
+            <time>Posted by Diana on {{ post.date | date: date_format }}</time>
+          </span>
+          <div style="border:0.5px solid rgba(58, 55, 55, 0.2)"></div>
+        </div>
+        {% endfor %}
+    <!-- <main class="site__content">
       <section class="blog">
         <div class="container">
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
 
-            {% for post in site.posts %}
-              <div>
-                <h1>{{ post.title | strip_html }}</h1>
-                {% if post.summary %}
-                <p>{{ post.summary | strip_html }}</p>
-                {% else %}
-                <p>{{ post.content | strip_html }}</p>
-                {% endif %}
-                {% assign date_format = site.sleek.date_format | default: "%b %-d, %Y" %}
-                <span class="post-card__meta">
-                  <time>Posted by Diana on {{ post.date | date: date_format }}</time>
-                </span>
-                <div style="border:0.5px solid rgba(58, 55, 55, 0.2)"></div>
-              </div>
-            {% endfor %}
+           -->
 
             <!-- {% include pagination.html %} -->
-          </div>
+          <!-- </div>
         </div>
       </section>
-    </main>
+    </main> -->
     </div>
     <div style="width: 20%;height: 40%;float: right;padding-top: 5rem;background-color:rgba(214, 217, 218, 0.2);">
       <div style="width: 100%; height: 40%;float: right;padding-top: 2rem;background-color: rgb(153, 188, 209,0.2);">
