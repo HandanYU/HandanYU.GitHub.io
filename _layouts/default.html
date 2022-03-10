@@ -4,8 +4,7 @@ layout: compress
 <html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
 
   {% include head.html %}
-
-  <body class="site">
+  <head>
     <style type="text/css">
       a:link {
         color: #404040;
@@ -19,6 +18,9 @@ layout: compress
         color: rgb(69, 121, 122)
       }
     </style>
+  </head>
+  <body class="site">
+
     {% if site.google_tag_manager %}
 
       <!-- Google Tag Manager (noscript) -->
@@ -93,7 +95,7 @@ layout: compress
           <ul>
           {% for category in site.categories %}
 
-            <a href='{{ site.url }}/{{ category[0] }}/' ><p style=" -webkit-tap-highlight-color: rgba(0,0,0,0);
+            <a href='{{ site.url }}/{{ category[0] }}/' style=" -webkit-tap-highlight-color: rgba(0,0,0,0);
               text-rendering: auto;
               -webkit-font-smoothing: antialiased;
               box-sizing: border-box;
@@ -110,7 +112,7 @@ layout: compress
                         margin-bottom: 6px;
                         cursor: pointer;
                         margin-right: 5px;
-                        border-color: #1f7090;">{{ category[0] }}</p></a>
+                        border-color: #1f7090;">{{ category[0] }}</a>
           {% endfor %}
         </ul>
     </div>
