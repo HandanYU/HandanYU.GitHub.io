@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Deep learning for molecular generation读书笔记
-summary: 
+summary: 论文Deep learning for molecular generation的读书笔记
 featured-img: others
-language: english 
+language: english
 category: others
 ---
 
@@ -13,19 +13,17 @@ category: others
 
 quantitative estimate of drug-likeness
 
-**是一种将药物相似性量化为介于0和1之间的数值的方法**
+**是一种将药物相似性量化为介于 0 和 1 之间的数值的方法**
 
 ## SAS —— 合成难度分数
 
- Synthetic Accessibility Score
+Synthetic Accessibility Score
 
 a measurement of synthetic accessibility
 
 ## RO5
 
 ## latent vector
-
-
 
 # 数据集
 
@@ -34,8 +32,6 @@ a measurement of synthetic accessibility
 ## ChemDiv
 
 ## SMILES
-
-
 
 # The structure of the article
 
@@ -50,13 +46,13 @@ a measurement of synthetic accessibility
 1. use KL regularization
 2. the posterior distribution in VAE is usually a Gaussian distribution with mean and variance predicted by the encoder
 
-#### ChemVAE (Chemical VAE) 
+#### ChemVAE (Chemical VAE)
 
 - Mechanism
 
   1. encoder
 
-     convert the discrete representations of molecules (SMILES strings in this case) into real-valued fix-dimensional continuous vectors (latent space).    
+     convert the discrete representations of molecules (SMILES strings in this case) into real-valued fix-dimensional continuous vectors (latent space).
 
      - to ensure the validation of the decoded SMILES strings. —— add Gaussian noise with penalty term.
 
@@ -76,7 +72,7 @@ a measurement of synthetic accessibility
 
   $$5\times QED - SAS$$
 
-####  GrammarVAE
+#### GrammarVAE
 
 utilized a context-free grammar (CFG) to form a parse tree
 
@@ -97,11 +93,9 @@ utilized a context-free grammar (CFG) to form a parse tree
 
   - Predicting
 
-    
-
 - Improvement
 
-  -  teach VAE
+  - teach VAE
   - provide smoother interpolation and more valid molecules
   - Use **BO** optimization method
 
@@ -109,13 +103,9 @@ utilized a context-free grammar (CFG) to form a parse tree
 
   $$\log P(m)-SAS(m)-ring\_penalty(m)$$
 
-  
-
 #### SD-VAE (syntax-directed VAE)
 
 take both the syntax and semantics of SMILES into account
-
-
 
 - Improvement
   - utilize the **CFG-based decoder** to capture the syntax of SMILES
@@ -128,7 +118,7 @@ take both the syntax and semantics of SMILES into account
 
 a supervised method
 
-1. use AL(adversarial learning) regularization -  match the posterior distribution to a prior distribution
+1. use AL(adversarial learning) regularization - match the posterior distribution to a prior distribution
 2. the posterior distribution in AAE is encouraged to match a prior arbitrary distribution
 
 #### ECAAE (entangled conditional AAE)
@@ -136,7 +126,8 @@ a supervised method
 it is a semisupervised method
 
 - Properties
-  -  logP, SAS and E
+
+  - logP, SAS and E
 
 - Improvement
   - integrates predictive and joint disentanglement approaches to solve disentanglement issues and inconsistency conditional generation problem
@@ -155,13 +146,13 @@ the GAN architecture is combined with **reward functions with RL**
 
 Cons
 
--  less effificient in controlling valid SMILES strings
+- less effificient in controlling valid SMILES strings
 
 #### ORGANIC
 
 Cons
 
--  less effificient in controlling valid SMILES strings
+- less effificient in controlling valid SMILES strings
 
 #### RANC (Reinforced adversarial neural computer)
 
@@ -170,9 +161,9 @@ Cons
   - discriminaroe
   - objective functions
 - Improvement
-  -  DNC could afford the generation on long SMILES strings
+  - DNC could afford the generation on long SMILES strings
 - Cons
-  -  less effificient in controlling valid SMILES strings
+  - less effificient in controlling valid SMILES strings
 
 #### ATNC (Adversarial threshold neural computer)
 
@@ -184,7 +175,7 @@ Extension of RANC with a specific adversarial threshold block.
 
 # optimization strategies
 
-## TL 
+## TL
 
 - learn general properties on both large and small datasets
 
@@ -215,7 +206,6 @@ Extension of RANC with a specific adversarial threshold block.
   - generative model: a stack-augmented RNN to learn hidden rules of forming
     sequences of letters for generating valid SMILES molecules
 
-###  VAE-based de novo molecular generative model
+### VAE-based de novo molecular generative model
 
-
-##  summarize these generative models and make comparisons between them.
+## summarize these generative models and make comparisons between them.
