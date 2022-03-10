@@ -46,6 +46,35 @@ layout: compress
     {% endif %}
     {% endfor %}
     </div>
+        <div style="-webkit-text-size-adjust: 100%;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                line-height: 1.7;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                box-sizing: border-box;
+                position: relative;
+                min-height: 1px;
+                padding-right: 15px;
+                padding-left: 15px;
+                float: left;
+                width: 25%;
+                margin-left: 0;
+                color: #bfbfbf;
+                font-size: 14px;">
+          <div style="width: 100%; height: 40%;float: right;padding-top: 2rem;background-color: rgb(153, 188, 209,0.2);">
+            <div style="color: black; text-align: center;">
+              <h3>Categories</h3>
+            </div>
+              <ul>
+                {% for category in site.categories %}
+                <li>
+                  <a href='{{ site.url }}/{{ category[0] }}/'
+                    style="font-size: 18px; font-weight:bold ; color: rgb(86, 105, 187);">{{ category[0] }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+          </div>
+        </div>
     {% include footer.html %}
 
   </body>
