@@ -6,7 +6,19 @@ layout: compress
   {% include head.html %}
 
   <body class="site">
-
+    <style type="text/css">
+      a:link {
+        color: #404040;
+      }
+    
+      a:hover {
+        color: rgb(69, 121, 122)
+      }
+    
+      a:active {
+        color: rgb(69, 121, 122)
+      }
+    </style>
     {% if site.google_tag_manager %}
 
       <!-- Google Tag Manager (noscript) -->
@@ -80,19 +92,7 @@ layout: compress
         </div>
           <ul>
           {% for category in site.categories %}
-          <style type="text/css">
-            a:link {
-              color: #404040;
-            }
-          
-            a:hover {
-              color: rgb(69, 121, 122)
-            }
-          
-            a:active {
-              color: rgb(69, 121, 122)
-            }
-          </style>
+
             <a href='{{ site.url }}/{{ category[0] }}/' ><p style=" -webkit-tap-highlight-color: rgba(0,0,0,0);
               text-rendering: auto;
               -webkit-font-smoothing: antialiased;
