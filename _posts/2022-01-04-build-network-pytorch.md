@@ -6,20 +6,7 @@ summary: 运用PyTorch自定义网络层并搭建网络结构
 language: english 
 category: deep learning
 ---
-##### Table of Contents  
-- [mac上安装pytorch](#mac上安装pytorch)  
-    - [建立python虚拟环境](#建立python虚拟环境)
-    - [激活python虚拟环境](#激活python虚拟环境)
-    - [利用pip安装pytorch](#利用pip安装pytorch)
-- [搭建自定义网络](#搭建自定义网络)
-    - [搭建自定义网络层](#搭建自定义网络层)
-    - [自定义网络](#自定义网络)
-    - [定义损失函数](#定义损失函数)
-    - [定义优化器](#定义优化器)
-- [训练网络模型](#训练网络模型)
-- [预测结果](#预测结果)
-- [例：BP Net](#例：BP Net)
-- [例：RNN](#例：RNN)
+
 <a name='mac上安装pytorch'/>
 
 # mac上安装pytorch

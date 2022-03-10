@@ -7,19 +7,6 @@ language: chinese
 category: machine learning
 ---
 
-##### Table of Contents
-
-- [0-1 Loss](#0-1 Loss)
-- [Binary cross entropy / log Loss](#Binary cross entropy / log Loss)
-- [Square Loss](#Square Loss)
-- [Exponential Loss](#Exponential Loss)
-- [Hinge Loss / Max Margin Loss](#Hinge Loss / Max Margin Loss)
-- [Perceptron Loss](#Perceptron Loss)
-- [Cross-entropy Loss](#Cross-entropy Loss)
-- [Maximum Likelihood Estimation](#Maximum Likelihood Estimation)
-
-<a name="0-1 Loss"/>
-
 # 0-1 Loss
 
 - used in Preceptron
