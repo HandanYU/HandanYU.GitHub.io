@@ -4,7 +4,19 @@ layout: compress
 <html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
 
   {% include head.html %}
+<style type="text/css">
+  a:link {
+    color: #404040;
+  }
 
+  a:hover {
+    color: rgb(69, 121, 122)
+  }
+
+  a:active {
+    color: rgb(69, 121, 122)
+  }
+</style>
   <body class="site">
 
     {% if site.google_tag_manager %}
