@@ -34,22 +34,11 @@ h6 {
 
 //reset link
 a {
-  color: $link-color;
-  text-decoration: none;
-  transition: all .2s linear;
-  border-bottom: 1px dashed $link-color;
-
-  &:active,
-  &:focus {
-    outline: 0;
-  }
-
-  &:hover,
-  &:focus {
-    color: $primary-light;
-    border-bottom: 1px solid $primary-light;
-  }
+  &:link{color:#404040;}
+  &:hover{color:rgb(69, 121, 122)}
+  &:active{color:rgb(69, 121, 122)}
 }
+
 
 hr {
   height: 1px;
