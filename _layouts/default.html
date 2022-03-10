@@ -5,20 +5,32 @@ layout: compress
 
   {% include head.html %}
   <head>
-    <style type="text/css">
-      a:link {
-        color: #82a584;
+    <style>
+      #aEle {
+      -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+            background-color:rgba(130, 161, 156, 0.3);
+            display: inline-block;
+            border: 1px solid rgba(131, 192, 139, 0.8);
+            border-radius: 999em;
+            padding: 0 10px 0 10px;
+            color: rgb(91, 172, 147);
+            line-height: 24px;
+            font-size: 15px;
+            text-decoration: none;
+            margin: 0 1px;
+            margin-bottom: 6px;
+            cursor: pointer;
+            margin-right: 5px;
       }
-    
-      a:hover {
+      .hover:hover{
         background-color: #82a584;
         color: rgb(10, 10, 10)
       }
-    
-      a:active {
-        color: rgb(69, 121, 122)
-      }
-    </style>
+      </style>
   </head>
   <body class="site">
 
@@ -96,24 +108,7 @@ layout: compress
           <ul>
           {% for category in site.categories %}
           
-            <a href='{{ site.url }}/{{ category[0] }}/' style="-webkit-text-size-adjust: 100%;
-            -webkit-tap-highlight-color: rgba(0,0,0,0);
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            box-sizing: border-box;
-            background-color:rgba(130, 161, 156, 0.3);
-            display: inline-block;
-            border: 1px solid rgba(131, 192, 139, 0.8);
-            border-radius: 999em;
-            padding: 0 10px 0 10px;
-            color: rgb(91, 172, 147);
-            line-height: 24px;
-            font-size: 15px;
-            text-decoration: none;
-            margin: 0 1px;
-            margin-bottom: 6px;
-            cursor: pointer;
-            margin-right: 5px;">{{ category[0] }}</a>
+            <a href='{{ site.url }}/{{ category[0] }}/' id="aEle" class="hover">{{ category[0] }}</a>
           {% endfor %}
         </ul>
     </div>
