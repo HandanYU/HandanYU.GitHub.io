@@ -25,7 +25,11 @@ layout: compress
     margin-bottom: 20px;
     height: 80%;
       }
-
+.warp-mask{
+    height:80%;
+    width:100%;
+    background: rgba(0,0,0,.4);
+}
       .hover{
         -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -88,6 +92,8 @@ layout: compress
     {% include header.html %}
       
     <header class="intro-header" style="background-image: url('{{site.url}}/assets/img/posts/Sleek_lg.jpg')">
+      <div class="wrap-mask">
+        </div>
       <div class="hero__wrap">
         <h1 class="hero__title">Diana's Blog</h1>
         <p style="color: rgb(248, 242, 242);">Yesterday is history, tomorrow is a mystery, but today is a gift</p>
