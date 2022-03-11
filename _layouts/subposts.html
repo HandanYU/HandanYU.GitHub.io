@@ -143,9 +143,9 @@ layout: compress
           {% for category in site.categories %}
           {% if category[0] == page.cat %}
           <p>{{ category[0] }}{{ page.cat }}</p>
-          <a href='{{ site.url }}/{{ category[0] }}/'  class="hover">{{ category[0] }}</a>
+          <a href='{{ site.url }}/{{ category[0] }}/'  class="fix">{{ category[0] }}</a>
           {% else %}
-          <a href='{{ site.url }}/{{ category[0] }}/' class="fix">{{ category[0] }}</a>
+          <a href='{{ site.url }}/{{ category[0] }}/' class="hover">{{ category[0] }}</a>
           {% endif %}
           {% endfor %}
         </ul>
