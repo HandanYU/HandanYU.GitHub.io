@@ -141,6 +141,7 @@ layout: compress
         </div>
         <ul>
           {% for category in site.categories %}
+          <p>{{ category[0] }}{{ page.cat }}</p>
           {% if category[0] == page.cat %}
           <p>{{ category[0] }}{{ page.cat }}</p>
           <a href='{{ site.url }}/{{ category[0] }}/'  class="fix">{{ category[0] }}</a>
