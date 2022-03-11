@@ -4,7 +4,30 @@ layout: compress
 <html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
   <head>
     <style>
-
+      .fix{
+        -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid #49717a;
+    border-radius: 999em;
+    color: rgb(15, 14, 14);
+    border-color: #49717a;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 10px 0 12px;
+    transition-property: all;
+    transition-duration: .4s;
+    transition-timing-function: ease;
+    font-size: 15px;
+    line-height: 28px;
+    margin: 0 2px;
+    margin-bottom: 8px;
+    background-color:rgba(98, 147, 175, 0.3);
+      }
       .hover{
         -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -13,9 +36,9 @@ layout: compress
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
     background-color: transparent;
-    color: #bfbfbf!important;
+    color: #89a88e!important;
     display: inline-block;
-    border: 1px solid rgba(255,255,255,.8);
+    border: 1px solid rgba(169, 187, 163, 0.8);
     border-radius: 999em;
     padding: 0 10px 0 10px;
     line-height: 24px;
@@ -25,7 +48,7 @@ layout: compress
     margin-bottom: 6px;
     cursor: pointer;
     margin-right: 5px;
-    border-color: #bfbfbf;
+    border-color: #8dbb95;
       }
       .hover:hover{
         -webkit-text-size-adjust: 100%;
@@ -49,7 +72,7 @@ layout: compress
     line-height: 28px;
     margin: 0 2px;
     margin-bottom: 8px;
-    background-color:transparent;
+    background-color:rgba(98, 147, 175, 0.3);
       }
       </style>
   </head>
@@ -118,7 +141,11 @@ layout: compress
         </div>
         <ul>
           {% for category in site.categories %}
+          {% if category[0] == page.cat %}
           <a href='{{ site.url }}/{{ category[0] }}/'  class="hover">{{ category[0] }}</a>
+          {% else %}
+          <a href='{{ site.url }}/{{ category[0] }}/' class="fix">{{ category[0] }}</a>
+          {% endif %}
           {% endfor %}
         </ul>
     </div>
