@@ -347,7 +347,7 @@ a {
   position: relative;
   background-color: #dde5ea;
   background-repeat: no-repeat;
-  /* background-position: 100%; */
+  background-position: 100%;
   background-size: cover;
 }
 @media (min-width: 80em) {
