@@ -112,14 +112,9 @@ layout: compress
 
 {% include header.html %}
 
-  {% if page.featured-img %}
 <div class="hero lazyload" data-bg="{{site.url}}/assets/img/posts/post.jpg">
-    {% else %}
-    <div class="hero dark-bg">
-      {% endif %}
-      <a href='{{ site.url }}/{{ post.cate }}/' class="hover">{{ post.cate }}</a>
+      
       <div class="hero__wrap">
-       
         <h1 class="hero__title">{{ page.title }}</h1>
         <p class="hero__meta">
             <span>
@@ -135,8 +130,8 @@ layout: compress
               &nbsp;
           </span>
         </p>
+        <a href='{{ site.url }}/{{ post.cate }}/' class="hover">{{ post.cate }}</a>
       </div>
-    </div>
   </div>
 <div style="width: 95%;">
 <div style="-webkit-text-size-adjust: 100%;
