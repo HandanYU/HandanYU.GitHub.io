@@ -211,8 +211,57 @@ margin-bottom: 15px;">
   </main>
   {% include footer.html %}
 </div>
-
 <div style="    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    line-height: 1.7;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 1px;
+    float: left;
+    width: 26.66666667%;
+    margin-left: 0;
+    display: block!important;
+    color: #bfbfbf;
+    font-size: 14px;
+    padding: 0;">
+    <div style="    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    line-height: 1.7;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    color: #bfbfbf;
+    font-size: 14px;
+    box-sizing: border-box;
+    overflow: auto;
+    height: 100%;
+    padding-bottom: 40px;
+    width: 195px;
+    display: block;">
+    <hr class="hidden-sm hidden-xs">
+      <section>
+        <h2 style="text-align: center; background-color:rgba(136, 210, 233, 0.1)">Catalogue</h2>
+        {% include toc.html html=content %}
+      </section>
+      <hr>
+      <section>
+        <h2 style="text-align: center; background-color: rgba(136, 210, 233, 0.1)">Relative Blogs</h2>
+        <ul>
+          {% for category in site.categories %}
+          {% if category.first == page.category %}
+          {% for post in category.last %}
+          <li>
+            <a href="{{ post.url | relative_url }}" style="color:black"><span>{{ post.title }}</span></a>
+          </li>
+          {% endfor %}
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </section>
+    </div>
+    </div>
+<!-- <div style="    -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     line-height: 1.7;
     text-rendering: auto;
@@ -250,7 +299,7 @@ margin-bottom: 15px;">
 </ul>
 </section>
 
-</div>
+</div> -->
 </div>
   
 
