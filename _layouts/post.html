@@ -113,9 +113,7 @@ layout: compress
 {% include header.html %}
 
 <div class="hero lazyload" data-bg="{{site.url}}/assets/img/posts/post.jpg">
-      <h1>{{ page.category }}</h1>
-      <h1>{{ page.title }}</h1>
-      <a href='{{ site.url }}/{{ page.category }}/' class="hover">{{ page.category }}</a>
+      
       <div class="hero__wrap">
         
         <h1 class="hero__title">{{ page.title }}</h1>
@@ -123,6 +121,7 @@ layout: compress
             <span>
               <time>{{ page.date | date_to_string }}</time>&nbsp;
             </span>
+            <a href='{{ site.url }}/{{ page.category }}/' class="hover">{{ page.category }}</a>
           <span>
               {% assign words = content | number_of_words %}
                 {% if words < 360 %}
