@@ -4,17 +4,40 @@ layout: compress
 <html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
   <head>
     <style type="text/css">
-      /* a:link {
-        color: #404040;
-      }
-    
-      a:hover {
-        color: rgb(69, 121, 122)
-      }
-    
-      a:active {
-        color: rgb(69, 121, 122)
-      } */
+.origin_cata{
+   -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    line-height: 1.7;
+    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    color: #bfbfbf;
+    font-size: 14px;
+    box-sizing: border-box;
+    overflow: auto;
+    height: 100%;
+    padding-bottom: 40px;
+    width: 26%;
+    display: block;
+}
+.fix_cata{
+      -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+    line-height: 1.7;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    color: #bfbfbf;
+    font-size: 14px;
+    box-sizing: border-box;
+    overflow: auto;
+    height: 100%;
+    padding-bottom: 40px;
+    width: 195px;
+    position: fixed;
+    top: -21px;
+    display: block;
+}
        .hover{
         -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -65,7 +88,23 @@ layout: compress
     background-color:rgba(255, 255, 255);
     position:relative   /*在遮罩层中使得超链接仍有效需要添加*/
       }
-    </style>
+   
+   </style>
+   <script type="text/javascript">
+
+    function scroll_cata() {
+      var btnSwitch = document.getElementById("cata");
+      var scrollTop = 0;
+      if (document.documentElement && document.documentElement.scrollTop) {
+        scrollTop = document.documentElement.scrollTop;
+      } else if (document.body) {
+        scrollTop = document.body.scrollTop;
+      }
+      if (scrollTop > 56 ){
+        document.div.className = 'fix_cata'
+      }
+    }
+  </script>
 {% include head.html %}
 <head>
   <script>
@@ -103,7 +142,7 @@ layout: compress
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 </head>
-<body class="site">
+<body class="site" onload="scoll_cata()">
 
 {% if site.google_tag_manager %}
 
@@ -138,32 +177,23 @@ layout: compress
         <a href='{{ site.url }}/{{ page.category }}/' class="hover">{{ page.category }}</a>
       </div>
     </div>
+<div style="width: 95%;">
 <div style="-webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    line-height: 1.7;
-    font-size: 16px;
-    color: #404040;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    box-sizing: border-box;
-    margin-right: -15px;
-    margin-left: -15px;">
-  <!--Content-->
-<div style="    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    line-height: 1.7;
-    font-size: 16px;
-    color: #404040;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    box-sizing: border-box;
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    float: left;
-    width: 83.33333333%;
-    margin-left: 8.33333333%;
-    padding-right: 5%;">
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+line-height: 1.7;
+font-size: 16px;
+color: #404040;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+box-sizing: border-box;
+position: relative;
+min-height: 1px;
+padding-right: 15px;
+padding-left: 15px;
+float: left;
+width: 66.66666667%;
+margin-left: 8.33333333%;
+margin-bottom: 15px;">
   <main class="site__content">
     <div class="container">
       <article class="post-content" itemprop="articleBody">
@@ -220,74 +250,12 @@ layout: compress
   </main>
   {% include footer.html %}
 </div>
-<!--catalog-->
-<div style="    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    line-height: 1.7;
-    text-rendering: auto;
-    width: 25%;
-    -webkit-font-smoothing: antialiased;
-    color: #bfbfbf;
-    font-size: 14px;
-    box-sizing: border-box;
-    bottom: 0;
-    right: 0;
-    padding: 30px;
-    padding-top: 0px;">
-    <div style="    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    line-height: 1.7;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    color: #bfbfbf;
-    font-size: 14px;
-    box-sizing: border-box;
-    overflow: auto;
-    height: 100%;
-    padding-bottom: 40px;
-    width: 195px;
-    display: block;">
-      <section>
-        <h2 style="text-align: center; background-color:rgba(136, 210, 233, 0.1)">Catalogue</h2>
-        {% include toc.html html=content %}
-      </section>
-      <hr>
-      <section>
-        <h2 style="text-align: center; background-color: rgba(136, 210, 233, 0.1)">Relative Blogs</h2>
-        <ul>
-          {% for category in site.categories %}
-          {% if category.first == page.category %}
-          {% for post in category.last %}
-          <li>
-            <a href="{{ post.url | relative_url }}" style="color:black"><span>{{ post.title }}</span></a>
-          </li>
-          {% endfor %}
-          {% endif %}
-          {% endfor %}
-        </ul>
-      </section>
-    </div>
-    </div>
-<!-- <div style="    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    line-height: 1.7;
-    text-rendering: auto;
-    width: 25%;
-    -webkit-font-smoothing: antialiased;
-    color: #bfbfbf;
-    font-size: 14px;
-    box-sizing: border-box;
-    position: fixed; /*固定用*/
-    overflow: auto; /*当内容在可显示内容之外，生产自用的滚动条，与position: fixed一起用*/
-    top: 36em;
-    bottom: 0;
-    right: 0;
-    left: 1050px;
-    padding: 30px;
-    padding-top: 0px;">
+
+    
+<div class="origin_cata" >
 
   <section>
-    <h2 style="text-align: center; background-color:rgba(136, 210, 233, 0.1)">Catalogue</h2>
+    <h2  id="cata" style="text-align: center; background-color:rgba(136, 210, 233, 0.1)">Catalogue</h2>
     {% include toc.html html=content %}
   </section>
   <hr>
@@ -306,7 +274,7 @@ layout: compress
 </ul>
 </section>
 
-</div> -->
+</div>
 </div>
   
 
