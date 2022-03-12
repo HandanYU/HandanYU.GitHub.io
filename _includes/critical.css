@@ -396,7 +396,7 @@ a {
 }
 @media (min-width: 48em) {
   .hero__wrap .hero__title {
-    font-size: 5.625em;
+    font-size: 3.625em;
     line-height: 3.125rem;
   }
   .post-list {
