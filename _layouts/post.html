@@ -22,8 +22,8 @@ layout: compress
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
-    background-color: rgba(87, 131, 182, 0.3);
-    color: #175964!important;
+    background-color: rgb(109, 175, 219);
+    color: #080808!important;
     display: inline-block;
     border: 1px solid rgba(37, 49, 121, 0.8);
     border-radius: 999em;
@@ -35,7 +35,7 @@ layout: compress
     margin-bottom: 6px;
     cursor: pointer;
     margin-right: 5px;
-    border-color: #2d6877;
+    border-color: #4d69c3;
       }
       .hover:hover{
         -webkit-text-size-adjust: 100%;
@@ -45,9 +45,9 @@ layout: compress
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
     display: inline-block;
-    border: 1px solid #49717a;
+    border: 1px solid #253c5d;
     border-radius: 999em;
-    color: rgb(15, 14, 14);
+    color: rgb(15, 15, 15);
     border-color: #49717a;
     text-decoration: none;
     cursor: pointer;
@@ -59,7 +59,7 @@ layout: compress
     line-height: 28px;
     margin: 0 2px;
     margin-bottom: 8px;
-    background-color:rgba(98, 147, 175, 0.3);
+    background-color:rgba(255, 255, 255);
       }
     </style>
 {% include head.html %}
@@ -115,13 +115,13 @@ layout: compress
 <div class="hero lazyload" data-bg="{{site.url}}/assets/img/posts/post.jpg">
       
       <div class="hero__wrap">
-        
+        <a href='{{ site.url }}/{{ page.category }}/' class="hover">{{ page.category }}</a>
         <h1 class="hero__title">{{ page.title }}</h1>
         <p class="hero__meta">
             <span>
               <time>{{ page.date | date_to_string }}</time>&nbsp;
             </span>
-            <a href='{{ site.url }}/{{ page.category }}/' class="hover">{{ page.category }}</a>
+            
           <span>
               {% assign words = content | number_of_words %}
                 {% if words < 360 %}
