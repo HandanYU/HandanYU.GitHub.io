@@ -221,18 +221,16 @@ margin-bottom: 15px;">
     color: #bfbfbf;
     font-size: 14px;
     box-sizing: border-box;
-    position: fixed;
-    overflow: auto;
-    height: 100%;
-    padding-bottom: 40px;
-    top: 30em;
+    position: fixed; /*固定用*/
+    overflow: auto; /*当内容在可显示内容之外，生产自用的滚动条，与position: fixed一起用*/
+    top: 30px;
     bottom: 0;
     right: 0;
-    left: 1100px;
+    left: 1050px;
     padding: 30px;
     padding-top: 0px;">
 
-  <section style="padding-top: 10em; ">
+  <section>
     <h2 style="text-align: center; background-color:rgba(136, 210, 233, 0.1)">Catalogue</h2>
     {% include toc.html html=content %}
   </section>
