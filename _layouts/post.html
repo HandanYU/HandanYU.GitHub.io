@@ -15,6 +15,52 @@ layout: compress
       a:active {
         color: rgb(69, 121, 122)
       }
+            .hover{
+        -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #89a88e!important;
+    display: inline-block;
+    border: 1px solid rgba(169, 187, 163, 0.8);
+    border-radius: 999em;
+    padding: 0 10px 0 10px;
+    line-height: 24px;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0 1px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-color: #8dbb95;
+      }
+      .hover:hover{
+        -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid #49717a;
+    border-radius: 999em;
+    color: rgb(15, 14, 14);
+    border-color: #49717a;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 10px 0 12px;
+    transition-property: all;
+    transition-duration: .4s;
+    transition-timing-function: ease;
+    font-size: 15px;
+    line-height: 28px;
+    margin: 0 2px;
+    margin-bottom: 8px;
+    background-color:rgba(98, 147, 175, 0.3);
+      }
     </style>
 {% include head.html %}
 <head>
@@ -72,6 +118,7 @@ layout: compress
     <div class="hero dark-bg">
       {% endif %}
       <div class="hero__wrap">
+        <a href='{{ site.url }}/{{ post.cate }}/' class="hover">{{ post.cate }}</a>
         <h1 class="hero__title">{{ page.title }}</h1>
         <p class="hero__meta">
             <span>
