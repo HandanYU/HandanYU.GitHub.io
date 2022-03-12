@@ -1223,7 +1223,7 @@ table td {
   background-position: 50%;
   background-size: cover;
 }
-@media (min-width: 62em) {
+@media (min-width: 80em) {
   .hero {
     margin: 0 auto;
     height: 36em;
@@ -1274,7 +1274,7 @@ table td {
 .hero__wrap .hero__title {
   color: #fff;
 }
-@media (min-width: 48em) {
+@media (min-width: 60em) {
   .hero__wrap .hero__title {
     font-size: 3.625em;
     line-height: 3.125rem;
