@@ -3,18 +3,7 @@ layout: compress
 ---
 <html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
   <head>
-    <style type="text/css">
-      a:link {
-        color: #404040;
-      }
-    
-      a:hover {
-        color: rgb(69, 121, 122)
-      }
-    
-      a:active {
-        color: rgb(69, 121, 122)
-      }
+    <style>
             .hover{
         -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -117,8 +106,9 @@ layout: compress
     {% else %}
     <div class="hero dark-bg">
       {% endif %}
+      <a href='{{ site.url }}/{{ post.cate }}/' class="hover">{{ post.cate }}</a>
       <div class="hero__wrap">
-        <a href='{{ site.url }}/{{ post.cate }}/' class="hover">{{ post.cate }}</a>
+       
         <h1 class="hero__title">{{ page.title }}</h1>
         <p class="hero__meta">
             <span>
