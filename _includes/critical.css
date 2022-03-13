@@ -370,7 +370,7 @@ a {
   z-index: 1;
 }
 .hero__wrap::before {
-  position: relative;
+  position: fixed;
   display: block;
   content: "";
   top: 0;
