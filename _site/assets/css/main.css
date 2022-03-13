@@ -1261,7 +1261,7 @@ table td {
   background: rgba(52, 56, 81, 0.3);
 }
 .hero__wrap {
-  position: relative;
+  position: fixed;
   padding-top: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
