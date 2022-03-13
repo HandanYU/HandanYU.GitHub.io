@@ -1262,25 +1262,13 @@ table td {
 }
 .hero__wrap {
   position: fixed;
-  top: 50%;
-  /* left: 50%; */
-  -webkit-transform: translate(-50%, -50%);
+  padding-top: 5%;
+  left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
-  width: 100%;
-  /* max-width: 100%; */
+  max-width: 40em;
   z-index: 1;
-}
-.hero__wrap::before {
-  position: fixed;
-  display: block;
-  content: "";
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(249, 249, 252, 0.2);
 }
 .hero__wrap .hero__title {
   color: #fff;
