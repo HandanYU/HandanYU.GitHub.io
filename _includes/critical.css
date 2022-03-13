@@ -356,7 +356,10 @@ a {
     height: 36em;
   }
 }
-
+.hero__title {
+  color: #fff;
+  text-align: center;
+}
 .hero__wrap {
   position: absolute;
   top: 50%;
