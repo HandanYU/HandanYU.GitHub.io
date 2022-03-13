@@ -379,8 +379,8 @@ a {
   top: 50%;
   left: 0;
   width: 100%;
-  /* height: 100%; */
-  background: rgba(249, 249, 252, 0.2);
+  height: 100%;
+  background: rgba(21, 21, 22);
 }
 .hero__wrap .hero__title {
   color: #fff;
