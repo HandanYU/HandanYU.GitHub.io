@@ -1262,7 +1262,7 @@ table td {
   background: rgba(52, 56, 81, 0.3);
 }
 .hero__wrap {
-  position: relative;
+  position: fixed;
   padding-top: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1272,14 +1272,14 @@ table td {
   z-index: 1;
 }
 .hero__wrap::before {
-  position: relative;
+  position: fixed;
   display: block;
   content: "";
   top: 50%;
   left: 0;
   width: 100%;
-  /* height: 100%; */
-  background: rgba(249, 249, 252, 0.5);
+  height: 100%;
+  background: rgba(249, 249, 252, 0.2);
 }
 .hero__wrap .hero__title {
   color: #fff;
