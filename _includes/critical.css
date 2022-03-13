@@ -358,15 +358,15 @@ a {
 }
 
 .hero__wrap {
-  position: fixed;
-  top: 50%;
+  position: absolute;
+  top: -50%;
   /* left: 50%; */
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
-  width: 100%;
-  /* max-width: 100%; */
+  /* width: 100%; */
+  max-width: 100%;
   z-index: 1;
 }
 .hero__wrap::before {
