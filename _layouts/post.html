@@ -298,31 +298,32 @@ layout: compress
 </section>
 
 </div>
+<script>
+  var navContainer = document.getElementById("nav-container");
+  // var navBox = document.getElementById("nav-box");
+  // var text = document.getElementById("text");
+  // var navBoxChild = navBox.children;
+  // var textChild = text.children;
+  var num = navContainer.offsetTop;
+  console.log(num)
+  var a = navContainer.offsetHeight;
+  window.onscroll = function(){
+      var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+      if(scrollTop >= num){
+          navContainer.className = "nav fixed";
+          // text.style.paddingTop = a +"px";
+      }else{
+          navContainer.className = "nav";
+          // text.style.paddingTop = "";
+      }
+      //当导航与相应文档接触的时候自动切换
+      //method1
+
+  }
+  </script>  
 </div>
   {% include footer.html %}
-  <script>
-    var navContainer = document.getElementById("nav-container");
-    // var navBox = document.getElementById("nav-box");
-    // var text = document.getElementById("text");
-    // var navBoxChild = navBox.children;
-    // var textChild = text.children;
-    var num = navContainer.offsetTop;
-    console.log(num)
-    var a = navContainer.offsetHeight;
-    window.onscroll = function(){
-        var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-        if(scrollTop >= num){
-            navContainer.className = "nav fixed";
-            // text.style.paddingTop = a +"px";
-        }else{
-            navContainer.className = "nav";
-            // text.style.paddingTop = "";
-        }
-        //当导航与相应文档接触的时候自动切换
-        //method1
 
-    }
-    </script>  
 </body>
 
 </html>
