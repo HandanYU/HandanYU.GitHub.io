@@ -34,7 +34,7 @@ layout: compress
     height: 100%;
     padding-bottom: 40px;
 }
-.nav .cur{
+/* .nav .cur{
   -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     line-height: 1.7;
@@ -53,9 +53,10 @@ layout: compress
     padding-bottom: 40px;
     border-top:2px solid #1a92cf;
     color:#1a92cf;
-}
-.fixed{
+} */
+.nav.fixed{
     position:fixed;
+    color: #080808;
     top:0;
     left:0;
 }
@@ -112,54 +113,24 @@ layout: compress
     </style>
     <script>
       var navContainer = document.getElementById("nav-container");
-      var navBox = document.getElementById("nav-box");
-      var text = document.getElementById("text");
-      var navBoxChild = navBox.children;
-      var textChild = text.children;
+      // var navBox = document.getElementById("nav-box");
+      // var text = document.getElementById("text");
+      // var navBoxChild = navBox.children;
+      // var textChild = text.children;
       var num = navContainer.offsetTop;
       var a = navContainer.offsetHeight;
       window.onscroll = function(){
           var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
           if(scrollTop >= num){
               navContainer.className = "nav fixed";
-              text.style.paddingTop = a +"px";
+              // text.style.paddingTop = a +"px";
           }else{
               navContainer.className = "nav";
-              text.style.paddingTop = "";
+              // text.style.paddingTop = "";
           }
           //当导航与相应文档接触的时候自动切换
           //method1
-          for(var i=0;i<navBoxChild.length;i++){
-              if( scrollTop + a >= textChild[i].offsetTop){
-                  for(var j=0;j<navBoxChild.length;j++){
-                      navBoxChild[j].className = "";
-                  }
-                  navBoxChild[i].className = "cur";
-             }
-          }
-      };
-      for(var i=0;i<navBoxChild.length;i++){
-          var interval;
-          navBoxChild[i].index = i;
-          navBoxChild[i].onclick = function(){
-              var self = this;
-              clearInterval(interval);
-              interval = setInterval(function(){
-                  if(document.body.scrollTop + a<=textChild[self.index].offsetTop){
-                      document.body.scrollTop += 40;
-                      if(document.body.scrollTop + a>=textChild[self.index].offsetTop){
-                          document.body.scrollTop = textChild[self.index].offsetTop-a;
-                          clearInterval(interval);
-                      }
-                  }else{
-                      document.body.scrollTop /= 1.1;
-                      if(document.body.scrollTop + a<=textChild[self.index].offsetTop){
-                          document.body.scrollTop = textChild[self.index].offsetTop-a;
-                          clearInterval(interval);
-                      }
-                  }
-              },40);
-          };
+
       }
       </script>  
 {% include head.html %}
