@@ -15,6 +15,50 @@ layout: compress
       a:active {
         color: rgb(69, 121, 122)
       } */
+      .nav{
+        -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    line-height: 1.7;
+    text-rendering: auto;
+    width: 25%;
+    -webkit-font-smoothing: antialiased;
+    color: #bfbfbf;
+    font-size: 14px;
+    box-sizing: border-box;
+    display: fix;
+    overflow: auto;
+    position: relative;
+    float: right;
+    margin-left: 0;
+    min-width: 350px;
+    height: 100%;
+    padding-bottom: 40px;
+}
+.nav .cur{
+  -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    line-height: 1.7;
+    text-rendering: auto;
+    width: 25%;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    box-sizing: border-box;
+    display: fix;
+    overflow: auto;
+    position: relative;
+    float: right;
+    margin-left: 0;
+    min-width: 350px;
+    height: 100%;
+    padding-bottom: 40px;
+    border-top:2px solid #1a92cf;
+    color:#1a92cf;
+}
+.fixed{
+    position:fixed;
+    top:0;
+    left:0;
+}
        .hover{
         -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -66,6 +110,58 @@ layout: compress
     position:relative   /*在遮罩层中使得超链接仍有效需要添加*/
       }
     </style>
+    <script>
+      var navContainer = document.getElementById("nav-container");
+      var navBox = document.getElementById("nav-box");
+      var text = document.getElementById("text");
+      var navBoxChild = navBox.children;
+      var textChild = text.children;
+      var num = navContainer.offsetTop;
+      var a = navContainer.offsetHeight;
+      window.onscroll = function(){
+          var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+          if(scrollTop >= num){
+              navContainer.className = "nav fixed";
+              text.style.paddingTop = a +"px";
+          }else{
+              navContainer.className = "nav";
+              text.style.paddingTop = "";
+          }
+          //当导航与相应文档接触的时候自动切换
+          //method1
+          for(var i=0;i<navBoxChild.length;i++){
+              if( scrollTop + a >= textChild[i].offsetTop){
+                  for(var j=0;j<navBoxChild.length;j++){
+                      navBoxChild[j].className = "";
+                  }
+                  navBoxChild[i].className = "cur";
+             }
+          }
+      };
+      for(var i=0;i<navBoxChild.length;i++){
+          var interval;
+          navBoxChild[i].index = i;
+          navBoxChild[i].onclick = function(){
+              var self = this;
+              clearInterval(interval);
+              interval = setInterval(function(){
+                  if(document.body.scrollTop + a<=textChild[self.index].offsetTop){
+                      document.body.scrollTop += 40;
+                      if(document.body.scrollTop + a>=textChild[self.index].offsetTop){
+                          document.body.scrollTop = textChild[self.index].offsetTop-a;
+                          clearInterval(interval);
+                      }
+                  }else{
+                      document.body.scrollTop /= 1.1;
+                      if(document.body.scrollTop + a<=textChild[self.index].offsetTop){
+                          document.body.scrollTop = textChild[self.index].offsetTop-a;
+                          clearInterval(interval);
+                      }
+                  }
+              },40);
+          };
+      }
+      </script>  
 {% include head.html %}
 <head>
   <script>
@@ -152,7 +248,7 @@ layout: compress
         margin-left: auto;
         width: 90%;
         padding-top: 15px;">
-<div style="-webkit-text-size-adjust: 100%;
+<div id="text" style="-webkit-text-size-adjust: 100%;
             -webkit-tap-highlight-color: rgba(0,0,0,0);
             line-height: 1.7;
             font-size: 16px;
@@ -229,23 +325,7 @@ layout: compress
 
 
  
-<div style="    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    line-height: 1.7;
-    text-rendering: auto;
-    width: 25%;
-    -webkit-font-smoothing: antialiased;
-    color: #bfbfbf;
-    font-size: 14px;
-    box-sizing: border-box;
-    display: fix;
-    overflow: auto;
-    position: relative;
-    float: right;
-    margin-left: 0;
-    min-width: 350px;
-    height: 100%;
-    padding-bottom: 40px;">
+<div class="nav" id="nav-container">
 
   <section style="padding-top: 10em; ">
     <h2 style="text-align: center; background-color:rgba(136, 210, 233, 0.1)">Catalogue</h2>
