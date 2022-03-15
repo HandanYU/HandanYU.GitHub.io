@@ -116,10 +116,17 @@ layout: compress
 
 {% include header.html %}
 
-<div style="height: 100px;" data-bg="{{site.url}}/assets/img/posts/post.jpg">
+<div style="  margin: 3.75rem auto 0;
+width: 100%;
+position: relative;
+background-color: #dde5ea;
+background-repeat: no-repeat;
+background-position: 100%;
+background-size: cover;height: 100px;" data-bg="{{site.url}}/assets/img/posts/post.jpg">
       
       <div>
         <h2 class="hero__title">{{ page.title }}</h2>
+      </div>
         <!-- <p class="hero__meta"> -->
             <!-- <span> -->
               <!-- <time>{{ page.date | date_to_string }}</time>&nbsp; -->
@@ -135,6 +142,7 @@ layout: compress
               &nbsp;
           </span> -->
         <!-- </p> -->
+        <div>
         <a href='{{ site.url }}/{{ page.category }}/' class="hover">{{ page.category }}</a>
       </div>
     </div>
