@@ -115,15 +115,15 @@ layout: compress
 {% endif %}
 
 {% include header.html %}
-
-<div class="hero lazyload" data-bg="{{site.url}}/assets/img/posts/post.jpg">
+<h2> {{ page.title }} </h2>
+<!-- <div class="hero lazyload" data-bg="{{site.url}}/assets/img/posts/post.jpg"> -->
       
-      <div class="hero__wrap">
-        <h2 class="hero__title">{{ page.title }}</h2>
-        <p class="hero__meta">
-            <span>
-              <time>{{ page.date | date_to_string }}</time>&nbsp;
-            </span>
+      <!-- <div class="hero__wrap"> -->
+        <!-- <h2 class="hero__title">{{ page.title }}</h2> -->
+        <!-- <p class="hero__meta"> -->
+            <!-- <span> -->
+              <!-- <time>{{ page.date | date_to_string }}</time>&nbsp; -->
+            <!-- </span> -->
             
           <!-- <span>
               {% assign words = content | number_of_words %}
@@ -134,10 +134,10 @@ layout: compress
               {% endif %} read
               &nbsp;
           </span> -->
-        </p>
-        <a href='{{ site.url }}/{{ page.category }}/' class="hover">{{ page.category }}</a>
-      </div>
-    </div>
+        <!-- </p> -->
+        <!-- <a href='{{ site.url }}/{{ page.category }}/' class="hover">{{ page.category }}</a> -->
+      <!-- </div> -->
+    <!-- </div> -->
 <div style="-webkit-text-size-adjust: 100%;
         -webkit-tap-highlight-color: rgba(0,0,0,0);
         line-height: 1.7;
@@ -228,24 +228,20 @@ layout: compress
   </main> -->
 
 
- 
-<div style="    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    line-height: 1.7;
-    text-rendering: auto;
-    width: 25%;
-    -webkit-font-smoothing: antialiased;
-    color: #bfbfbf;
-    font-size: 14px;
-    box-sizing: border-box;
-    display: fix;
-    overflow: auto;
-    position: relative;
-    float: right;
-    margin-left: 0;
-    min-width: 350px;
-    height: 100%;
-    padding-bottom: 40px;">
+
+<div style="   -webkit-text-size-adjust: 100%;
+color: rgb(55, 53, 47);
+fill: currentcolor;
+line-height: 1.5;
+-webkit-font-smoothing: auto;
+cursor: text;
+outline: 0;
+box-sizing: border-box;
+width: 25%;
+position: absolute;
+right: 0px;
+top: 0px;
+display: block !important;">
 
   <section style="padding-top: 10em; ">
     <h2 style="text-align: center; background-color:rgba(136, 210, 233, 0.1)">Catalogue</h2>
