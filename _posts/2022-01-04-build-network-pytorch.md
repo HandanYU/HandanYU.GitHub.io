@@ -355,4 +355,25 @@ AttributeError: 'collections.OrderedDict' object has no attribute 'state_dict'
 ```python
 torch.save(my_model.state_dict(), save_path)
 ```
-这里我们通过`model.load_state_dict(torch.load())`来加载，其中的model是
+这里我们通过`model.load_state_dict(torch.load())`来加载
+```python
+model.load_state_dict(torch.load(load_path))
+```
+我们通过输出model来看看，我们可以看到对应加载模型的参数值
+```python
+print(model)
+
+MyNet(
+  (myLayer1): MyLayer()
+)
+
+print(model.state_dict())
+OrderedDict([('myLayer1.weight',
+              tensor([[nan, nan, nan],
+                      [nan, nan, nan],
+                      [nan, nan, nan],
+                      [nan, nan, nan],
+                      [nan, nan, nan]])),
+             ('myLayer1.bias', tensor([[nan, nan, nan, nan, nan]]))])
+```
+## 
