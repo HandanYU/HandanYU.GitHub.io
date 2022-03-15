@@ -22,10 +22,11 @@ category: machine learning
 
 - used in LR
 - L(Y,P(Y\|X)) = -$$\log$$P(Y\|X)
-- L = -$$\frac{1}{N}\sum_{i=1}^Ny_i\log \hat{y_i}+(1-y_1)\log (1-\hat{y_i})$$
+- L = -$$\frac{1}{N}\sum_{i=1}^Ny_i\log \hat{y_i}+(1-y_i)\log (1-\hat{y_i})$$
   - where $$\hat{y_i}=p(y_i$$\|$$X)$$
 - sensitive to noise compared with [Hinge Loss / Max Margin Loss](#Hinge Loss / Max Margin Loss)
 - describe distribution of feature probability well
+- widely use in positive / negtive classification
 
 <a name="Square Loss"/>
 
