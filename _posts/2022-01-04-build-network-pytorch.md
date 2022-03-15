@@ -327,3 +327,22 @@ for epoch in range(10):
 ```
 
 # 保存和加载模型
+
+## 只保存整个模型结构，不保存其他模型参数具体值
+```python
+# torch.save(model, save_path)
+torch.save(model, 'XXX.pt') # 一般我们用.pt的形式来保存模型
+```
+我们已上面**MyNet**为例，通过`torch.load()`来加载模型
+```python
+model = torch.load(load_path)
+```
+我们通过输出model来看一下，可以发现它只保存了整个模型
+```python
+print(model)
+
+MyNet(
+  (myLayer1): MyLayer()
+)
+```
+## 
