@@ -16,8 +16,6 @@ layout: compress
         color: rgb(69, 121, 122)
       } */
        .hover{
-        align-items: center;
-        text-align: center;
         -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
@@ -42,8 +40,6 @@ layout: compress
     position:relative;
       }
       .hover:hover{
-        align-items: center;
-        text-align: center;
         -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
@@ -120,17 +116,10 @@ layout: compress
 
 {% include header.html %}
 
-<div style="  margin: 3.75rem auto 0;
-width: 100%;
-position: relative;
-background-color: #dde5ea;
-background-repeat: no-repeat;
-background-position: 100%;
-background-size: cover;height: 100px;" data-bg="{{site.url}}/assets/img/posts/post.jpg">
+<div class="hero lazyload" data-bg="{{site.url}}/assets/img/posts/post.jpg">
       
-      <div>
-        <h2 class="hero__title" style="align-items: center;text-align: center;">{{ page.title }}</h2>
-      </div>
+      <div class="hero__wrap">
+        <h2 class="hero__title">{{ page.title }}</h2>
         <!-- <p class="hero__meta"> -->
             <!-- <span> -->
               <!-- <time>{{ page.date | date_to_string }}</time>&nbsp; -->
@@ -146,11 +135,10 @@ background-size: cover;height: 100px;" data-bg="{{site.url}}/assets/img/posts/po
               &nbsp;
           </span> -->
         <!-- </p> -->
-        <div>
         <a href='{{ site.url }}/{{ page.category }}/' class="hover">{{ page.category }}</a>
       </div>
     </div>
-  <!-- <div><h2 style="text-align: center;"> {{ page.title }} </h2></div> -->
+  <div><h2 style="text-align: center;"> {{ page.title }} </h2></div>
 <div style="-webkit-text-size-adjust: 100%;
         -webkit-tap-highlight-color: rgba(0,0,0,0);
         line-height: 1.7;
@@ -255,7 +243,7 @@ background-size: cover;height: 100px;" data-bg="{{site.url}}/assets/img/posts/po
     display: fix;
     position: fixed;
     overflow: auto;
-    top: 100px;
+    top: 300px;
     float: right;
     left: 950px;
     min-width: 350px;
@@ -263,7 +251,7 @@ background-size: cover;height: 100px;" data-bg="{{site.url}}/assets/img/posts/po
     background: rgb(241, 244, 247, 0.2);
     ">
 
-  <section style="padding-top: 10em; ">
+  <section>
     <h2 style="text-align: center; background-color:rgba(136, 210, 233, 0.1)">Catalogue</h2>
     {% include toc.html html=content %}
   </section>
