@@ -116,7 +116,7 @@ layout: compress
 
 {% include header.html %}
 
-<div class="hero lazyload" style="height: 20%;display: fix; position: fixed; overflow: auto;z-index: -9;" data-bg="{{site.url}}/assets/img/posts/post.jpg">
+<div class="hero lazyload" style="height: 250px;" data-bg="{{site.url}}/assets/img/posts/post.jpg">
       
       <div class="hero__wrap">
         <h2 class="hero__title">{{ page.title }}</h2>
@@ -142,7 +142,7 @@ layout: compress
         -webkit-tap-highlight-color: rgba(0,0,0,0);
         line-height: 1.7;
         font-size: 16px;
-        color: #0f0f0f;
+        color: #404040;
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
         box-sizing: border-box;
@@ -151,28 +151,26 @@ layout: compress
         margin-right: auto;
         margin-left: auto;
         width: 90%;
-        height: 60%;
-        top: 35%;
-        position: fixed;
-        overflow: auto;
+        padding-top: 15px;">
         
-      ">
-        
-<div style="    -webkit-text-size-adjust: 100%;
--webkit-tap-highlight-color: rgba(0,0,0,0);
-line-height: 1.7;
-text-rendering: auto;
-width: 60%;
-padding-right: 20%;
--webkit-font-smoothing: antialiased;
-color: #0a0a0a;
-font-size: 14px;
-box-sizing: border-box;
-display: fix;
-float: left;
-min-width: 350px;
-height: 70%;
-            ">
+<div style="-webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            line-height: 1.7;
+            font-size: 16px;
+            color: #404040;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+            position: relative;
+            min-height: 1px;
+            /* padding-right: 15px; */
+            /* padding-left: 15px; */
+            float: left;
+            min-width: 340px;
+            width: 56.66666667%;
+            /* margin-left: 8.33333333%; */
+            padding-top: 6%;
+            margin-bottom: 25px;">
             {{ content }}
           </div>
   <!-- <main class="site__content">
@@ -244,7 +242,7 @@ height: 70%;
     display: fix;
     position: fixed;
     overflow: auto;
-    top: 35%;
+    top: 0px;
     float: right;
     left: 950px;
     min-width: 350px;
@@ -273,8 +271,8 @@ height: 70%;
 </section>
 
 </div>
-{% include footer.html %}
 </div>
+  {% include footer.html %}
 
 </body>
 
