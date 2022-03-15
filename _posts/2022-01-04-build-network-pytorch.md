@@ -376,4 +376,16 @@ OrderedDict([('myLayer1.weight',
                       [nan, nan, nan]])),
              ('myLayer1.bias', tensor([[nan, nan, nan, nan, nan]]))])
 ```
-## 
+## 自定义保存内容
+由于很多时候自己在做实验测试的，需要查看很多参数，因此需要自定义保存内容
+```python
+torch.save({'epoch': epochID + 1, 
+            'state_dict': model.state_dict(), 
+            'best_loss': lossMIN,
+            'optimizer': optimizer.state_dict()}, save_path)
+```
+仍然通过`torch.load()`进行模型加载
+```python
+checkpoints = torch.load(load_path)
+
+```
