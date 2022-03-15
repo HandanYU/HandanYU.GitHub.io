@@ -16,6 +16,8 @@ layout: compress
         color: rgb(69, 121, 122)
       } */
        .hover{
+        align-items: center;
+        text-align: center;
         -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
@@ -40,6 +42,8 @@ layout: compress
     position:relative;
       }
       .hover:hover{
+        align-items: center;
+        text-align: center;
         -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
@@ -125,7 +129,7 @@ background-position: 100%;
 background-size: cover;height: 100px;" data-bg="{{site.url}}/assets/img/posts/post.jpg">
       
       <div>
-        <h2 class="hero__title">{{ page.title }}</h2>
+        <h2 class="hero__title" style="align-items: center;text-align: center;">{{ page.title }}</h2>
       </div>
         <!-- <p class="hero__meta"> -->
             <!-- <span> -->
@@ -146,7 +150,7 @@ background-size: cover;height: 100px;" data-bg="{{site.url}}/assets/img/posts/po
         <a href='{{ site.url }}/{{ page.category }}/' class="hover">{{ page.category }}</a>
       </div>
     </div>
-  <div><h2 style="text-align: center;"> {{ page.title }} </h2></div>
+  <!-- <div><h2 style="text-align: center;"> {{ page.title }} </h2></div> -->
 <div style="-webkit-text-size-adjust: 100%;
         -webkit-tap-highlight-color: rgba(0,0,0,0);
         line-height: 1.7;
