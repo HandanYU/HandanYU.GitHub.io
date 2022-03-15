@@ -337,12 +337,22 @@ torch.save(model, 'XXX.pt') # 一般我们用.pt的形式来保存模型
 ```python
 model = torch.load(load_path)
 ```
-我们通过输出model来看一下，可以发现它只保存了整个模型
+我们通过输出model来看一下，可以发现它保存了整个模型结构框架内容，虽然无法显示出参数的具体值。
 ```python
 print(model)
 
 MyNet(
   (myLayer1): MyLayer()
 )
+
+## 看看参数的具体值：
+print(model.state_dict()
+)
+AttributeError: 'collections.OrderedDict' object has no attribute 'state_dict'
 ```
-## 
+## 只保存模型参数
+由于通过上述方法直接保存法，既需要保存大量无用的内容，又无法对具体参数可视，因此通过以下方法进行保存，选择只保存模型的参数值。
+```python
+torch.save(my_model.state_dict(), save_path)
+```
+这里我们通过`model.load_state_dict(torch.load())`来加载，其中的model是
