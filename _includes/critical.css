@@ -342,7 +342,7 @@ a {
 }
 .hero {
   margin: 3.75rem auto 0;
-  /* min-height: 20.25rem; */
+  min-height: 20.25rem;
   width: 100%;
   position: relative;
   background-color: #dde5ea;
@@ -361,10 +361,9 @@ a {
   text-align: center;
 }
 .hero__wrap {
-  position: relative;
-  top: -50%;
+  position: fixed;
+  top: 50%;
   left: 50%;
-  height: 230px;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;

@@ -1263,8 +1263,7 @@ table td {
 }
 .hero__wrap {
   position: relative;
-  height: 230px;
-  top: -50%;
+  padding-top: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
