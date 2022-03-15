@@ -342,7 +342,7 @@ a {
 }
 .hero {
   margin: 3.75rem auto 0;
-  min-height: 20.25rem;
+  /* min-height: 20.25rem; */
   width: 100%;
   position: relative;
   background-color: #dde5ea;
