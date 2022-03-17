@@ -61,7 +61,7 @@ category: machine learning
 <a name="Cross-entropy Loss"/>
 
 # Cross-entropy Loss
-
+Aka negative log likelihood loss
 - L = $$-\frac{1}{N}\sum_Ny_i\log \hat{y_i}$$
   - where $$\hat{y_i} = \frac{\exp(z_i)}{\sum_K\exp(z_i)}$$
   - $z_i$ is the output of class $$i$$
