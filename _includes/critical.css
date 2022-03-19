@@ -402,7 +402,7 @@ a {
 }
 @media (min-width: 60em) {
   .hero__wrap .hero__title {
-    font-size: 3.625em;
+    font-size: 2.625em;
     line-height: 3.125rem;
   }
   .post-list {
