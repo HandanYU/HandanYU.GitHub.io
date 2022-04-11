@@ -121,6 +121,10 @@ class SentimentClassifier(nn.Module):
         self.bert_layer = BertModel.from_pretrained('bert-base-uncased')
         self.cls_layer = nn.Linear(768, 1)
     def forward(self, seq_tokens, atten_mask):
+        """"
+        1. get the contextualized represation using BERT
+        2. use classifier via input contextualized represation of [CLS]
+        """"
         # Feeding the input to BERT model to obtain contextualized representations
         outputs = self.bert_layer(seq_tokens, attention_mask = attn_masks)
         cont_reps = outputs.last_hidden_state

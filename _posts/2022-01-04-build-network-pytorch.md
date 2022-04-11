@@ -85,7 +85,9 @@ class MyLayer(nn.Module):
         super(MyLayer,self).__init__()#调用父类的构造函数
         self.in_channel=in_channel
         self.out_channel=out_channel
-        self.weight=nn.Parameter(torch.Tensor(in_channel,out_channel))#随机产生一个in_channel*out_channel的矩阵权重。又由于权重是要不断训练的，需要将其绑定为一个可以训练的参数于是需要使用Parameter
+         # 又由于权重是要不断训练的，需要将其绑定为一个可以训练的参数于是需要使用Parameter(!!!这点很重要，否则model.parameters()调用的时候不会获取到这个参数)
+        self.weight=nn.Parameter(torch.Tensor(in_channel,out_channel))#随机产生一个in_channel*out_channel的矩阵权重。
+       
         if bias:
             self.bias=nn.Parameter(torch.Tensor(in_channel).view(1,-1))#注意⚠️这边的b是自定义层中自带的b，而不是神经网络中的卷积核的偏置，因此维数需要和输入单元数一样
         else:
