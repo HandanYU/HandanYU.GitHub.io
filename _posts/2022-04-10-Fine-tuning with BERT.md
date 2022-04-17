@@ -57,6 +57,7 @@ tokens_ids = self.tokenizer.convert_tokens_to_ids(padded_tokens)
 创建一个Dataset类，用于load data, 
 - 其中`__init___` function 中获取raw data和pre-trained model。
 - 在`__getitem__` function 中进行之前我们提到的一系列pre-processing，并return我们处理得到的数据
+
 ```python
 import torch
 from torch.utils.data import Dataset
@@ -144,7 +145,7 @@ optimizer = optim.Adam(classifier.parameters(), lr = 2e-5)
 ```
 ### 2.4.2 Iteratively train the model
 ```python
-def train(classifier, criterion, opti, train_loader, dev_loader, max_eps, gpu):
+def train(classifier, criterion, optimizer, train_loader, dev_loader, max_eps, gpu):
     best_acc = 0
     st = time.time()
     for ep in range(max_eps):
