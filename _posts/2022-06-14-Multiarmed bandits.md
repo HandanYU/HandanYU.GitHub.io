@@ -6,6 +6,7 @@ featured-img: machine learning
 language: chinese 
 category: AI
 ---
+
 # Multi-armed bandits
 
 ## 1. 平整蒙特卡洛 (Flat Monte Carlo, FMC)

@@ -1,12 +1,13 @@
- ---
+---
 layout: post
-title:   Markov Decision Processes
+title: Markov Decision Processes
 summary: 本章主要总结了面试中涉及到的机器学习相关的一些问题。
 featured-img: machine learning
 language: chinese 
 category: AI
 ---
- # Markov Decision Processes
+
+# Markov Decision Processes
 
 classical planning假设了action are **deterministic**，然而*Markov Decision Processes (MDPs)*没有这个假设，而是认为每个action都有multiple outcomes，并且每个outcome又一个probability
 
