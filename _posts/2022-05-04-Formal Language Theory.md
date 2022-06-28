@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hidden Markov Model (HMM)
+title: Formal Language Theory
 summary: 本篇文章主要讲解了HMM在NLP中sequence labelling的应用
 featured-img: deep learning
 language: chinese
