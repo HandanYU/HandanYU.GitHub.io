@@ -47,7 +47,7 @@
         <p>{{ post.content | strip_html | truncatewords: 20 }}</p>
       {% endif %}
     </a>
-    <button type="button" onclick="alert('{{ post.summary }}')">More</button>
+    <button type="button" onclick="location.href='{{ post.url }}'">More</button>
   </div>
   
   
