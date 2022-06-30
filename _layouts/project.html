@@ -25,12 +25,13 @@ layout: compress
         <p class="hero__meta">{{ site.tagline }}</p>
       </div>
     </div>
-    <h2 style="color: white; font-weight: bold;">{{ page.cate }}<br /><br /><br /></h2>
-    <!-- <main class="site__content">
+
+    <main class="site__content">
       <section class="blog">
         <div class="container">
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
-            
+            <h1>hello</h1>
+            <h2 style="color: white; font-weight: bold;">{{ page.category }}<br /><br /><br /></h2>
             {% for post in site.posts %}
             {% for category in site.categories %}
             {% if category[0] == page.cate %}
@@ -42,7 +43,7 @@ layout: compress
           </div>
         </div>
       </section>
-    </main> -->
+    </main>
 
     {% include footer.html %}
 
