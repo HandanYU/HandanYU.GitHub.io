@@ -29,7 +29,7 @@
 {% endif %}
     </a>
     <a class="post-card__inner" href="{{ post.link }}">
-        {% endif %}
+      
       <div style="align-content: center;">
         <h2>{{ post.title | strip_html | truncate: 50 }}</h2>
         {% assign date_format = site.sleek.date_format | default: "%b %-d, %Y" %}
@@ -38,7 +38,7 @@
         </span>
 
       </div>
-      
+        {% endif %}
       {% if post.summary %}
         <p>{{ post.summary | strip_html | truncatewords:20 }}</p>
       {% else %}
