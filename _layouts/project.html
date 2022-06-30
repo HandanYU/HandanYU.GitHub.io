@@ -30,7 +30,7 @@ layout: compress
       <section class="blog">
         <div class="container">
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
-
+            <h2 style="color: white; font-weight: bold;">{{ page.cate }}<br /><br /><br /></h2>
             {% for post in site.posts %}
             {% for category in site.categories %}
             {% if category[0] == page.cate %}
