@@ -27,9 +27,9 @@
           <div class="dark-bg"></div>
         </figure>
             {% endif %}
-    </a>
+   
 
-    <a class="post-card__inner" href="{{ post.url }}">
+    <!-- <a class="post-card__inner" href="{{ post.url }}"> -->
       
       <div style="align-content: center;">
         <h2>{{ post.title | strip_html | truncate: 50 }}</h2>
@@ -47,7 +47,7 @@
       {% endif %}
     </a>
     {% if post.link %}
-    <button type="button" style="left: 0;" onclick="location.href='{{ post.link }}'">Go to GitHub</button>
+    <button type="button" style="left: 0;" onclick="location.href='{{ post.link }}'">Dump to GitHub</button>
     {% endif %}
   </div>
   
