@@ -2,13 +2,13 @@
     {% if post.categories %}
       {% assign categories = post.categories %}
       <span class="post-card__label">
-        <!-- {% for category in categories %} -->
-        <!-- <h1>{{site.baseurl}}/categories/#{{category|slugize}}</h1> -->
-        <!-- {% if category[0] == "project" %} -->
-          <a href="{{site.baseurl}}/categories/#project" class="label"> </a>
+        {% for category in categories %}
+        <h1>{{site.baseurl}}/categories/#{{category|slugize}}</h1>
+        {% if category[0] == "project" %}
+          <a href="{{site.baseurl}}/categories/#{{category|slugize}}" class="label"> {{ category }} </a>
           {% unless forloop.last %}&nbsp;{% endunless %}
-          <!-- {% endif %} -->
-        <!-- {% endfor %} -->
+          {% endif %}
+        {% endfor %}
       </span>
     {% endif %}
     <a href="{{ post.url | relative_url }}">
