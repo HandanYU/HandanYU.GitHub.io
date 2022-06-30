@@ -26,8 +26,9 @@
         <figure class="post-card__thumb">
           <div class="dark-bg"></div>
         </figure>
-{% endif %}
+            {% endif %}
     </a>
+
     <a class="post-card__inner" href="{{ post.link }}">
       
       <div style="align-content: center;">
@@ -41,12 +42,12 @@
         {% endif %}
       {% if post.summary %}
         <p>{{ post.summary | strip_html | truncatewords:20 }}</p>
-        <button type="button" onclick="alert(post.summary)">More</button>
+        
       {% else %}
         <p>{{ post.content | strip_html | truncatewords: 20 }}</p>
       {% endif %}
     </a>
-    
+    <button type="button" onclick="alert('{{ post.summary }}')">More</button>
   </div>
   
   
