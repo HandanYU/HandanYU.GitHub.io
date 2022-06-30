@@ -32,7 +32,9 @@ layout: compress
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
 
             {% for post in site.posts %}
-            {% if post.category == "project" %}
+            {% if post.category == page.cate %}
+            <h1>hello</h1>
+            <h2>{{ post.link }}</h2>
               {% include projectcard.html %}
             {% endif %}
             {% endfor %}
