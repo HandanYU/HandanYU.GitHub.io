@@ -30,9 +30,8 @@ layout: compress
       <section class="blog">
         <div class="container">
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
-            {% for category in site.categories %}
-            <h1>{{ category[0] }}</h1>
-
+            {% for post in site.posts %}
+            <h1>{{ post }}</h1>
             <!-- {% for post in site.posts %}
             {% for category in site.categories %}
             {% if category[0] == page.cate %}
