@@ -10,6 +10,14 @@
         {% endfor %}
       </span>
     {% endif %}
+    {% if post.featured-img %}
+  <figure class="post-card__thumb">
+    <img
+      src="{{site.url}}/assets/img/posts/{{post.featured-img}}.png",
+      class="lazyload blur"
+      alt="{{post.title}}"
+    />
+  </figure>
     {% if post.link %}
     <a href="{{ post.link }}">
 
