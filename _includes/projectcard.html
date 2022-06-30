@@ -11,8 +11,8 @@
       </span>
     {% endif %}
     
-    {% if post.link %}
-    <a href="{{ post.link }}">
+    
+    <a href="{{ post.url }}">
 {% if post.featured-img %}
   <figure class="post-card__thumb">
     <img
@@ -29,7 +29,7 @@
             {% endif %}
     </a>
 
-    <a class="post-card__inner" href="{{ post.link }}">
+    <a class="post-card__inner" href="{{ post.url }}">
       
       <div style="align-content: center;">
         <h2>{{ post.title | strip_html | truncate: 50 }}</h2>
@@ -39,7 +39,6 @@
         </span>
 
       </div>
-        {% endif %}
       {% if post.summary %}
         <p>{{ post.summary | strip_html | truncatewords:20 }}</p>
         
@@ -47,7 +46,9 @@
         <p>{{ post.content | strip_html | truncatewords: 20 }}</p>
       {% endif %}
     </a>
-    <button type="button" onclick="location.href='{{ post.url }}'">More</button>
+    {% if post.link %}
+    <button type="button" style="left: 0;" onclick="location.href='{{ post.link }}'">More</button>
+    {% endif %}
   </div>
   
   
