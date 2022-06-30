@@ -1,3 +1,11 @@
+---
+layout: post
+title: Molecular
+summary: 本篇文章主要讲解了HMM在NLP中sequence labelling的应用
+featured-img: deep learning
+language: chinese
+category: others
+---
 ## Approaches
 ### Sequence-based
 - take SMILES representation as the input
