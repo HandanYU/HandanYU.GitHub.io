@@ -10,7 +10,10 @@
         {% endfor %}
       </span>
     {% endif %}
-    {% if post.featured-img %}
+    
+    {% if post.link %}
+    <a href="{{ post.link }}">
+{% if post.featured-img %}
   <figure class="post-card__thumb">
     <img
       src="{{site.url}}/assets/img/posts/{{post.featured-img}}.png",
@@ -18,14 +21,12 @@
       alt="{{post.title}}"
     />
   </figure>
-  {% endif %}
-    {% if post.link %}
-    <a href="{{ post.link }}">
-
+  
+  {% else %}
         <figure class="post-card__thumb">
           <div class="dark-bg"></div>
         </figure>
-
+{% endif %}
     </a>
     <a class="post-card__inner" href="{{ post.link }}">
         {% endif %}
