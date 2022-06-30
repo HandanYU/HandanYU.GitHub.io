@@ -1,59 +1,11 @@
 ---
 layout: compress
 ---
-<html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
 
   {% include head.html %}
-  <head>
-    <style>
-      .hover{
-        -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    box-sizing: border-box;
-    background-color: transparent;
-    color: #89a88e!important;
-    display: inline-block;
-    border: 1px solid rgba(169, 187, 163, 0.8);
-    border-radius: 999em;
-    padding: 0 10px 0 10px;
-    line-height: 24px;
-    font-size: 12px;
-    text-decoration: none;
-    margin: 0 1px;
-    margin-bottom: 6px;
-    cursor: pointer;
-    margin-right: 5px;
-    border-color: #8dbb95;
-      }
-      .hover:hover{
-        -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    box-sizing: border-box;
-    display: inline-block;
-    border: 1px solid #49717a;
-    border-radius: 999em;
-    color: rgb(15, 14, 14);
-    border-color: #49717a;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 0 10px 0 12px;
-    transition-property: all;
-    transition-duration: .4s;
-    transition-timing-function: ease;
-    font-size: 15px;
-    line-height: 28px;
-    margin: 0 2px;
-    margin-bottom: 8px;
-    background-color:rgba(98, 147, 175, 0.3);
-      }
-      </style>
-  </head>
+
   <body class="site">
 
     {% if site.google_tag_manager %}
@@ -66,95 +18,29 @@ layout: compress
     {% endif %}
 
     {% include header.html %}
-    <div class="hero lazyload" data-bg="{{site.url}}/assets/img/posts/Sleek_lg.jpg">
+
+    <div class="hero lazyload" data-bg="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.hero_img }}">
       <div class="hero__wrap">
-        <h1 class="hero__title"><br /><br />Diana's Blog</h1>
-        <p class="hero__meta">Yesterday is history, tomorrow is a mystery, but today is a gift
-        <br /><br /><br /><br /></p>
+        <h1 class="hero__title">{{ site.title | escape }}</h1>
+        <p class="hero__meta">{{ site.tagline }}</p>
       </div>
     </div>
-        
-    <div style="-webkit-text-size-adjust: 100%;
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
-        line-height: 1.7;
-        font-size: 16px;
-        color: #404040;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        box-sizing: border-box;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-        width: 80%;
-        padding-bottom: 2em;">
-            
-    <div style="-webkit-text-size-adjust: 100%;
-            -webkit-tap-highlight-color: rgba(0,0,0,0);
-            line-height: 1.7;
-            font-size: 16px;
-            color: #404040;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            box-sizing: border-box;
-            position: relative;
-            min-height: 1px;
-            /* padding-right: 15px; */
-            /* padding-left: 15px; */
-            float: left;
-            min-width: 280px;
-            width: 65.66666667%;
-            /* margin-left: 3.33333333%; */
-            /* margin-right: 3.33333333%; */
-            margin-bottom: 25px;">
-    
-        {% for post in site.posts %}
-          {% include projectcard.html %}
-        {% endfor %}
-    <!-- <main class="site__content">
+
+    <main class="site__content">
       <section class="blog">
         <div class="container">
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
 
-           -->
+            {% for post in site.posts %}
+              {% include card.html %}
+            {% endfor %}
 
             <!-- {% include pagination.html %} -->
-          <!-- </div>
+          </div>
         </div>
       </section>
-    </main> -->
-    </div>
-          
-    <div style="-webkit-text-size-adjust: 100%;
-          -webkit-tap-highlight-color: rgba(0,0,0,0);
-          line-height: 1.7;
-          text-rendering: auto;
-          -webkit-font-smoothing: antialiased;
-          box-sizing: border-box;
-          position: relative;
-          min-height: 1px;
-          padding-right: 15px;
-          padding-left: 15px;
-          float: right;
-          min-width: 300px;
-          width: 18%;
-          margin-left: 0;
-          margin-right: 5.33333333%;
-          color: #bfbfbf;
-          font-size: 14px;">
-        
-        <div style="color: black; text-align: center;padding-top: 2em;" >
-          <h2>Categories</h2>
-        </div>
-          <ul>
-          {% for category in site.categories %}
-          
-            <a href='{{ site.url }}/{{ category[0] }}/'  class="hover">{{ category[0] }}</a>
-          {% endfor %}
-        </ul>
-    </div>
-  </div>
-  </div>
+    </main>
+
     {% include footer.html %}
 
   </body>
