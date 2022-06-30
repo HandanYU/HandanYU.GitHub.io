@@ -1,9 +1,81 @@
 ---
 layout: compress
 ---
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
-
+<html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
+  <head>
+    <style>
+      .fix{
+        -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid #49717a;
+    border-radius: 999em;
+    color: rgb(15, 14, 14);
+    border-color: #49717a;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 10px 0 12px;
+    transition-property: all;
+    transition-duration: .4s;
+    transition-timing-function: ease;
+    font-size: 15px;
+    line-height: 28px;
+    margin: 0 2px;
+    margin-bottom: 8px;
+    background-color:rgba(98, 147, 175, 0.3);
+      }
+      .hover{
+        -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #89a88e!important;
+    display: inline-block;
+    border: 1px solid rgba(169, 187, 163, 0.8);
+    border-radius: 999em;
+    padding: 0 10px 0 10px;
+    line-height: 24px;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0 1px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-color: #8dbb95;
+      }
+      .hover:hover{
+        -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid #49717a;
+    border-radius: 999em;
+    color: rgb(15, 14, 14);
+    border-color: #49717a;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 10px 0 12px;
+    transition-property: all;
+    transition-duration: .4s;
+    transition-timing-function: ease;
+    font-size: 15px;
+    line-height: 28px;
+    margin: 0 2px;
+    margin-bottom: 8px;
+    background-color:rgba(98, 147, 175, 0.3);
+      }
+      </style>
+  </head>
   {% include head.html %}
 
   <body class="site">
@@ -18,33 +90,82 @@ layout: compress
     {% endif %}
 
     {% include header.html %}
-
-    <div class="hero lazyload" data-bg="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.hero_img }}">
+    <div class="hero lazyload" data-bg="{{site.url}}/assets/img/posts/subpost.jpg">
       <div class="hero__wrap">
-        <h1 class="hero__title">{{ site.title | escape }}</h1>
-        <p class="hero__meta">{{ site.tagline }}</p>
+        <h1 class="hero__title">Diana's Blog<br /></h1>
+        <h2 style="color: white; font-weight: bold;">{{ page.cate }}<br /><br /><br /></h2>
       </div>
     </div>
-
-    <main class="site__content">
-      <section class="blog">
-        <div class="container">
-          <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
-            <!-- {% for post in site.posts %} -->
-            <!-- <h1>{{ post }}</h1> -->
-            <!-- {% for post in site.posts %}
-            {% for category in site.categories %}
-            {% if category[0] == page.cate %}
-              {% include projectcard.html %}
-            {% endif %}
-            {% endfor %} -->
-            <!-- {% endfor %} -->
-            <!-- {% include pagination.html %} -->
-          </div>
+    <!-- <div style="height: 100em;"></div> -->
+    <div style="-webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    line-height: 1.7;
+    font-size: 16px;
+    color: #404040;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    padding-bottom: 2em;">
+         <div style="-webkit-text-size-adjust: 100%;
+         -webkit-tap-highlight-color: rgba(0,0,0,0);
+         line-height: 1.7;
+         font-size: 16px;
+         color: #404040;
+         text-rendering: auto;
+         -webkit-font-smoothing: antialiased;
+         box-sizing: border-box;
+         position: relative;
+         min-height: 1px;
+         /* padding-right: 15px; */
+         /* padding-left: 15px; */
+         float: left;
+         min-width: 280px;
+         width: 57.66666667%;
+         margin-left: 3.33333333%;
+         margin-right: 3.33333333%;
+         margin-bottom: 25px;">
+    {% for post in site.posts %}
+    {% if post.category == page.cate %}
+    {% include card.html %}
+    {% endif %}
+    {% endfor %}
+    </div>
+    <div style="-webkit-text-size-adjust: 100%;
+          -webkit-tap-highlight-color: rgba(0,0,0,0);
+          line-height: 1.7;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          box-sizing: border-box;
+          position: relative;
+          min-height: 1px;
+          padding-right: 15px;
+          padding-left: 15px;
+          float: right;
+          min-width: 330px;
+          width: 25%;
+          margin-left: 0;
+          margin-right: 5.33333333%;
+          color: #bfbfbf;
+          font-size: 14px;">
+        <div style="color: black; text-align: center;padding-top: 2em;">
+          <h2>Categories</h2>
         </div>
-      </section>
-    </main>
-
+        <ul>
+          {% for category in site.categories %}
+          {% if category[0] == "project" %}
+          <a href='{{ site.url }}/{{ category[0] }}/'  class="fix">{{ category[0] }}</a>
+          {% else %}
+          <a href='{{ site.url }}/{{ category[0] }}/' class="hover">{{ category[0] }}</a>
+          {% endif %}
+          {% endfor %}
+        </ul>
+    </div>
+    </div>
     {% include footer.html %}
 
   </body>
