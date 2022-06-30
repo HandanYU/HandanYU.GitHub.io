@@ -1,5 +1,5 @@
 <div style="height: 50px;">
-<h1>{{ post.link }}</h1>
+
 </div>
 <div class="post-card" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting">
     {% if post.categories %}
@@ -12,7 +12,7 @@
         {% endfor %}
       </span>
     {% endif %}
-    <a href="{{ post.link }}">
+    <a href="{{ post.url | relative_url }}">
       {% if post.featured-img %}
         <figure class="post-card__thumb">
           <img
@@ -29,7 +29,7 @@
         </figure>
       {% endif %}
     </a>
-    <a class="post-card__inner" href="{{ post.link }}">
+    <a class="post-card__inner" href="{{ post.url | relative_url }}">
       <div class="post-card__header">
         <h2>{{ post.title | strip_html | truncate: 50 }}</h2>
         {% assign date_format = site.sleek.date_format | default: "%b %-d, %Y" %}
