@@ -4,7 +4,7 @@
       <span class="post-card__label">
         {% for category in categories %}
         <p>{{ category[0] }}</p>
-        {% if category[0] == project %}
+        {% if category[0] == "project" %}
           <a href="{{site.baseurl}}/categories/#{{category|slugize}}" class="label"> {{ category }} </a>
           {% unless forloop.last %}&nbsp;{% endunless %}
           {% endif %}
