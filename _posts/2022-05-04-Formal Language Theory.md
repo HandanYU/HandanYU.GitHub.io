@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Formal Language Theory
-summary: 本篇文章主要讲解了HMM在NLP中sequence labelling的应用
+summary: Learn something related to syntax and mainly focus on Formal Language Theory.
 featured-img: deep learning
 language: chinese
 category: NLP

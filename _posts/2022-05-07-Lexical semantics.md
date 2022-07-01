@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lexical semantics
-summary: 本篇文章主要讲解了HMM在NLP中sequence labelling的应用
+summary: Learn about Lexical semantics.
 featured-img: deep learning
 language: chinese
 category: NLP
