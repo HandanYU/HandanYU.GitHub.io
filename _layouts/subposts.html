@@ -4,6 +4,16 @@ layout: compress
 <html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
   <head>
     <style>
+      .layout{
+  margin-top: 5%;
+  margin-left:  5%;
+    width: 90%;
+    align-content: center;
+    height: 100vh;
+    display: flex;
+}
+.aside{right:10px; width: 20%;height: 100%;overflow-y: auto;margin-right: 1%;max-width: fit-content;}
+.article{flex: 1;height: 100%;overflow-y: auto;min-width: 350px;}
       .fix{
         -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -97,61 +107,15 @@ layout: compress
       </div>
     </div>
     <!-- <div style="height: 100em;"></div> -->
-    <div style="-webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    line-height: 1.7;
-    font-size: 16px;
-    color: #404040;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    box-sizing: border-box;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 80%;
-    padding-bottom: 2em;">
-         <div style="-webkit-text-size-adjust: 100%;
-         -webkit-tap-highlight-color: rgba(0,0,0,0);
-         line-height: 1.7;
-         font-size: 16px;
-         color: #404040;
-         text-rendering: auto;
-         -webkit-font-smoothing: antialiased;
-         box-sizing: border-box;
-         position: relative;
-         min-height: 1px;
-         /* padding-right: 15px; */
-         /* padding-left: 15px; */
-         float: left;
-         min-width: 280px;
-         width: 57.66666667%;
-         margin-left: 3.33333333%;
-         margin-right: 3.33333333%;
-         margin-bottom: 25px;">
+    <div class="layout" >
+         <article class="article">
     {% for post in site.posts %}
     {% if post.category == page.cate %}
     {% include card.html %}
     {% endif %}
     {% endfor %}
-    </div>
-    <div style="-webkit-text-size-adjust: 100%;
-          -webkit-tap-highlight-color: rgba(0,0,0,0);
-          line-height: 1.7;
-          text-rendering: auto;
-          -webkit-font-smoothing: antialiased;
-          box-sizing: border-box;
-          position: relative;
-          min-height: 1px;
-          padding-right: 15px;
-          padding-left: 15px;
-          float: right;
-          min-width: 330px;
-          width: 25%;
-          margin-left: 0;
-          margin-right: 4.33333333%;
-          color: #bfbfbf;
-          font-size: 14px;">
+   </article>
+<aside class="aside">
         <div style="color: black; text-align: center;padding-top: 2em;">
           <h2>Categories</h2>
         </div>
@@ -164,7 +128,7 @@ layout: compress
           {% endif %}
           {% endfor %}
         </ul>
-    </div>
+    </aside>
     </div>
     {% include footer.html %}
 
