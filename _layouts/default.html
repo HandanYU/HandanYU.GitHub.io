@@ -109,7 +109,9 @@ layout: compress
             margin-bottom: 25px;">
     
         {% for post in site.posts %}
+        {% if post.category != page.cate %}
           {% include card.html %}
+          {% endif %}
         {% endfor %}
     <!-- <main class="site__content">
       <section class="blog">
