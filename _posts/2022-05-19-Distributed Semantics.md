@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Discourse
-summary: Learn about Dependency Grammar
+title: Distributional Semantics/Representation
+summary: Learn about Distributional Semantics/Representation
 featured-img: deep learning
 language: chinese
 category: NLP
