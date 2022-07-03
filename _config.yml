@@ -54,4 +54,5 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 disqus:
-  shortname: https-handanyu-github-io
+  comments: true
+  shortname: 'https-handanyu-github-io'
