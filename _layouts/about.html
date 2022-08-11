@@ -1,8 +1,25 @@
 ---
 layout: compress
 ---
+<script type="text/javascript" src="js/pdfobject.min.js"></script>
 
-<html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>在线浏览PDF</title>
+    </head>
+    
+    <body>
+    
+        <script type="text/javascript" src="js/pdfobject.min.js"></script>
+        <script>
+            // 我的pdf文件放在项目的pdf文件夹下，名字叫做Java.pdf
+            PDFObject.embed("assets/pdf/中文简历.pdf");
+        </script>
+    </body>
+</html>
+<!-- <html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
 
   {% include head.html %}
 
@@ -39,7 +56,7 @@ layout: compress
         <div class="page-content">
 
           {{ content }}
-
+<iframe src="https://docs.google.com/viewer?url=http://public-Url-of-pdf.pdf&embedded=true" frameborder="0" height="500px" width="100%"></iframe>
         </div>
       </div>
       
@@ -49,4 +66,4 @@ layout: compress
 
   </body>
 
-</html>
+</html> -->
