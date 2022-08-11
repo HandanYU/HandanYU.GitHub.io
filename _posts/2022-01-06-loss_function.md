@@ -7,17 +7,7 @@ language: chinese
 category: machine learning
 ---
 
-##### Table of Contents  
-- [0-1 Loss](#0-1 Loss)  
-- [Binary cross entropy / log Loss](#Binary cross entropy / log Loss) 
-- [Square Loss](#Square Loss)  
-- [Exponential Loss](#Exponential Loss)  
-- [Hinge Loss / Max Margin Loss](#Hinge Loss / Max Margin Loss)  
-- [Perceptron Loss](#Perceptron Loss)  
-- [Cross-entropy Loss](#Cross-entropy Loss)
-- [Maximum Likelihood Estimation](#Maximum Likelihood Estimation)
 
-<a name="0-1 Loss"/>
 
 # 0-1 Loss
 
@@ -25,7 +15,6 @@ category: machine learning
 - $$L(Y,\hat{Y})$$ = 1, if \|$$Y-\hat{Y}$$\| $$\geq T.$$ else 0
 - non-convex function
 
-<a name="Binary cross entropy / log Loss"/>
 
 # Binary cross entropy / log Loss
 
@@ -36,14 +25,12 @@ category: machine learning
 - sensitive to noise compared with [Hinge Loss / Max Margin Loss](#Hinge Loss / Max Margin Loss)
 - describe distribution of feature probability well
 
-<a name="Square Loss"/>
 
 # Square Loss
 
 - used in Regression,
 - L = $$\sum_{N}(y_i-\hat{y_i})^2$$
 
-<a name="Exponential Loss"/>
 
 # Exponential Loss
 
@@ -51,7 +38,6 @@ category: machine learning
 - sensitive to outliers and noises
 - L=$$\frac{1}{N}\sum_N\exp(-y_i\hat{y_i})$$
 
-<a name="Hinge Loss / Max Margin Loss"/>
 
 # Hinge Loss / Max Margin Loss
 
@@ -59,14 +45,12 @@ category: machine learning
     - if classify correctly, return 0; else $$1-y_i\hat{y_i}$$
 - used in SVM
 
-<a name="Perceptron Loss"/>
 
 # Perceptron Loss
 
 - L = $$\sum_N\max (0,-\hat{y_i})$$
 - advanced hinge loss
 
-<a name="Cross-entropy Loss"/>
 
 # Cross-entropy Loss
 
@@ -75,7 +59,6 @@ category: machine learning
     - $$z_i$$ is the output of class $$i$$
 
 
-<a name="Maximum Likelihood Estimation"/>
 
 # Maximum Likelihood Estimation
 
