@@ -6,6 +6,6 @@
 #
 layout: subposts
 title: Diana's Blog
-permalink: /bigdata/
+permalink: /Big Data/
 cate: Big Data
 ---
