@@ -6,6 +6,6 @@
 #
 layout: subposts
 title: Diana's Blog
-permalink: /others/
-cate: others
+permalink: /python/
+cate: python
 ---
