@@ -6,6 +6,6 @@
 #
 layout: subposts
 title: Diana's Blog
-permalink: /ai/
-cate: ai
+permalink: /AI/
+cate: AI
 ---
