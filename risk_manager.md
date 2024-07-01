@@ -6,6 +6,6 @@
 #
 layout: subposts
 title: Diana's Blog
-permalink: /risk_manager/
+permalink: /风控/
 cate: 风控
 ---
